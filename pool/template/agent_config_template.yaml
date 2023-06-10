@@ -1,0 +1,40 @@
+###################################################
+############### Agent Configuration ###############
+###################################################
+
+agent:
+  name: AgentName
+  type: AgentType # eg. ReWOO, ReAct, IO
+  version: 1.0.0
+  description: Short description of the agent
+  task: # Example of tasks that the agent is optimized for
+    - task1
+    - task2
+    - task3
+  tools:
+    - name: ToolName # tool class name must be unique for a single agent
+      param1: value
+      param2: value
+    - name: ToolName2
+      param1: value
+      param2: value
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
