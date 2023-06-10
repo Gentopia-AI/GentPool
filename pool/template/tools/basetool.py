@@ -337,7 +337,6 @@ class Tool(BaseTool):
             func: Callable,
             name: str,
             description: str,
-            return_direct: bool = False,
             args_schema: Optional[Type[BaseModel]] = None,
             **kwargs: Any,
     ) -> Tool:
@@ -346,7 +345,6 @@ class Tool(BaseTool):
             name=name,
             func=func,
             description=description,
-            return_direct=return_direct,
             args_schema=args_schema,
             **kwargs,
         )
@@ -392,7 +390,6 @@ class StructuredTool(BaseTool):
             func: Callable,
             name: Optional[str] = None,
             description: Optional[str] = None,
-            return_direct: bool = False,
             args_schema: Optional[Type[BaseModel]] = None,
             infer_schema: bool = True,
             **kwargs: Any,
@@ -414,14 +411,12 @@ class StructuredTool(BaseTool):
             func=func,
             args_schema=_args_schema,
             description=description,
-            return_direct=return_direct,
             **kwargs,
         )
 
 
 def tool(
         *args: Union[str, Callable],
-        return_direct: bool = False,
         args_schema: Optional[Type[BaseModel]] = None,
         infer_schema: bool = True,
 ) -> Callable:
@@ -429,8 +424,6 @@ def tool(
 
     Args:
         *args: The arguments to the tool.
-        return_direct: Whether to return directly from the tool rather
-            than continuing the agent loop.
         args_schema: optional argument schema for user to specify
         infer_schema: Whether to infer the schema of the arguments from
             the function's signature. This also makes the resultant tool
@@ -448,7 +441,7 @@ def tool(
                 # Searches the API for the query.
                 return
 
-            @tool("search", return_direct=True)
+            @tool("search")
             def search_api(query: str) -> str:
                 # Searches the API for the query.
                 return
@@ -460,7 +453,6 @@ def tool(
                 return StructuredTool.from_function(
                     func,
                     name=tool_name,
-                    return_direct=return_direct,
                     args_schema=args_schema,
                     infer_schema=infer_schema,
                 )
@@ -471,14 +463,13 @@ def tool(
                 name=tool_name,
                 func=func,
                 description=f"{tool_name} tool",
-                return_direct=return_direct,
             )
 
         return _make_tool
 
     if len(args) == 1 and isinstance(args[0], str):
         # if the argument is a string, then we use the string as the tool name
-        # Example usage: @tool("search", return_direct=True)
+        # Example usage: @tool("search")
         return _make_with_name(args[0])
     elif len(args) == 1 and callable(args[0]):
         # if the argument is a function, then we use the function name as the tool name
@@ -486,10 +477,11 @@ def tool(
         return _make_with_name(args[0].__name__)(args[0])
     elif len(args) == 0:
         # if there are no arguments, then we use the function name as the tool name
-        # Example usage: @tool(return_direct=True)
+        # Example usage: @tool()
         def _partial(func: Callable[[str], str]) -> BaseTool:
             return _make_with_name(func.__name__)(func)
 
         return _partial
     else:
         raise ValueError("Too many arguments for tool decorator")
+
