@@ -2,7 +2,7 @@
 from __future__ import annotations
 
 from abc import ABC, abstractmethod
-from inspect import signature
+from inspect import signature, iscoroutinefunction
 from typing import Any, Awaitable, Callable, Dict, Optional, Tuple, Type, Union
 
 from pydantic import (
@@ -193,6 +193,27 @@ class BaseTool(ABC, BaseModel, metaclass=ToolMetaclass):
         else:
             return (), tool_input
 
+    def _handle_tool_error(self, e: ToolException) -> Any:
+        """Handle the content of the ToolException thrown."""
+        observation = None
+        if not self.handle_tool_error:
+            raise e
+        elif isinstance(self.handle_tool_error, bool):
+            if e.args:
+                observation = e.args[0]
+            else:
+                observation = "Tool execution error"
+        elif isinstance(self.handle_tool_error, str):
+            observation = self.handle_tool_error
+        elif callable(self.handle_tool_error):
+            observation = self.handle_tool_error(e)
+        else:
+            raise ValueError(
+                f"Got unexpected type of `handle_tool_error`. Expected bool, str "
+                f"or callable. Received: {self.handle_tool_error}"
+            )
+        return observation
+
     def run(
             self,
             tool_input: Union[str, Dict],
@@ -201,31 +222,13 @@ class BaseTool(ABC, BaseModel, metaclass=ToolMetaclass):
     ) -> Any:
         """Run the tool."""
         parsed_input = self._parse_input(tool_input)
-        if not self.verbose and verbose is not None:
-            verbose_ = verbose
-        else:
-            verbose_ = self.verbose
-
+        verbose_ = verbose if not self.verbose and verbose is not None else self.verbose
+        # TODO (verbose_): Add logging
         try:
             tool_args, tool_kwargs = self._to_args_and_kwargs(parsed_input)
             observation = self._run(*tool_args, **tool_kwargs)
         except ToolException as e:
-            if not self.handle_tool_error:
-                raise e
-            elif isinstance(self.handle_tool_error, bool):
-                if e.args:
-                    observation = e.args[0]
-                else:
-                    observation = "Tool execution error"
-            elif isinstance(self.handle_tool_error, str):
-                observation = self.handle_tool_error
-            elif callable(self.handle_tool_error):
-                observation = self.handle_tool_error(e)
-            else:
-                raise ValueError(
-                    f"Got unexpected type of `handle_tool_error`. Expected bool, str "
-                    f"or callable. Received: {self.handle_tool_error}"
-                )
+            observation = self._handle_tool_error(e)
             return observation
         else:
             return observation
@@ -238,32 +241,14 @@ class BaseTool(ABC, BaseModel, metaclass=ToolMetaclass):
     ) -> Any:
         """Run the tool asynchronously."""
         parsed_input = self._parse_input(tool_input)
-        if not self.verbose and verbose is not None:
-            verbose_ = verbose
-        else:
-            verbose_ = self.verbose
-
+        verbose_ = verbose if not self.verbose and verbose is not None else self.verbose
+        # TODO (verbose_): Add logging
         try:
             # We then call the tool on the tool input to get an observation
             tool_args, tool_kwargs = self._to_args_and_kwargs(parsed_input)
             observation = await self._arun(*tool_args, **tool_kwargs)
         except ToolException as e:
-            if not self.handle_tool_error:
-                raise e
-            elif isinstance(self.handle_tool_error, bool):
-                if e.args:
-                    observation = e.args[0]
-                else:
-                    observation = "Tool execution error"
-            elif isinstance(self.handle_tool_error, str):
-                observation = self.handle_tool_error
-            elif callable(self.handle_tool_error):
-                observation = self.handle_tool_error(e)
-            else:
-                raise ValueError(
-                    f"Got unexpected type of `handle_tool_error`. Expected bool, str "
-                    f"or callable. Received: {self.handle_tool_error}"
-                )
+            observation = self._handle_tool_error(e)
             return observation
         except (Exception, KeyboardInterrupt) as e:
             raise e
@@ -330,6 +315,8 @@ class Tool(BaseTool):
         super(Tool, self).__init__(
             name=name, func=func, description=description, **kwargs
         )
+        if iscoroutinefunction(func):
+            self.coroutine = func
 
     @classmethod
     def from_function(
@@ -406,6 +393,15 @@ class StructuredTool(BaseTool):
         _args_schema = args_schema
         if _args_schema is None and infer_schema:
             _args_schema = create_schema_from_function(f"{name}Schema", func)
+        if iscoroutinefunction(func):
+            return cls(
+                name=name,
+                func=func,
+                coroutine=func,
+                args_schema=_args_schema,
+                description=description,
+                **kwargs,
+            )
         return cls(
             name=name,
             func=func,
@@ -419,6 +415,7 @@ def tool(
         *args: Union[str, Callable],
         args_schema: Optional[Type[BaseModel]] = None,
         infer_schema: bool = True,
+        description: Optional[str] = None,
 ) -> Callable:
     """Make tools out of functions, can be used with or without arguments.
 
@@ -455,6 +452,7 @@ def tool(
                     name=tool_name,
                     args_schema=args_schema,
                     infer_schema=infer_schema,
+                    description=description,
                 )
             # If someone doesn't want a schema applied, we must treat it as
             # a simple string->string function
@@ -462,7 +460,7 @@ def tool(
             return Tool(
                 name=tool_name,
                 func=func,
-                description=f"{tool_name} tool",
+                description=f"{tool_name} tool" if description is None else description
             )
 
         return _make_tool
@@ -484,4 +482,3 @@ def tool(
         return _partial
     else:
         raise ValueError("Too many arguments for tool decorator")
-
