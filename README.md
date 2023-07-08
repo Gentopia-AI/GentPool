@@ -10,8 +10,6 @@ pip install -e Gentopia
 ```
 ./create_agent <your_agent_name> 
 ```
-if it fails for authentication, try `chmod +x create_agent`
-
 
 ## Assemble your agent
 After specializing your agent (prompt tuning, tool tuning, SFT on LMs, etc.), simply assemble your agent by 
