@@ -1,6 +1,11 @@
 # GentPool
 The pool of Agents for Gentopia
 
+## Install Gentopia
+```
+pip install -e Gentopia
+```
+
 ## Register an empty new agent under ./pool/
 ```
 ./create_agent <your_agent_name> 
