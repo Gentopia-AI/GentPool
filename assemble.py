@@ -7,7 +7,7 @@ from gentopia.assembler.agent_assembler import AgentAssembler
 from gentopia.output import enable_log
 from gentopia.output.console_output import ConsoleOutput
 
-from pool import MathPlannerPrompt
+from pool import *
 
 
 def ask(agent):
