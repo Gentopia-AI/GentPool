@@ -1,5 +1,5 @@
 # GentPool
-The pool of Agents for Gentopia
+The registry pool and benchmark of Agents in Gentopia.
 
 ## Install Gentopia
 Currently, we haven't registered Gentopia to pip. Fork and clone [Gentopia](https://github.com/Gentopia-AI/Gentopia) and install locally.
@@ -24,3 +24,6 @@ After specializing your agent (prompt tuning, tool tuning, SFT on LMs, etc.), si
 ```
 python assemble.py <your_agent_name>
 ```
+
+## To Run Eval
+🛠️🛠️
