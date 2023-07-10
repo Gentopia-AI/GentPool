@@ -1,0 +1,16 @@
+# Agent Config
+name: chatgpt
+type: vanilla
+version: NA
+description: Simple GPT-4 LLM
+prompt_template: !prompt ZeroShotVanillaPrompt
+llm:
+  model_name: gpt-4
+  params:
+    temperature: 0.0
+    top_p: 0.9
+    repetition_penalty: 1.0
+    max_tokens: 1000
+target_tasks:
+  - anything
+
