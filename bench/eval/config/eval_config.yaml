@@ -1,0 +1,32 @@
+# general
+verbose: True 
+private: False
+
+# eval tasks
+knowledge:
+  world_knowledge: 1
+  domain_specific_knowledge: 1
+  web_retrieval: 1
+
+reasoning:
+  math: 1
+  coding: 1
+  planning: 1
+  commonsense: 1
+
+safety:
+  integrity: 1
+  harmless: 1
+
+multilingual: 
+  translation: 1
+  understanding: 1
+
+robustness:
+  consistency: 0
+  resilience: 0
+
+memory: False
+
+
+
