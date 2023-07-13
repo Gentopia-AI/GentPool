@@ -57,7 +57,7 @@ def create_agent(agent_name: str):
         )
 
     print(f"Agent {agent_name} has been initialized.")
-    
+
 
 def delete_agent(agent_name: str):
     dir_path = Path(f"./gentpool/pool/{agent_name}")

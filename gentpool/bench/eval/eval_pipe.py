@@ -5,6 +5,7 @@ import yaml
 from gentpool.bench.eval import BaseEvalPipeline
 from gentpool.bench.eval.base_eval import EvalPipelineResult
 from gentpool.bench.eval.evaluator import *
+from gentopia.output.console_output import ConsoleOutput
 
 
 class EvalPipeline(BaseEvalPipeline):
@@ -50,6 +51,7 @@ class EvalPipeline(BaseEvalPipeline):
                                   total_eval_cost=total_eval_cost)
 
     def run_eval(self, agent: BaseAgent, seed: int = 0) -> EvalPipelineResult:
+        output = ConsoleOutput()
 
         if isinstance(self.eval_config, str):
             self.eval_config = self._parse_config_from_file(self.eval_config)
@@ -69,99 +71,114 @@ class EvalPipeline(BaseEvalPipeline):
         total_eval_count = 0
 
         # knowledge/world_knowledge
-        print("> EVALUATING: knowledge/world_knowledge ...")
+        # print("> EVALUATING: knowledge/world_knowledge ...")
+        output.update_status("EVALUATING: knowledge/world_knowledge ...")
         n = self.eval_config.get("knowledge", {}).get("world_knowledge", 0)
         total_eval_count += n
         evaluator = QAEval(eval_class="knowledge", eval_subclass="world_knowledge",
                            grader=GateGrader(llm=OpenAIGPTClient(model_name=self.grader_llm)))
         eval_results["knowledge/world_knowledge"] = evaluator.evaluate(agent, n, seed, verbose=False)
+        output.done()
+
 
         # knowledge/domain_specific_knowledge
-        print("> EVALUATING: knowledge/domain_specific_knowledge ...")
+        output.update_status("> EVALUATING: knowledge/domain_specific_knowledge ...")
         n = self.eval_config.get("knowledge", {}).get("domain_specific_knowledge", 0)
         total_eval_count += n
         evaluator = QAEval(eval_class="knowledge", eval_subclass="domain_specific_knowledge",
                            grader=GateGrader(llm=OpenAIGPTClient(model_name=self.grader_llm)))
         eval_results["knowledge/domain_specific_knowledge"] = evaluator.evaluate(agent, n, seed, private, verbose=False)
+        output.done()
 
         # knowledge/web_retrieval
-        print("> EVALUATING: knowledge/web_retrieval ...")
+        output.update_status("> EVALUATING: knowledge/web_retrieval ...")
         n = self.eval_config.get("knowledge", {}).get("web_retrieval", 0)
         total_eval_count += n
         evaluator = QAEval(eval_class="knowledge", eval_subclass="web_retrieval",
                            grader=GateGrader(llm=OpenAIGPTClient(model_name=self.grader_llm)))
         eval_results["knowledge/web_retrieval"] = evaluator.evaluate(agent, n, seed, private, verbose=False)
+        output.done()
 
         # reasoning/math
-        print("> EVALUATING: reasoning/math ...")
+        output.update_status("> EVALUATING: reasoning/math ...")
         n = self.eval_config.get("reasoning", {}).get("math", 0)
         total_eval_count += n
         evaluator = QAEval(eval_class="reasoning", eval_subclass="math",
                            grader=GateGrader(llm=OpenAIGPTClient(model_name=self.grader_llm)))
         eval_results["reasoning/math"] = evaluator.evaluate(agent, n, seed, private, verbose=False)
+        output.done()
 
         # reasoning/coding
-        print("> EVALUATING: reasoning/coding ...")
+        output.update_status("> EVALUATING: reasoning/coding ...")
         n = self.eval_config.get("reasoning", {}).get("coding", 0)
         total_eval_count += n
         evaluator = CodeEval(eval_class="reasoning", eval_subclass="coding")
         eval_results["reasoning/coding"] = evaluator.evaluate(agent, n, seed, private, verbose=False)
+        output.done()
 
         # reasoning/planning
-        print("> EVALUATING: reasoning/planning ...")
+        output.update_status("> EVALUATING: reasoning/planning ...")
         n = self.eval_config.get("reasoning", {}).get("planning", 0)
         total_eval_count += n
         evaluator = QAEval(eval_class="reasoning", eval_subclass="planning",
                            grader=GateGrader(llm=OpenAIGPTClient(model_name=self.grader_llm)))
         eval_results["reasoning/planning"] = evaluator.evaluate(agent, n, seed, private, verbose=False)
+        output.done()
 
         # reasoning/commonsense
-        print("> EVALUATING: reasoning/commonsense ...")
+        output.update_status("> EVALUATING: reasoning/commonsense ...")
         n = self.eval_config.get("reasoning", {}).get("commonsense", 0)
         total_eval_count += n
         evaluator = QAEval(eval_class="reasoning", eval_subclass="commonsense",
                            grader=GateGrader(llm=OpenAIGPTClient(model_name=self.grader_llm)))
         eval_results["reasoning/commonsense"] = evaluator.evaluate(agent, n, seed, private, verbose=False)
+        output.done()
 
         # safety/integrity
-        print("> EVALUATING: safety/integrity ...")
+        output.update_status("> EVALUATING: safety/integrity ...")
         n = self.eval_config.get("safety", {}).get("integrity", 0)
         total_eval_count += n
         evaluator = IntegrityEval(eval_class="safety", eval_subclass="integrity",
                                   grader=InstructedGrader(llm=OpenAIGPTClient(model_name=self.grader_llm)))
         eval_results["safety/integrity"] = evaluator.evaluate(agent, n, seed, private, verbose=False)
+        output.done()
 
         # safety/harmless
-        print("> EVALUATING: safety/harmless ...")
+        output.update_status("> EVALUATING: safety/harmless ...")
         n = self.eval_config.get("safety", {}).get("harmless", 0)
         total_eval_count += n
         evaluator = QAEval(eval_class="reasoning", eval_subclass="commonsense",
                            grader=GateGrader(llm=OpenAIGPTClient(model_name=self.grader_llm)))
         eval_results["safety/harmless"] = evaluator.evaluate(agent, n, seed, private, verbose=False)
+        output.done()
 
         # multilingual/translation
-        print("> EVALUATING: multilingual/translation ...")
+        output.update_status("> EVALUATING: multilingual/translation ...")
         n = self.eval_config.get("multilingual", {}).get("translation", 0)
         total_eval_count += n
         evaluator = QAEval(eval_class="multilingual", eval_subclass="translation",
                            grader=GateGrader(llm=OpenAIGPTClient(model_name=self.grader_llm)))
         eval_results["multilingual/translation"] = evaluator.evaluate(agent, n, seed, private, verbose=False)
+        output.done()
 
         # multilingual/understanding
-        print("> EVALUATING: multilingual/understanding ...")
+        output.update_status("> EVALUATING: multilingual/understanding ...")
         n = self.eval_config.get("multilingual", {}).get("understanding", 0)
         total_eval_count += n
         evaluator = QAEval(eval_class="multilingual", eval_subclass="understanding",
                            grader=GateGrader(llm=OpenAIGPTClient(model_name=self.grader_llm)))
         eval_results["multilingual/understanding"] = evaluator.evaluate(agent, n, seed, private, verbose=False)
+        output.done()
 
         # robustness/consistency
-        print("> EVALUATING: robustness/consistency ...")
+        output.update_status("> EVALUATING: robustness/consistency ...")
         eval_results["robustness/consistency"] = self._placeholder_eval_result()
+        output.done()
 
         # robustness/resilience
-        print("> EVALUATING: robustness/resilience ...")
+        output.update_status("> EVALUATING: robustness/resilience ...")
         eval_results["robustness/resilience"] = self._placeholder_eval_result()
+        output.done()
 
         # #memory
         # print("> EVALUATING: memory ...")
@@ -180,6 +197,7 @@ class EvalPipeline(BaseEvalPipeline):
         raise NotImplementedError
 
     def _print_result(self, result: EvalPipelineResult):
+        _output = ConsoleOutput()
         output = [
             "\n### FINISHING Agent EVAL PIPELINE ###",
             " (づ￣ ³￣)づ",
@@ -206,15 +224,17 @@ class EvalPipeline(BaseEvalPipeline):
             f"Avg token usage per task: {round(result.avg_token_usage, 1)} tokens",
             f"... And the total cost for evaluation ${round(result.total_eval_cost, 5)}"
         ]
+        if result.avg_score >= 0.8:
+            info, style = "Excellent Scoring! (ﾉ◕ヮ◕)ﾉ*:･ﾟ✧", "green"
+        elif result.avg_score >= 0.6:
+            info, style = "It passed, at least. (￣▽￣)ノ", "yellow"
+        else:
+            info, style = "Your agent needs some additional tuning (╯°□°）╯︵ ┻━┻)", "red"
 
         for line in output:
-            print(line, end=' ', flush=True)
+            _output.panel_print(line + '\n\n', f"[{style}]{info}", True)
+            # print(line, end=' ', flush=True)
             time.sleep(0.7)
             print()
 
-        if result.avg_score >= 0.8:
-            print("Excellent Scoring! (ﾉ◕ヮ◕)ﾉ*:･ﾟ✧")
-        elif result.avg_score >= 0.6:
-            print("It passed, at least. (￣▽￣)ノ")
-        else:
-            print(f"Your agent needs some additional tuning (╯°□°）╯︵ ┻━┻)")
+
