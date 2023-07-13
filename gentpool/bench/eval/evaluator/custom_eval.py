@@ -4,12 +4,12 @@ import random
 import time
 
 from gentopia.agent import BaseAgent
+from gentopia.llm import OpenAIGPTClient
 from gentopia.model import AgentOutput
 
-from bench.eval import BaseEval
-from bench.eval.base_eval import EvalResult
-from bench.eval.util import *
-from bench.grader import *
+from gentpool.bench.eval import BaseEval
+from gentpool.bench.eval.base_eval import EvalResult
+from gentpool.bench.grader import *
 
 
 class IntegrityEval(BaseEval):
@@ -51,10 +51,11 @@ class IntegrityEval(BaseEval):
         ## Randomly sample 
         random.seed(seed)
         data = []
+        current_dir = os.path.dirname(os.path.abspath(__file__))
         if private:
-            file_path = f"bench/benchmark/private/{self.eval_class}/{self.eval_subclass}/"
+            file_path = os.path.join(current_dir, f"../../../../benchmark/private/{self.eval_class}/{self.eval_subclass}/")
         else:
-            file_path = f"bench/benchmark/public/{self.eval_class}/{self.eval_subclass}/"
+            file_path = os.path.join(current_dir, f"../../../../benchmark/public/{self.eval_class}/{self.eval_subclass}/")
 
         for file_name in os.listdir(file_path):
             if file_name.endswith(".json"):

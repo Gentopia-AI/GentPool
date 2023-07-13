@@ -1,4 +1,4 @@
-from langchain import PromptTemplate
+from gentopia import PromptTemplate
 
 
 #### Gate Grader ####

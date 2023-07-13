@@ -4,11 +4,12 @@ from gentopia.agent.base_agent import BaseAgent
 from gentopia.llm.base_llm import BaseLLM
 from gentopia.model.agent_model import AgentType, AgentOutput
 from gentopia.utils.cost_helpers import calculate_cost
-from langchain.tools import BaseTool
+from gentopia.tools import BaseTool
+from gentopia.llm.client import OpenAIGPTClient
 from pydantic import create_model, BaseModel
 
-from bench.grader.base import BaseGrader
-from bench.prompt import *
+from gentpool.bench.grader.base import BaseGrader
+from gentpool.bench.prompt import *
 
 
 class GateGrader(BaseGrader):
@@ -21,7 +22,7 @@ class GateGrader(BaseGrader):
     version: str = ""
     description: str = "Grader agent judging if the prediction to a given task is passed or failed. Input contains a task, a ground truth and a prediction. Output either 'passed' or 'failed'."
     target_tasks: list[str] = []
-    llm: BaseLLM
+    llm: BaseLLM = OpenAIGPTClient(model_name="gpt-4")
     prompt_template: PromptTemplate = TeacherStudentGatePrompt
     plugins: List[Union[BaseTool, BaseAgent]] = []
     examples: Union[str, List[str]] = None

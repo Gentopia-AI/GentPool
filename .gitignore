@@ -1,7 +1,8 @@
 # Custom
-bench/benchmark/private/
-bench/benchmark/public/
-bench/benchmark/raw/
+benchmark/private/
+benchmark/public/
+benchmark/raw/
+test.ipynb
 
 
 # Byte-compiled / optimized / DLL files
