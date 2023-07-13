@@ -50,59 +50,6 @@ class CodeEval(BaseEval):
         else:
             print(f"Your agent needs some tuning for {self.eval_class}/{self.eval_subclass}. (╯°□°）╯︵ ┻━┻)")
 
-    def _check_correctness(self, program: str, timeout: float) -> str:
-        """
-        Evaluates the functional correctness of a completion by running the test
-        suite provided in the problem. 
-
-        :param completion_id: an optional completion ID so we can match
-            the results later even if execution finishes asynchronously.
-        """
-
-        def unsafe_execute():
-
-            with create_tempdir():
-
-                # These system calls are needed when cleaning up tempdir.
-                import os
-                import shutil
-                rmtree = shutil.rmtree
-                rmdir = os.rmdir
-                chdir = os.chdir
-
-                # Disable functionalities that can make destructive changes to the test.
-                reliability_guard()
-
-                try:
-                    exec_globals = {}
-                    with swallow_io():
-                        with time_limit(timeout):
-                            exec(program, exec_globals)
-                    result.append("pass")
-                except TimeoutException:
-                    result.append("timed out")
-                except BaseException as e:
-                    result.append(f"failed: {e}")
-
-                # Needed for cleaning up.
-                shutil.rmtree = rmtree
-                os.rmdir = rmdir
-                os.chdir = chdir
-
-        manager = multiprocessing.Manager()
-        result = manager.list()
-
-        p = multiprocessing.Process(target=unsafe_execute)
-        p.start()
-        p.join(timeout=timeout + 1)
-        if p.is_alive():
-            p.kill()
-
-        if not result:
-            result.append("timed out")
-
-        return result[0]
-
     def evaluate(self, agent: BaseAgent, n_smaple: int, seed=0, private=False, verbose=True,
                  time_limit=5) -> EvalResult:
         ## Randomly sample 
@@ -165,7 +112,7 @@ class CodeEval(BaseEval):
                     test = response.output + "\n" + task["test_case"]
                 elif dataset == "mbpp":
                     test = response.output + "\n" + task["test_case"]
-                output = self._check_correctness(test, time_limit)
+                output = check_correctness(test, time_limit)
                 if verbose:
                     print(f"> Grader: {output}")
                 eval_grader_cost += 0

@@ -1,0 +1,7 @@
+{
+    "problem": "Identify the sentiment of this Hindi sentence: \"मुझे यह किताब बहुत पसंद है\". Positive or Negative?",
+    "solution": "Positive",
+    "tags": [
+        "multilingual/understanding"
+    ]
+}
