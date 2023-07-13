@@ -1,10 +1,10 @@
 from typing import Union, Dict
 
 import yaml
-from bench.eval import BaseEvalPipeline
-from bench.eval.base_eval import EvalResult, EvalPipelineResult
-from bench.eval.evaluator import *
-from gentopia.agent import BaseAgent
+
+from gentpool.bench.eval import BaseEvalPipeline
+from gentpool.bench.eval.base_eval import EvalPipelineResult
+from gentpool.bench.eval.evaluator import *
 
 
 class EvalPipeline(BaseEvalPipeline):

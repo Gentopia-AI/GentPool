@@ -1,9 +1,10 @@
-from pydantic import BaseModel
-from gentopia.agent import BaseAgent
-from bench.grader import BaseGrader
 from abc import ABC, abstractmethod
 from typing import Dict
-import yaml
+
+from gentopia.agent import BaseAgent
+from pydantic import BaseModel
+
+from gentpool.bench.grader import BaseGrader
 
 
 class EvalResult(BaseModel):
@@ -12,8 +13,8 @@ class EvalResult(BaseModel):
     avg_runtime: float  # avg runtime of the evaluation per task
     avg_cost: float  # avg cost of the evaluation per task
     avg_token_usage: float  # avg token usage of the evaluation per task 
-    eval_cost: float # total cost introducted by evaluation (such as grader cost)
-    
+    eval_cost: float  # total cost introducted by evaluation (such as grader cost)
+
 
 class EvalPipelineResult(BaseModel):
     eval_results: Dict[str, EvalResult]  # eval results for each eval task
@@ -22,31 +23,25 @@ class EvalPipelineResult(BaseModel):
     avg_runtime: float  # weighted average (by count) of runtimes
     avg_cost: float  # weighted average (by count) of costs
     avg_token_usage: float  # weighted average (by count) of token usages
-    total_eval_cost: float # total cost introducted by evaluation (such as grader cost)
-
-
-
+    total_eval_cost: float  # total cost introducted by evaluation (such as grader cost)
 
 
 class BaseEval(ABC, BaseModel):
     eval_class: str
     eval_subclass: str
     grader: BaseGrader
-    
 
     @abstractmethod
     def evaluate(self, agent: BaseAgent, n_smaple: int, seed: int = 0, *args, **kwargs) -> EvalResult:
         pass
 
-
     @abstractmethod
     def eval_async(self, agent: BaseAgent, n_smaple: int, seed: int = 0, *args, **kwargs) -> EvalResult:
         pass
-    
 
 
 class BaseEvalPipeline(ABC, BaseModel):
-    eval_config: Dict 
+    eval_config: Dict
     grader_llm: str
 
     @abstractmethod
@@ -56,5 +51,3 @@ class BaseEvalPipeline(ABC, BaseModel):
     @abstractmethod
     def run_eval_async(self, agent: BaseAgent, seed: int = 0, *args, **kwargs) -> EvalResult:
         pass
-    
-

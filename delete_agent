@@ -1,0 +1,28 @@
+#!/bin/bash
+
+# Get the agent name from the first argument
+agent_name="$1"
+
+# Directory path
+dir_path="./gentpool/pool/${agent_name}"
+
+# Ask for user confirmation
+echo "Deleting agent ${agent_name} in folder ${dir_path}, this is irreversible, are you sure? (y/n) "
+read answer
+
+if [ "$answer" != "${answer#[Yy]}" ] ;then
+    # Check if directory exists before trying to delete it
+    if [ -d "${dir_path}" ] ; then
+        # Remove the directory
+        rm -r "${dir_path}"
+
+        # Unregister the agent from the pool
+        sed -i "/from .${agent_name} import */d" "./gentpool/pool/__init__.py"
+
+        echo "Agent ${agent_name} has been deleted."
+    else
+        echo "Agent ${agent_name} does not exist."
+    fi
+else
+    echo "Agent deletion cancelled."
+fi

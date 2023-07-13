@@ -1,18 +1,20 @@
-import textwrap
-from typing import Optional
 import contextlib
 import faulthandler
 import io
+import json
 import os
 import platform
 import signal
 import tempfile
-import json
+import textwrap
+from typing import Optional
+
 
 @contextlib.contextmanager
 def time_limit(seconds: float):
     def signal_handler(signum, frame):
         raise TimeoutException("Timed out!")
+
     signal.setitimer(signal.ITIMER_REAL, seconds)
     signal.signal(signal.SIGALRM, signal_handler)
     try:
@@ -76,6 +78,7 @@ def chdir(root):
     finally:
         os.chdir(cwd)
 
+
 def convert_apps_code(original_code, test_case):
     """
     This function converts the original code from APPS to a new function that takes in
@@ -101,9 +104,8 @@ def new_func(input_str):
     asserts = ""
     for input_, output_ in zip(test_case["inputs"], test_case["outputs"]):
         asserts += f'assert new_func("""{input_}""") == """{output_}"""\n'
-    
-    return new_func + asserts
 
+    return new_func + asserts
 
 
 def reliability_guard(maximum_memory_bytes: Optional[int] = None):

@@ -1,33 +1,10 @@
 import argparse
 import os
-import signal
 
 import dotenv
+from gentopia import chat
 from gentopia.assembler.agent_assembler import AgentAssembler
 from gentopia.output import enable_log
-from gentopia.output.console_output import ConsoleOutput
-
-from pool import *
-
-
-def ask(agent):
-    out = ConsoleOutput()
-
-    def handler(signum, frame):
-        out.print("\n[red]Bye!")
-        exit(0)
-
-    signal.signal(signal.SIGINT, handler)
-    while True:
-        out.print("[green]User: ", end="")
-        text = input()
-        if text:
-            response = agent.stream(text, output=out)
-        else:
-            response = agent.stream(output=out)
-
-        out.done(_all=True)
-        print("\n")
 
 
 def main():
@@ -40,11 +17,11 @@ def main():
     args = parser.parse_args()
     agent_name = args.name
 
-    # check if agent_name is under directory ./pool/
-    if not os.path.exists(f'./pool/{agent_name}'):
-        raise ValueError(f'Agent {agent_name} does not exist. Check GentPool/pool/ for available agents.')
+    # check if agent_name is under directory ./gentpool/pool/
+    if not os.path.exists(f'./gentpool/pool/{agent_name}'):
+        raise ValueError(f'Agent {agent_name} does not exist. Check ./gentpool/pool/ for available agents.')
 
-    agent_config_path = f'./pool/{agent_name}/agent.yaml'
+    agent_config_path = f'./gentpool/pool/{agent_name}/agent.yaml'
 
     assembler = AgentAssembler(file=agent_config_path)
 
@@ -55,7 +32,7 @@ def main():
     if agent.name != agent_name:
         raise ValueError(f"Agent name mismatch. Expected {agent_name}, got {agent.name}.")
 
-    ask(agent)
+    chat(agent)
 
 
 if __name__ == '__main__':

@@ -4,43 +4,52 @@
 agent_name="$1"
 
 # Directory path
-dir_path="./pool/${agent_name}"
+dir_path="./gentpool/pool/${agent_name}"
 
-# Create the directory if it doesn't exist
-mkdir -p "${dir_path}"
+echo "Initializing agent ${agent_name} in folder ${dir_path}, continue? (y/n)"
+read answer
 
-# Create the files
-touch "${dir_path}/__init__.py"
-touch "${dir_path}/agent.yaml"
-touch "${dir_path}/prompt.py"
-touch "${dir_path}/tools.py"
+if [ "$answer" != "${answer#[Yy]}" ] ;then
+    # Create the directory if it doesn't exist
+    mkdir -p "${dir_path}"
 
-# Initialize the content in the __init__.py file
-echo "from .prompt import *" > "${dir_path}/__init__.py"
-echo "from .tools import *" >> "${dir_path}/__init__.py"
+    # Create the files
+    touch "${dir_path}/__init__.py"
+    touch "${dir_path}/agent.yaml"
+    touch "${dir_path}/prompt.py"
+    touch "${dir_path}/tools.py"
 
-# Register the agent in the pool
-echo -e "\nfrom .${agent_name} import *" >> "./pool/__init__.py"
+    # Initialize the content in the __init__.py file
+    echo "from .prompt import *" > "${dir_path}/__init__.py"
+    echo "from .tools import *" >> "${dir_path}/__init__.py"
 
-# Initialize the content in the agent.yaml file
-echo "### Author: ###" > "${dir_path}/agent.yaml"
-echo "name: ${agent_name}" > "${dir_path}/agent.yaml"
-echo "type: " >> "${dir_path}/agent.yaml"
-echo "version: " >> "${dir_path}/agent.yaml"
-echo "description: " >> "${dir_path}/agent.yaml"
-echo "target_tasks: " >> "${dir_path}/agent.yaml"
-echo "prompt_template: " >> "${dir_path}/agent.yaml"
-echo "llm: " >> "${dir_path}/agent.yaml"
-echo "plugins: " >> "${dir_path}/agent.yaml"
+    # Register the agent in the pool
+    echo "from .${agent_name} import *" >> "./gentpool/pool/__init__.py"
 
-# Initialize the content in the prompt.py file
-echo "### Define your custom prompt here. Check prebuilts in gentopia.prompt :)###" > "${dir_path}/prompt.py"
-echo "from gentopia.prompt import *" >> "${dir_path}/prompt.py"
-echo "from langchain import PromptTemplate" >> "${dir_path}/prompt.py"
+    # Initialize the content in the agent.yaml file
+    echo "### Author: ###" > "${dir_path}/agent.yaml"
+    echo "name: ${agent_name}" > "${dir_path}/agent.yaml"
+    echo "type: " >> "${dir_path}/agent.yaml"
+    echo "version: " >> "${dir_path}/agent.yaml"
+    echo "description: " >> "${dir_path}/agent.yaml"
+    echo "target_tasks: " >> "${dir_path}/agent.yaml"
+    echo "prompt_template: " >> "${dir_path}/agent.yaml"
+    echo "llm: " >> "${dir_path}/agent.yaml"
+    echo "plugins: " >> "${dir_path}/agent.yaml"
 
-# Initialize the content in the tools.py file
-echo "### Define your custom tools here. Check prebuilts in gentopia.tools (:###" > "${dir_path}/tools.py"
-echo "from gentopia.tools import *" >> "${dir_path}/tools.py"
+    # Initialize the content in the prompt.py file
+    echo "### Define your custom prompt here. Check prebuilts in gentopia.prompt :)###" > "${dir_path}/prompt.py"
+    echo "from gentopia.prompt import *" >> "${dir_path}/prompt.py"
+    echo "from gentopia import PromptTemplate" >> "${dir_path}/prompt.py"
+
+    # Initialize the content in the tools.py file
+    echo "### Define your custom tools here. Check prebuilts in gentopia.tools (:###" > "${dir_path}/tools.py"
+    echo "from gentopia.tools import *" >> "${dir_path}/tools.py"
 
 
-echo "Agent ${agent_name} has been initialized."
+    echo "Agent ${agent_name} has been initialized."
+else
+    echo "Exiting..."
+    exit 1
+fi
+
