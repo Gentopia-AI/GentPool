@@ -2,6 +2,7 @@ import contextlib
 import faulthandler
 import io
 import json
+import multiprocessing
 import os
 import platform
 import signal
@@ -181,3 +182,56 @@ def reliability_guard(maximum_memory_bytes: Optional[int] = None):
     sys.modules['resource'] = None
     sys.modules['psutil'] = None
     sys.modules['tkinter'] = None
+
+def check_correctness(program: str, timeout: float) -> str:
+    """
+    Evaluates the functional correctness of a completion by running the test
+    suite provided in the problem. 
+
+    :param completion_id: an optional completion ID so we can match
+        the results later even if execution finishes asynchronously.
+    """
+
+    def unsafe_execute():
+
+        with create_tempdir():
+
+            # These system calls are needed when cleaning up tempdir.
+            import os
+            import shutil
+            rmtree = shutil.rmtree
+            rmdir = os.rmdir
+            chdir = os.chdir
+
+            # Disable functionalities that can make destructive changes to the test.
+            reliability_guard()
+
+            try:
+                exec_globals = {}
+                with swallow_io():
+                    with time_limit(timeout):
+                        exec(program, exec_globals)
+                result.append("pass")
+            except TimeoutException:
+                result.append("timed out")
+            except BaseException as e:
+                result.append(f"failed: {e}")
+
+            # Needed for cleaning up.
+            shutil.rmtree = rmtree
+            os.rmdir = rmdir
+            os.chdir = chdir
+
+    manager = multiprocessing.Manager()
+    result = manager.list()
+
+    p = multiprocessing.Process(target=unsafe_execute)
+    p.start()
+    p.join(timeout=timeout + 1)
+    if p.is_alive():
+        p.kill()
+
+    if not result:
+        result.append("timed out")
+
+    return result[0]

@@ -1,0 +1,7 @@
+{
+    "problem": "Extract the main entities in this Korean sentence: \"방탄소년단은 대한민국의 유명한 아이돌 그룹입니다\".",
+    "solution": "방탄소년단, 대한민국, 아이돌 그룹",
+    "tags": [
+        "multilingual/understanding"
+    ]
+}
