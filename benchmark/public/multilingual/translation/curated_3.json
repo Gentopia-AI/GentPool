@@ -1,0 +1,7 @@
+{
+    "problem": "Translate the following sentence from Swedish to English: \"Jag älskar att läsa böcker\".",
+    "solution": "I love reading books.",
+    "tags": [
+        "multilingual/translation"
+    ]
+}

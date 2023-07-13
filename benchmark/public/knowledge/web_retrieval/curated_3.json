@@ -1,0 +1,7 @@
+{
+    "problem": "Around July 2023, Elon Musk put new limits on tweets. What is the number of limitations in viewing tweets for verified accounts?",
+    "solution": "6000",
+    "tags": [
+        "knowledge/web_retrieval"
+    ]
+}

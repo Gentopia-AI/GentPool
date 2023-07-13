@@ -1,0 +1,7 @@
+{
+    "problem": "Identify the sentiment of this Japanese sentence: \"この映画はとても面白かった\". Positive or Negative?",
+    "solution": "Positive",
+    "tags": [
+        "multilingual/understanding"
+    ]
+}

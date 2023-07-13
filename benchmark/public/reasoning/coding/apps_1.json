@@ -1,0 +1,8 @@
+{
+    "problem": "Young Luka is about to enter a house with the evil witch Marica inside. As soon as he enters the house, she asks him questions about her array of $N$ numbers. Luka fearfully asks for a clarification of the questions. Marica explains to him that each query consists of two integers $L$ and $R$ which represent the positions of a contiguous sub-array in her array.\n\nIt is Luka’s task to answer for each query what the longest contiguous sub-array of that contiguous sub-array (it can be the entire sub-array) having the property of being magical. An array is called magical if all the values are between the values of the first and last number in that array. For example, $[1\\ 3\\ 1\\ 2\\ 4]$ is magical, the same as $[4\\ 1\\ 1\\ 2\\ 1]$, whereas $[3\\ 3\\ 4\\ 1]$ is not magical.\n\n-----Input-----\nThe first line of input contains the integer $N$ ($1 \\leq N \\leq 500000$), the number of numbers in the array. The second line contains $N$ integers $a_ i$ ($1 \\leq a_ i \\leq 10^9$). The third line contains the integer $Q$ ($1 \\leq Q \\leq 500000$), the number of queries. Each of the following $Q$ lines contains two integers, $L$ and $R$ ($1 \\leq L \\leq R \\leq N$), representing the sub-array from the query.\n\n-----Output-----\nThe $i$-th line of output must contain a single integer—the answer to the $i$-th query.\n\n-----Examples-----\nSample Input:\n5\n5 4 3 3 2\n3\n1 2\n1 1\n2 4\nSample Output:\n2\n1\n3",
+    "test_case": "{\n    \"inputs\": [\n        \"5\\n5 4 3 3 2\\n3\\n1 2\\n1 1\\n2 4\\n\",\n        \"6\\n6 6 5 1 6 2\\n3\\n4 5\\n4 6\\n1 4\\n\"\n    ],\n    \"outputs\": [\n        \"2\\n1\\n3\\n\",\n        \"2\\n2\\n4\\n\"\n    ]\n}",
+    "dataset": "apps",
+    "tags": [
+        "reasoning/coding"
+    ]
+}
