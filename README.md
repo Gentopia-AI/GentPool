@@ -26,7 +26,7 @@ python assemble.py <your_agent_name>
 ```
 
 ## To Run Eval
-🛠️🛠️
+Check out this Quick Start [Notebook](https://github.com/Gentopia-AI/GentPool/blob/main/notebooks/gentpool_eval_quickstart.ipynb) for basic eval utilities.
 
 ## Delete an agent under ./gentpool/pool/
 ```
