@@ -14,16 +14,21 @@ OPENAI_API_KEY=xxxx
 WOLFRAM_ALPHA_APPID=xxxx
 ```
 
-## Register an empty new agent under ./pool/
+## Register an empty new agent under ./gentpool/pool/
 ```
 ./create_agent <your_agent_name> 
 ```
 
-## Assemble your agent
-After specializing your agent (prompt tuning, tool tuning, SFT on LMs, etc.), simply assemble your agent by 
+## Assemble your agent and chat
+To test agent by interaction while specializing your agent (prompt tuning, tool tuning, SFT on LMs, etc.), simply assemble your agent and chat by 
 ```
 python assemble.py <your_agent_name>
 ```
 
 ## To Run Eval
 🛠️🛠️
+
+## Delete an agent under ./gentpool/pool/
+```
+./delete_agent <your_agent_name> 
+```
