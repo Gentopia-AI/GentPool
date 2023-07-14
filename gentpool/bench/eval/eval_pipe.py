@@ -50,8 +50,7 @@ class EvalPipeline(BaseEvalPipeline):
                                   avg_token_usage=avg_toekn_usage,
                                   total_eval_cost=total_eval_cost)
 
-    def run_eval(self, agent: BaseAgent, seed: int = 0) -> EvalPipelineResult:
-        output = ConsoleOutput()
+    def run_eval(self, agent: BaseAgent, seed: int = 0, output=ConsoleOutput()) -> EvalPipelineResult:
 
         if isinstance(self.eval_config, str):
             self.eval_config = self._parse_config_from_file(self.eval_config)
@@ -72,7 +71,7 @@ class EvalPipeline(BaseEvalPipeline):
 
         # knowledge/world_knowledge
         # print("> EVALUATING: knowledge/world_knowledge ...")
-        output.update_status("EVALUATING: knowledge/world_knowledge ...")
+        output.update_status("> EVALUATING: knowledge/world_knowledge ...")
         n = self.eval_config.get("knowledge", {}).get("world_knowledge", 0)
         total_eval_count += n
         evaluator = QAEval(eval_class="knowledge", eval_subclass="world_knowledge",
@@ -189,15 +188,14 @@ class EvalPipeline(BaseEvalPipeline):
 
         # print to console:
         if verbose:
-            self._print_result(final_result)
+            self._print_result(final_result, output)
 
         return final_result
 
     def run_eval_async(self, agent: BaseAgent, seed: int = 0, *args, **kwargs):
         raise NotImplementedError
 
-    def _print_result(self, result: EvalPipelineResult):
-        _output = ConsoleOutput()
+    def _print_result(self, result: EvalPipelineResult, _output = ConsoleOutput()):
         output = [
             "\n### FINISHING Agent EVAL PIPELINE ###",
             " (づ￣ ³￣)づ",
@@ -234,7 +232,9 @@ class EvalPipeline(BaseEvalPipeline):
         for line in output:
             _output.panel_print(line + '\n\n', f"[{style}]{info}", True)
             # print(line, end=' ', flush=True)
-            time.sleep(0.7)
-            print()
+            # time.sleep(0.7)
+            # print()
+        _output.panel_print("### FINISHING Agent EVAL PIPELINE ###", f"[{style}]{info}", True)
+        _output.clear()
 
 
