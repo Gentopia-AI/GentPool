@@ -1,8 +1,0 @@
-{
-    "problem": "-----Input-----\nThe first line of input contains a line contains a line with four non-negative integers, $2 \\le n \\le 250$, $0 \\le m \\le 5000$, $0 \\le s \\le n-1$ and $0 \\le t \\le n-1$, separated by single spaces, where $n$ is the numbers of nodes in the graph, $m$ is the number of edges, $s$ is the source and $t$ is the sink ($s \\ne t$). Nodes are numbered from $0$ to $n-1$. Then follow $m$ lines, each line consisting of four (space-separated) integers $u$, $v$, $c$ and $w$ indicating that there is an edge from $u$ to $v$ in the graph with capacity $1 \\le c \\le 10000$ and cost $1 \\le w \\le 1000$.\n\n-----Output-----\nOutput a single line containing two integers; the size $F$ of a maximum flow from node $s$ to node $t$, and the cost of a mimimum cost flow of size $F$. You may assume that $F < 2^{31}$.\n\n-----Examples-----\nSample Input 1:\n4 4 0 3\n0 1 4 10\n1 2 2 10\n0 2 4 30\n2 3 4 10\nSample Output 1:\n4 140\n\nSample Input 2:\n2 1 0 1\n0 1 1000 100\nSample Output 2:\n1000 100000",
-    "test_case": "{\n    \"inputs\": [\n        \"4 4 0 3\\n0 1 4 10\\n1 2 2 10\\n0 2 4 30\\n2 3 4 10\\n\",\n        \"2 1 0 1\\n0 1 1000 100\\n\",\n        \"2 1 1 0\\n0 1 1000 100\\n\"\n    ],\n    \"outputs\": [\n        \"4 140\\n\",\n        \"1000 100000\\n\",\n        \"0 0\\n\"\n    ]\n}",
-    "dataset": "apps",
-    "tags": [
-        "reasoning/coding"
-    ]
-}

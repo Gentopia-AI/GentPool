@@ -1,7 +1,0 @@
-{
-    "problem": "Sort the following words alphabetically: List: alleviate duopoly mattress gland benelux townsmen buoyant klaxon hardbound tomography felice gunk",
-    "solution": "alleviate benelux buoyant duopoly felice gland gunk hardbound klaxon mattress tomography townsmen",
-    "tags": [
-        "reasoning/commonsense"
-    ]
-}

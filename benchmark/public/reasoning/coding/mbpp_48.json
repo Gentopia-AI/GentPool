@@ -1,8 +1,0 @@
-{
-    "problem": "Write a python function to accept the strings which contains all vowels.\n\nYour code should pass these tests:\n\nassert check(\"SEEquoiaL\") == 'accepted'\nassert check('program') == \"not accepted\"\nassert check('fine') == \"not accepted\"\n\n",
-    "test_case": "assert check(\"SEEquoiaL\") == 'accepted'\nassert check('program') == \"not accepted\"\nassert check('fine') == \"not accepted\"",
-    "dataset": "mbpp",
-    "tags": [
-        "reasoning/coding"
-    ]
-}

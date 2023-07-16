@@ -1,8 +1,0 @@
-{
-    "problem": "Write a function to remove characters from the first string which are present in the second string.\n\nYour code should pass these tests:\n\nassert remove_dirty_chars(\"probasscurve\", \"pros\") == 'bacuve'\nassert remove_dirty_chars(\"digitalindia\", \"talent\") == 'digiidi'\nassert remove_dirty_chars(\"exoticmiles\", \"toxic\") == 'emles' \n\n",
-    "test_case": "assert remove_dirty_chars(\"probasscurve\", \"pros\") == 'bacuve'\nassert remove_dirty_chars(\"digitalindia\", \"talent\") == 'digiidi'\nassert remove_dirty_chars(\"exoticmiles\", \"toxic\") == 'emles' ",
-    "dataset": "mbpp",
-    "tags": [
-        "reasoning/coding"
-    ]
-}

@@ -1,7 +1,0 @@
-{
-    "problem": "Jordan has a new hit song on Spotify. 3 months are left in the year, and she currently has 60,000 listens. If the number of listens per month doubles, how many listens will the song have by the end of the year?",
-    "solution": "In the first month, the song will have 60,000 * 2 = <<60000*2=120000>>120,000 listens.\nIn the second month, the song will have 120000 * 2 = <<120000*2=240000>>240,000 listens.\nIn the third month, the song will have 240000 * 2 = <<240000*2=480000>>480,000 listens.\nBy the end of the year Jordan's song will have a total of 60,000 + 120,000 + 240,000 + 480,000 = <<60000+120000+240000+480000=900000>>900,000 listens.\n#### 900000",
-    "tags": [
-        "reasoning/math"
-    ]
-}

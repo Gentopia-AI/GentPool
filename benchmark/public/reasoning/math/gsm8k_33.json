@@ -1,7 +1,0 @@
-{
-    "problem": "Colin ran his first mile in 6 minutes.  He ran his next two miles in 5 minutes each and finished his 4th mile in 4 minutes.  What was the average time it took him to run a mile?",
-    "solution": "His first mile was in 6 minutes, then 5 minutes, another 5 minutes and his final mile was 4 minutes so it took him 6+5+5+4 = <<6+5+5+4=20>>20 minutes\nIt took 20 minutes to run 4 miles so his average time was 20/4 = <<20/4=5>>5 minutes per mile\n#### 5",
-    "tags": [
-        "reasoning/math"
-    ]
-}

@@ -1,7 +1,0 @@
-{
-    "problem": "Edmund owns a gift wrapping shop, he uses 18 inches of gift wrapper per gift box. If Edmund has 90 inches of gift wrapper per day, how many gift boxes will he be able to wrap every 3 days?",
-    "solution": "Edmund can wrap 90/18 = <<90/18=5>>5 gift boxes per day.\nTherefore, he will be able to wrap 5 x 3= <<5*3=15>>15 gift boxes every 3 days.\n#### 15",
-    "tags": [
-        "reasoning/math"
-    ]
-}

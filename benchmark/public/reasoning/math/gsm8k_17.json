@@ -1,7 +1,0 @@
-{
-    "problem": "Ara joined the school basketball team four years ago. She has been playing 40 games every year. If her score for every game is 21 points, calculate the total number of points she has scored in the four years.",
-    "solution": "Forty games every year translates to 40*4 = <<40*4=160>>160 games in four years.\nIf Ara scores 21 points in each game, she has scored 160*21 = <<21*160=3360>>3360 points\n#### 3360",
-    "tags": [
-        "reasoning/math"
-    ]
-}

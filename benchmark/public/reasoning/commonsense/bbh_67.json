@@ -1,7 +1,0 @@
-{
-    "problem": "Which statement is sarcastic?\nOptions:\n(A) So he's planning to continue leaving useless space junk in orbit literally just because he can. What a horrible person\n(B) So he's planning to continue leaving useless space junk in orbit literally just because he can. What a brilliant person",
-    "solution": "(B)",
-    "tags": [
-        "reasoning/commonsense"
-    ]
-}

@@ -1,8 +1,0 @@
-{
-    "problem": "Write a python function to check whether an array can be sorted or not by picking only the corner elements.\n\nYour code should pass these tests:\n\nassert check([3,2,1,2,3,4],6) == True\nassert check([2,1,4,5,1],5) == True\nassert check([1,2,2,1,2,3],6) == True\n\n",
-    "test_case": "assert check([3,2,1,2,3,4],6) == True\nassert check([2,1,4,5,1],5) == True\nassert check([1,2,2,1,2,3],6) == True",
-    "dataset": "mbpp",
-    "tags": [
-        "reasoning/coding"
-    ]
-}

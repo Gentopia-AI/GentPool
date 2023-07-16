@@ -1,8 +1,0 @@
-{
-    "problem": "\n\ndef triangle_area(a, h):\n    \"\"\"Given length of a side and high return area for a triangle.\n    >>> triangle_area(5, 3)\n    7.5\n    \"\"\"\n",
-    "test_case": "\n\nMETADATA = {}\n\n\ndef check(candidate):\n    assert candidate(5, 3) == 7.5\n    assert candidate(2, 2) == 2.0\n    assert candidate(10, 8) == 40.0\n\n\ncheck(triangle_area)",
-    "dataset": "humaneval",
-    "tags": [
-        "reasoning/coding"
-    ]
-}

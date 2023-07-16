@@ -1,8 +1,0 @@
-{
-    "problem": "Rookie Bunny is helping the motor vehicle department to renew licenses for its customers. She works at the ticket machine and gives tickets to customers to tell them at which counters they will be served. There are two counters providing service in the office today. The two counters will be open for at most $s_1$ and $s_2$ minutes respectively.\n\nThere are $n$ customers waiting in a line in front of the ticket machine. Every customer can be served at either counter. The $j$th customer needs $t_ j$ minutes at a counter. If neither counter has $t_ j$ minutes till its closing time, then the customer has to leave and come back tomorrow. Besides, all customers in the line behind the $j$th customer have to leave to respect the order of the line and avoid customer complaints.\n\nRookie Bunny may assign each customer in the line to either counter of her choice. She would like to maximize the number of customers that can be served today.\n\n-----Input-----\nThe first line has three positive integers $n$, $s_1$, and $s_2$ ($n \\leq 1000, s_1 \\cdot s_2 \\leq 10^{7}$). The second line has $n$ integers. The $j$th integer is $t_ j$ ($1 \\leq t_ j \\leq 10^6$).\n\n-----Output-----\nOutput the maximum number of customers that can be served today.\n\n-----Examples-----\nSample Input:\n5 20 20\n7 11 9 12 2\nSample Output:\n4",
-    "test_case": "{\n    \"inputs\": [\n        \"5 20 20\\n7 11 9 12 2\\n\",\n        \"5 100 100\\n101 1 1 1 1\\n\"\n    ],\n    \"outputs\": [\n        \"4\\n\",\n        \"0\\n\"\n    ]\n}",
-    "dataset": "apps",
-    "tags": [
-        "reasoning/coding"
-    ]
-}

@@ -1,8 +1,0 @@
-{
-    "problem": "Write a python function to check whether the given string is a binary string or not.\n\nYour code should pass these tests:\n\nassert check(\"01010101010\") == \"Yes\"\nassert check(\"name0\") == \"No\"\nassert check(\"101\") == \"Yes\"\n\n",
-    "test_case": "assert check(\"01010101010\") == \"Yes\"\nassert check(\"name0\") == \"No\"\nassert check(\"101\") == \"Yes\"",
-    "dataset": "mbpp",
-    "tags": [
-        "reasoning/coding"
-    ]
-}

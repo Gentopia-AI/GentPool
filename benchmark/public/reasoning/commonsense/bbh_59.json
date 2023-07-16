@@ -1,7 +1,0 @@
-{
-    "problem": "\"Here comes a perfectly valid argument: First premise: Whatever is ingredient of Concealer is at least one of these: an ingredient of HEART SHAPED BALM, an ingredient of Goth Fairy or an ingredient of Love Me Like A Wimp. Second premise: Being an ingredient of Clarifying Mask is necessary for being an ingredient of Goth Fairy. Third premise: Being an ingredient of HEART SHAPED BALM is sufficient for being an ingredient of Clarifying Mask. Fourth premise: Every ingredient of Love Me Like A Wimp is an ingredient of Clarifying Mask. So, necessarily, being an ingredient of Concealer is sufficient for being an ingredient of Clarifying Mask.\"\nIs the argument, given the explicitly stated premises, deductively valid or invalid?\nOptions:\n- valid \n- invalid",
-    "solution": "valid",
-    "tags": [
-        "reasoning/commonsense"
-    ]
-}

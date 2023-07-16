@@ -1,7 +1,0 @@
-{
-    "problem": "Is the following sentence plausible? \"Luis Robert was out at second.\"",
-    "solution": "yes",
-    "tags": [
-        "reasoning/commonsense"
-    ]
-}

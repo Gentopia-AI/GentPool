@@ -1,7 +1,0 @@
-{
-    "problem": "Is the following sentence plausible? \"Aleksander Barkov passed the puck.\"",
-    "solution": "yes",
-    "tags": [
-        "reasoning/commonsense"
-    ]
-}

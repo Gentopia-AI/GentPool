@@ -1,8 +1,0 @@
-{
-    "problem": "Write a python function to find the cube sum of first n even natural numbers.\n\nYour code should pass these tests:\n\nassert cube_Sum(2) == 72\nassert cube_Sum(3) == 288\nassert cube_Sum(4) == 800\n\n",
-    "test_case": "assert cube_Sum(2) == 72\nassert cube_Sum(3) == 288\nassert cube_Sum(4) == 800",
-    "dataset": "mbpp",
-    "tags": [
-        "reasoning/coding"
-    ]
-}

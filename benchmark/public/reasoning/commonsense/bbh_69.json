@@ -1,7 +1,0 @@
-{
-    "problem": "Sort the following words alphabetically: List: yuh edt cheddar oblivion from poignant pang",
-    "solution": "cheddar edt from oblivion pang poignant yuh",
-    "tags": [
-        "reasoning/commonsense"
-    ]
-}

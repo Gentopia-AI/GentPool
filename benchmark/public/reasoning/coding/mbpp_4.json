@@ -1,8 +1,0 @@
-{
-    "problem": "Write a python function to find the sum of hamming distances of all consecutive numbers from o to n.\n\nYour code should pass these tests:\n\nassert Total_Hamming_Distance(4) == 7\nassert Total_Hamming_Distance(2) == 3\nassert Total_Hamming_Distance(5) == 8\n\n",
-    "test_case": "assert Total_Hamming_Distance(4) == 7\nassert Total_Hamming_Distance(2) == 3\nassert Total_Hamming_Distance(5) == 8",
-    "dataset": "mbpp",
-    "tags": [
-        "reasoning/coding"
-    ]
-}

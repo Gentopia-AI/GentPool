@@ -1,8 +1,0 @@
-{
-    "problem": "Write a function to sum elements in two lists.\n\nYour code should pass these tests:\n\nassert sum_list([10,20,30],[15,25,35])==[25,45,65]\nassert sum_list([1,2,3],[5,6,7])==[6,8,10]\nassert sum_list([15,20,30],[15,45,75])==[30,65,105]\n\n",
-    "test_case": "assert sum_list([10,20,30],[15,25,35])==[25,45,65]\nassert sum_list([1,2,3],[5,6,7])==[6,8,10]\nassert sum_list([15,20,30],[15,45,75])==[30,65,105]",
-    "dataset": "mbpp",
-    "tags": [
-        "reasoning/coding"
-    ]
-}

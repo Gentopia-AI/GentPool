@@ -1,7 +1,0 @@
-{
-    "problem": "True and not True or False and True is",
-    "solution": "False",
-    "tags": [
-        "reasoning/commonsense"
-    ]
-}

@@ -1,8 +1,0 @@
-{
-    "problem": "Write a function to concatenate all elements of the given list into a string.\n\nYour code should pass these tests:\n\nassert concatenate_elements(['hello','there','have','a','rocky','day'] ) == '  hello there have a rocky day'\nassert concatenate_elements([ 'Hi', 'there', 'How','are', 'you'] ) == '  Hi there How are you'\nassert concatenate_elements([ 'Part', 'of', 'the','journey', 'is', 'end'] ) == '  Part of the journey is end'\n\n",
-    "test_case": "assert concatenate_elements(['hello','there','have','a','rocky','day'] ) == '  hello there have a rocky day'\nassert concatenate_elements([ 'Hi', 'there', 'How','are', 'you'] ) == '  Hi there How are you'\nassert concatenate_elements([ 'Part', 'of', 'the','journey', 'is', 'end'] ) == '  Part of the journey is end'",
-    "dataset": "mbpp",
-    "tags": [
-        "reasoning/coding"
-    ]
-}

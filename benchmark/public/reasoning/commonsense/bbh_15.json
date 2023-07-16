@@ -1,7 +1,0 @@
-{
-    "problem": "((0 * 8 - -9 * 6) - (-3 * -9 * -1 - 7)) =",
-    "solution": "88",
-    "tags": [
-        "reasoning/commonsense"
-    ]
-}

@@ -1,7 +1,0 @@
-{
-    "problem": "Lilah's family gallery has 400 photos. On a two-day trip to the Grand Canyon, they took half as many photos they have in the family's gallery on the first day and 120 more photos than they took on the first day on the second day. If they added all these photos to the family gallery, calculate the total number of photos in the gallery.",
-    "solution": "On their first day to the grand canyon, the family took half as many photos as the ones they have in the gallery, meaning they took 1/2*400 = <<400/2=200>>200 photos.\nThe total number of photos if they add the ones they took on the first day to the family's gallery is 400+200 = <<400+200=600>>600\nOn the second day, they took 120 more photos than they took on the first day, a total of 200+120 = <<200+120=320>>320 photos.\nAfter adding the photos they took on the second day to the galley, the number of photos will be 600+320 = <<600+320=920>>920\n#### 920",
-    "tags": [
-        "reasoning/math"
-    ]
-}

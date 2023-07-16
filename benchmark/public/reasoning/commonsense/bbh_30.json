@@ -1,7 +1,0 @@
-{
-    "problem": "Is the following sentence plausible? \"Malcolm Brogdon eurostepped to the basket in the NBA Championship.\"",
-    "solution": "yes",
-    "tags": [
-        "reasoning/commonsense"
-    ]
-}

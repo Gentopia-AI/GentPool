@@ -1,7 +1,0 @@
-{
-    "problem": "问题：下列实验操作或方法, 目的可实现的是\n\n\\begin{tabular}{|l|l|l|}\n\\hline & 操作或方法 & 实验目的 \\\\\n\\hline A & 向末知弱酸性试液中滴加含有 $\\mathrm{SCN}^{-}$的溶液 & 确证试液中 $\\mathrm{Fe}^{2+}$ 存在 \\\\\n\\hline B & $\\begin{array}{l}\\text { 等体积 } 0.1 \\mathrm{~mol} \\cdot \\mathrm{L}^{-1} \\mathrm{Ag}^{+} \\text {和 }\\left[\\mathrm{Ag}\\left(\\mathrm{NH}_{3}\\right)_{2}\\right]^{+} \\text {溶液分别与大 } \\\\\n\\text { 量 } 1 \\mathrm{~mol} \\cdot \\mathrm{L}^{-1} \\text { 葡萄糖碱性溶液形成银镜 }\\end{array}$ & $\\begin{array}{l}\\text { 判断多步过程中, 分步反应 } \\\\\n\\text { 速率与浓度的关系 }\\end{array}$ \\\\\n\\hline C & $\\begin{array}{l}\\text { 稀 } \\mathrm{H}_{2} \\mathrm{SO}_{4} \\text { 酸化 } \\mathrm{n}\\left(\\mathrm{KBrO}_{3}\\right): \\mathrm{n}(\\mathrm{KBr})=1: 5 \\text { 的混合液替 } \\\\\n\\text { 代溴水 }\\end{array}$ & 降低液溴的财存与使用风险 \\\\\n\\hline $\\mathrm{D}$ & $\\begin{array}{l}\\text { 向 } 0.1 \\mathrm{~mol}^{2} \\mathrm{~L}^{-1} \\mathrm{Na}_{2} \\mathrm{~S}_{2} \\mathrm{O}_{3} \\text { 溶液中缓慢滴加 } 0.2 \\mathrm{~mol} \\cdot \\mathrm{L}^{-1} \\\\\n\\text { 盐酸 }\\end{array}$ & $\\begin{array}{l}\\text { 由浑浊情况测定单质硫的溶 } \\\\\n\\text { 解度 }\\end{array}$ \\\\\n\\hline\n\\end{tabular} 选项：(A)A (B)$\\mathrm{B}$ (C)C (D)D\n答案：从A到D, 我们应选择",
-    "solution": "C",
-    "tags": [
-        "knowledge/domain_specific_knowledge"
-    ]
-}

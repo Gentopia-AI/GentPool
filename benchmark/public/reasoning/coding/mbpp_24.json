@@ -1,8 +1,0 @@
-{
-    "problem": "Write a python function to check whether the length of the word is even or not.\n\nYour code should pass these tests:\n\nassert word_len(\"program\") == False\nassert word_len(\"solution\") == True\nassert word_len(\"data\") == True\n\n",
-    "test_case": "assert word_len(\"program\") == False\nassert word_len(\"solution\") == True\nassert word_len(\"data\") == True",
-    "dataset": "mbpp",
-    "tags": [
-        "reasoning/coding"
-    ]
-}

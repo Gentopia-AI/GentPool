@@ -1,8 +1,0 @@
-{
-    "problem": "Consider a square grid with lamps in fixed locations. Each lamp can either illuminate its row or its column, but not both. The illumination of each lamp extends over a limited distance.\n\nAny square in the grid should only be illuminated by at most one lamp in its row and by at most one lamp in its column (one of each is acceptable, as is just the row, just the column, or neither). Determine if it is possible for all lamps to be lit while satisfying these constraints.\n\n-----Input-----\nEach input will consist of a single test case. Note that your program may be run multiple times on different inputs. The first line of input contains three positive integers, $n$, $r$ and $k$ ($1 \\le n, r, k \\le 1000, k \\le n^2$), where $n$ is the size of one side of the square grid, $r$ is the maximum reach of a lamp, and $k$ is the number of lamps. The next $k$ lines will each contain two positive integers $i$ and $j$ ($1 \\le i, j \\le n$), indicating that there is a lamp in the grid at row $i$, column $j$.\n\nEach lamp can illuminate squares at most $r$ units away, and can also illuminate its own square, so the maximum number of squares it can illuminate is $2 r + 1$. All lamps will be in distinct locations.\n\n-----Output-----\nOutput a single integer, $1$ if it is possible to light all of the lamps and $0$ if it is not possible.\n\n-----Examples-----\nSample Input:\n3 2 5\n1 1\n1 3\n3 1\n3 3\n2 2\nSample Output:\n1",
-    "test_case": "{\n    \"inputs\": [\n        \"3 2 5\\n1 1\\n1 3\\n3 1\\n3 3\\n2 2\\n\",\n        \"3 2 6\\n1 1\\n1 2\\n1 3\\n3 1\\n3 2\\n3 3\\n\"\n    ],\n    \"outputs\": [\n        \"1\\n\",\n        \"0\\n\"\n    ]\n}",
-    "dataset": "apps",
-    "tags": [
-        "reasoning/coding"
-    ]
-}

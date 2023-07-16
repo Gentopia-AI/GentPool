@@ -1,7 +1,0 @@
-{
-    "problem": "There are 100 lions in Londolozi at first. If lion cubs are born at the rate of 5 per month and lions die at the rate of 1 per month, how many lions will there be in Londolozi after 1 year?",
-    "solution": "There are 5-1=<<5-1=4>>4 more lions each month.\nThere will be 4*12=<<4*12=48>>48 more lions after 1 year.\nThere will be 100+48=<<100+48=148>>148 lions in Londolozi after 1 year.\n#### 148",
-    "tags": [
-        "reasoning/math"
-    ]
-}

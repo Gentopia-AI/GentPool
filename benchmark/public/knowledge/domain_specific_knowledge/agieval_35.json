@@ -1,7 +1,0 @@
-{
-    "problem": "Q: Given that $\\displaystyle {{\\left((3!)!\\right)!}\\over{3!}}= k\\cdot\nn!$, where $k$ and $n$ are positive integers and $n$ is as large as possible, find $k+n$.\nA: The answer is",
-    "solution": "839",
-    "tags": [
-        "knowledge/domain_specific_knowledge"
-    ]
-}

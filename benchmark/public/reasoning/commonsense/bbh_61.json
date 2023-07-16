@@ -1,7 +1,0 @@
-{
-    "problem": "How would a typical person answer each of the following questions about causation?\nA bear and a hedgehog were shown a box full of colored pencils. Only bears were allowed to take pencils, whereas hedgehogs were not allowed to take them. The hedgehog was absent when the new rule about pencil use was announced. Therefore, the hedgehog did not know about the new norm. Both animals alternately took pencils out of the box six times. At last, the hedgehog and the bear came to the box and simultaneously took a pencil. A short time later, another animal, a polar bear, approached the box seeking a pencil to do his homework with. However, there were no pencils left in the box. The polar bear could not finish his homework. Did the hedgehog cause the problem?\nOptions:\n- Yes\n- No",
-    "solution": "Yes",
-    "tags": [
-        "reasoning/commonsense"
-    ]
-}

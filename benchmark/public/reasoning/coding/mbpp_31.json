@@ -1,8 +1,0 @@
-{
-    "problem": "Write a function to calculate the sum of all digits of the base to the specified power.\n\nYour code should pass these tests:\n\nassert power_base_sum(2,100)==115\nassert power_base_sum(8,10)==37\nassert power_base_sum(8,15)==62\n\n",
-    "test_case": "assert power_base_sum(2,100)==115\nassert power_base_sum(8,10)==37\nassert power_base_sum(8,15)==62",
-    "dataset": "mbpp",
-    "tags": [
-        "reasoning/coding"
-    ]
-}

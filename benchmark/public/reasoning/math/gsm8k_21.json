@@ -1,7 +1,0 @@
-{
-    "problem": "Harry is joining a marathon that's why he practices and varies his workouts from day to day. He ran 10 meters per hour on Monday. From Tuesday to Thursday he ran 50% faster than on Monday. Then on Friday, he ran 60% faster than he ran on Thursday. How fast did Harry run on Friday?",
-    "solution": "Harry ran 10 x 50/100 = <<10*50/100=5>>5 meters per hour faster on Tuesday to Wednesday.\nSo he ran 10 + 5 = <<10+5=15>>15 meters per hour from Tuesday to Thursday.\nThen on Friday, he ran 15 x 60/100 = <<15*60/100=9>>9 meters per hour more.\nTherefore, he ran 15 + 9 = <<15+9=24>>24 meters per hour on Friday.\n#### 24",
-    "tags": [
-        "reasoning/math"
-    ]
-}

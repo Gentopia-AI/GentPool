@@ -1,8 +1,0 @@
-{
-    "problem": "Write a function to find the perimeter of a pentagon.\n\nYour code should pass these tests:\n\nassert perimeter_pentagon(5)==25\nassert perimeter_pentagon(10)==50\nassert perimeter_pentagon(15)==75\n\n",
-    "test_case": "assert perimeter_pentagon(5)==25\nassert perimeter_pentagon(10)==50\nassert perimeter_pentagon(15)==75",
-    "dataset": "mbpp",
-    "tags": [
-        "reasoning/coding"
-    ]
-}

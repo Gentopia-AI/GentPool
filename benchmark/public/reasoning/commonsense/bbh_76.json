@@ -1,7 +1,0 @@
-{
-    "problem": "Alice, Bob, and Claire are dancers at a square dance. At the start of a song, they each have a partner: Alice is dancing with Rodrigo, Bob is dancing with Jamie, and Claire is dancing with Lola.\nThroughout the song, the dancers often trade partners. First, Claire and Alice switch partners. Then, Bob and Claire switch partners. Finally, Claire and Alice switch partners. At the end of the dance, Claire is dancing with\nOptions:\n(A) Rodrigo\n(B) Jamie\n(C) Lola",
-    "solution": "(C)",
-    "tags": [
-        "reasoning/commonsense"
-    ]
-}

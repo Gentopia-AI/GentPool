@@ -1,7 +1,0 @@
-{
-    "problem": "There are 90 students who have lunch during period 5. Today, two-thirds of the students sat in the cafeteria, while the remainder sat at the covered picnic tables outside. But some yellow-jackets were attracted to their food, and so one-third of the students outside jumped up and ran inside to the cafeteria, while 3 of the students in the cafeteria went outside to see what all the fuss was about. How many students are now in the cafeteria?",
-    "solution": "Originally, there were 90*2/3=<<90*2/3=60>>60 in the cafeteria.\nOriginally, there were 90-60=<<90-60=30>>30 outside the cafeteria.\nThen 30*1/3=<<30*1/3=10>>10 ran inside\nThe number of students inside the cafeteria grew by 10-3=<<10-3=7>>7.\nThere are now 60+7=<<60+7=67>>67 students in the cafeteria.\n#### 67",
-    "tags": [
-        "reasoning/math"
-    ]
-}

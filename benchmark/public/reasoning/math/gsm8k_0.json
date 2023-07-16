@@ -1,7 +1,0 @@
-{
-    "problem": "The Kwik-e-Tax Center charges $50 for a federal return, $30 for a state return, and $80 for quarterly business taxes. If they sell 60 federal returns, 20 state returns, and 10 quarterly returns in one day, what was their total revenue for the day?",
-    "solution": "First find the total income from the federal returns: $50/return * 60 returns = $<<50*60=3000>>3000\nThen find the total income from the state returns: $30/return * 20 returns = $<<30*20=600>>600\nThen find the total income from the quarterly returns: $80/return * 10 returns = $<<80*10=800>>800\nThen add the income from each source to find their total income: $3000 + $600 + $800 = $<<3000+600+800=4400>>4400\n#### 4400",
-    "tags": [
-        "reasoning/math"
-    ]
-}

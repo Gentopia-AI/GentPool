@@ -1,7 +1,0 @@
-{
-    "problem": "Hannah comes home from work to find her older son taped her younger son to a chair with 22 strands of duct tape. If Hannah can cut 8 strands per minute and her son can cut 3 strands per minute, how long will it take them to free her younger son?",
-    "solution": "First find the total number of strands the two of them can cut per minute: 8 strands + 3 strands = <<8+3=11>>11 strands\nThen divide the total number of strands by the number of strands they cut per minute to find the number of minutes it takes to cut all the strands: 22 strands / 11 strands/minute = <<22/11=2>>2 minutes\n#### 2",
-    "tags": [
-        "reasoning/math"
-    ]
-}

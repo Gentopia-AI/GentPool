@@ -1,8 +1,0 @@
-{
-    "problem": "The people of Absurdistan discovered how to build roads only last year. After the discovery, each city decided to build its own road, connecting the city with some other city. Each newly built road can be used in both directions.\n\nAbsurdistan is full of absurd coincidences. It took all $N$ cities precisely one year to build their roads. And even more surprisingly, when the roads were finished it was possible to travel from every city to any other city using the newly built roads. We say that such a road network is connected. Being interested in mathematics and probability, you started wondering how unlikely this coincidence really is.\n\n-----Task-----\nEach city picked uniformly at random another city to which they built a road. Calculate the probability that the road network ends up being connected.\n\n-----Input-----\nThe first line contains an integer $N$ $(2\\le N\\le 140)$ – the number of cities.\n\n-----Output-----\nOutput one line containing a floating point number denoting the probability that the randomly built road network with $N$ cities and $N$ roads is connected. Your answer should have an absolute error of at most $10^{-8}$.\n\n-----Examples-----\nSample Input:\n4\nSample Output:\n0.962962962963",
-    "test_case": "{\n    \"inputs\": [\n        \"4\\n\",\n        \"2\\n\"\n    ],\n    \"outputs\": [\n        \"0.962962962963\\n\",\n        \"1.000000000000\\n\"\n    ]\n}",
-    "dataset": "apps",
-    "tags": [
-        "reasoning/coding"
-    ]
-}

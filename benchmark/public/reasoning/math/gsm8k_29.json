@@ -1,7 +1,0 @@
-{
-    "problem": "A truck driver has to spend $2 per gallon of gas. She can drive 10 miles per gallon. She drives at a rate of 30 miles per hour. If she is paid $.50 per mile, how much money does she make if she drives for 10 hours?",
-    "solution": "The truck driver drives for 10 hours at 30 miles per hour, so she drives 10*30=<<10*30=300>>300 miles.\nTherefore, she needs 300/10=<<300/10=30>>30 gallons of gas.\nThis will cost her 30*$2=$<<30*2=60>>60.\nShe will make 300*$.50= $<<300*.50=150>>150.\nThus, after paying for gas, she will make $150-$60=$<<150-60=90>>90.\n#### 90",
-    "tags": [
-        "reasoning/math"
-    ]
-}

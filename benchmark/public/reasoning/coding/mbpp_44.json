@@ -1,8 +1,0 @@
-{
-    "problem": "Write a function to toggle characters case in a string.\n\nYour code should pass these tests:\n\nassert toggle_string(\"Python\")==(\"pYTHON\")\nassert toggle_string(\"Pangram\")==(\"pANGRAM\")\nassert toggle_string(\"LIttLE\")==(\"liTTle\")\n\n",
-    "test_case": "assert toggle_string(\"Python\")==(\"pYTHON\")\nassert toggle_string(\"Pangram\")==(\"pANGRAM\")\nassert toggle_string(\"LIttLE\")==(\"liTTle\")",
-    "dataset": "mbpp",
-    "tags": [
-        "reasoning/coding"
-    ]
-}

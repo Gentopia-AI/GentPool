@@ -1,7 +1,0 @@
-{
-    "problem": "Q: Suppose that $a$ and $b$ are positive real numbers, and let \\[f(x) =\n\\begin{cases}\n\\frac{a}{b}x & \\text{ if }x\\le-4, \\\\\nabx^2 & \\text{ if }x>-4.\n\\end{cases}\n\\]If $f(-4)=-\\frac{60}{13}$ and $f(4)=3120$, what is $a+b$?\nA: The answer is",
-    "solution": "28",
-    "tags": [
-        "knowledge/domain_specific_knowledge"
-    ]
-}

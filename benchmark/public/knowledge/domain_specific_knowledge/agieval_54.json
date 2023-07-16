@@ -1,7 +1,0 @@
-{
-    "problem": "Placebo effect\" refers to the phenomenon of letting patients take fake drugs that have no effect at all without knowing it, but they can get the same or better effects than real drugs.The \"placebo effect\" has been supported by many clinical studies.One explanation for this phenomenon is that human expectations for the future will change the physiological state of the brain, which in turn will cause physiological changes throughout the body.Q: The following statements can support the above explanation, except Answer Choices: (A)The placebo effect is the result of a combination of factors. (B)Placebo has no effect on Alzheimer's patients who have lost their expected future abilities. (C)Some patients do not believe that the treatment will be effective.Although they have been treated normally, their condition has worsened. (D)Inject the subject with normal saline and make him believe that it is an analgesic.The subject's brain then secretes the analgesic endorphin.\nA: Among A through D, the answer is",
-    "solution": "C",
-    "tags": [
-        "knowledge/domain_specific_knowledge"
-    ]
-}

@@ -1,7 +1,0 @@
-{
-    "problem": "Q: Find the minimum value of\n\\[\\frac{x^7 + 32x^2 + 128}{x^3}\\]for $x > 0.$\nA: The answer is",
-    "solution": "48",
-    "tags": [
-        "knowledge/domain_specific_knowledge"
-    ]
-}

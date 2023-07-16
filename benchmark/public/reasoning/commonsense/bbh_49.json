@@ -1,7 +1,0 @@
-{
-    "problem": "((1 * -9 - 4 + -9) + (-1 + -6 + 9 - 5)) =",
-    "solution": "-25",
-    "tags": [
-        "reasoning/commonsense"
-    ]
-}

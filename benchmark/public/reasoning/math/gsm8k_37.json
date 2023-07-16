@@ -1,7 +1,0 @@
-{
-    "problem": "Jennifer wants to go to a museum. There is one 5 miles away from her home and one 15 miles away. If Jennifer goes to both museums on two separate days, how many miles total will she travel?",
-    "solution": "Jennifer's home is 5 miles away from the first museum, so the round trip back and forth is 5 miles there + 5 miles back = <<5+5=10>>10 miles altogether.\nOn another day Jennifer goes to a museum 15 miles away + 15 miles to return home = <<15+15=30>>30 miles total.\nCombined, Jennifer travels 10 miles on the first day + 30 miles on the second day = <<10+30=40>>40 miles Jennifer travels total.\n#### 40",
-    "tags": [
-        "reasoning/math"
-    ]
-}

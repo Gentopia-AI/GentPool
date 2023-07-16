@@ -1,8 +1,0 @@
-{
-    "problem": "Write a python function to remove all digits from a list of strings.\n\nYour code should pass these tests:\n\nassert remove(['4words', '3letters', '4digits']) == ['words', 'letters', 'digits']\nassert remove(['28Jan','12Jan','11Jan']) == ['Jan','Jan','Jan']\nassert remove(['wonder1','wonder2','wonder3']) == ['wonder','wonder','wonder']\n\n",
-    "test_case": "assert remove(['4words', '3letters', '4digits']) == ['words', 'letters', 'digits']\nassert remove(['28Jan','12Jan','11Jan']) == ['Jan','Jan','Jan']\nassert remove(['wonder1','wonder2','wonder3']) == ['wonder','wonder','wonder']",
-    "dataset": "mbpp",
-    "tags": [
-        "reasoning/coding"
-    ]
-}

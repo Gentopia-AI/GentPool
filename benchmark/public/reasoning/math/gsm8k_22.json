@@ -1,7 +1,0 @@
-{
-    "problem": "If it takes 20 minutes to paint a house, how many houses can you paint in 3 hours?",
-    "solution": "There are 3 hours * 60 minutes/hour =<<3*60=180>>180 minutes in 3 hours\nYou can paint 180 minutes / 20 houses/minute = 9 houses in 3 hours.\n#### 9",
-    "tags": [
-        "reasoning/math"
-    ]
-}

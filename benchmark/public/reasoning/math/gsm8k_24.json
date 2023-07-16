@@ -1,7 +1,0 @@
-{
-    "problem": "Mrs. Brynlee reduced the prices of items in her store by 20% after the local government gave small businesses in her county a subsidy. If the price of a shirt in the store was $60 and that of the leather jacket was $90, calculate the amount of money Teagan will pay for buying 5 shirts and 10 leather jackets at the reduced prices.",
-    "solution": "If the price of a shirt in the store was $60, its price was reduced by 20/100*$60=$<<60*20/100=12>>12\nThe price of a shirt was reduced to $60-$12=$<<60-12=48>>48\nTeagan will pay $48*5= $<<48*5=240>>240 for buying 5 shirts\nIf the initial price of the leather jacket was $90, the price reduced by 20/100*$90=$<<90*0.2=18>>18\nThe final leather jacket after Mrs. Brynlee reduced the price by 20% is $90-$18=$<<90-18=72>>72\nTeagan will pay $72*10= $<<72*10=720>>720 for buying 10 leather jackets\nThe amount of money Teagan paid to Mrs. Brynlee for the shirts and the leather jackets is $720+$240=$<<720+240=960>>960\n#### 960",
-    "tags": [
-        "reasoning/math"
-    ]
-}

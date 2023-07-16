@@ -1,7 +1,0 @@
-{
-    "problem": "There are 480 grains of rice in one cup. If half a cup is 8 tablespoons and one tablespoon is 3 teaspoons, how many grains of rice are in a teaspoon?",
-    "solution": "First find the number of tablespoons in a full cup: 8 tablespoons/half-cup * 2 half-cups/cup = <<8*2=16>>16 tablespoons\nThen find the total number of teaspoons in a cup: 16 tablespoons/cup * 3 teaspoons/tablespoon = <<16*3=48>>48 teaspoons\nThen find the number of grains of rice per teaspoon: 480 grains / 48 teaspoons = <<480/48=10>>10 grains/teaspoon\n#### 10",
-    "tags": [
-        "reasoning/math"
-    ]
-}

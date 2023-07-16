@@ -1,7 +1,0 @@
-{
-    "problem": "((3 - 3 - -3 + -2) + (8 - 2 + -8 - -6)) =",
-    "solution": "5",
-    "tags": [
-        "reasoning/commonsense"
-    ]
-}

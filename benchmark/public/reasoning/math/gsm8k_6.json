@@ -1,7 +1,0 @@
-{
-    "problem": "Jasmine's teacher gives stickers for reward. She was given 15 stickers for participating in class, but she lost 7 stickers during playtime. However, her teacher gave her another 5 stickers for helping her classmates. How many stickers does she have at the end?",
-    "solution": "Jasmine had 15 stickers - 7 stickers = <<15-7=8>>8 stickers after losing 7.\nThen, she now has 8 stickers + 5 stickers = <<8+5=13>>13 stickers at the end.\n#### 13",
-    "tags": [
-        "reasoning/math"
-    ]
-}

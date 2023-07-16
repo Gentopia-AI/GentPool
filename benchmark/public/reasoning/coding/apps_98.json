@@ -1,8 +1,0 @@
-{
-    "problem": "Mirko and Slavko are playing a new game. Again. Slavko starts each round by giving Mirko two numbers $A$ and $B$, both smaller than 100. Mirko then has to slove the following task for Slavko: how to pair all given $A$ numbers with all given $B$ numbers so that the maximal sum of such pairs is as small as possible.\n\nIn other words, if during previous rounds Slavko gave numbers $a_1, a_2 ,a_3, \\ldots , a_ n$ and $b_1, b_2, b_3, \\ldots , b_ n$ , determine $n$ pairings $(a_ i, b_ j)$ such that each number in the $A$ sequence is used in exactly one pairing, each number in the $B$ sequence is used in exactly one pairing, and the maximum of all sums $a_ i + b_ j$ is minimal.\n\n-----Input-----\nThe first line of input contains a single integer $N$ ($1 \\leq N \\leq 100000$), the number of rounds.\n\nThe next $N$ lines contain two integers $A$ and $B$ ($1 \\leq A, B \\leq 100$), the numbers given by Slavko in that round.\n\n-----Output-----\nThe output consists of $N$ lines, one for each round. Each line should contain the smallest maximal sum for that round.\n\n-----Examples-----\nSample Input:\n3\n2 8\n3 1\n1 4\nSample Output:\n10\n10\n9",
-    "test_case": "{\n    \"inputs\": [\n        \"3\\n2 8\\n3 1\\n1 4\\n\",\n        \"3\\n1 1\\n2 2\\n3 3\\n\"\n    ],\n    \"outputs\": [\n        \"10\\n10\\n9\\n\",\n        \"2\\n3\\n4\\n\"\n    ]\n}",
-    "dataset": "apps",
-    "tags": [
-        "reasoning/coding"
-    ]
-}

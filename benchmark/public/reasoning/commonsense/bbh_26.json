@@ -1,7 +1,0 @@
-{
-    "problem": "\"Here comes a perfectly valid argument: To begin with, it is false that Retinyl acetate is an ingredient of Spider Hero Tattoo. Moreover, every ingredient of Peach Whip is an ingredient of Spider Hero Tattoo. It follows that it is false that Retinyl acetate is an ingredient of Peach Whip.\"\nIs the argument, given the explicitly stated premises, deductively valid or invalid?\nOptions:\n- valid \n- invalid",
-    "solution": "valid",
-    "tags": [
-        "reasoning/commonsense"
-    ]
-}

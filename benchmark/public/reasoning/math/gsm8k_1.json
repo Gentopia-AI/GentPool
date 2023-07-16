@@ -1,7 +1,0 @@
-{
-    "problem": "To make a profit of $2000, Isaias has to sell the chickens he planned to take to the market from his farm at $50 per chicken. If Isaias has 300 chickens on his farm and plans to sell 3/5 of them, for how much money did Isaias buy the chicken he took to the market for sale?",
-    "solution": "Isaias plans to sell 3/5*300 = <<3/5*300=180>>180 chickens from his farm.\nTo make his profit, Isaias sells all the chicken he took to the market for $50*180 = $<<50*180=9000>>9000\nThe price at which Isaias bought the chicken is $9000-$2000 = $<<9000-2000=7000>>7000.\n#### 7000",
-    "tags": [
-        "reasoning/math"
-    ]
-}

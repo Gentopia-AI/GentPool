@@ -1,7 +1,0 @@
-{
-    "problem": "If Clover goes for a 1.5-mile walk in the morning and another 1.5-mile walk in the evening, every day, how many miles does he walk in 30 days?",
-    "solution": "He walks 1.5 miles in the morning and 1.5 miles in the evening so that\u2019s 1.5+1.5 = <<1.5+1.5=3>>3 miles\nIf he walks 3 miles everyday, for 30 days then he walks 3*30 = <<3*30=90>>90 miles in 30 days\n#### 90",
-    "tags": [
-        "reasoning/math"
-    ]
-}

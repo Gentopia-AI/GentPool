@@ -1,8 +1,0 @@
-{
-    "problem": "Write a function to find minimum of three numbers.\n\nYour code should pass these tests:\n\nassert min_of_three(10,20,0)==0\nassert min_of_three(19,15,18)==15\nassert min_of_three(-10,-20,-30)==-30\n\n",
-    "test_case": "assert min_of_three(10,20,0)==0\nassert min_of_three(19,15,18)==15\nassert min_of_three(-10,-20,-30)==-30",
-    "dataset": "mbpp",
-    "tags": [
-        "reasoning/coding"
-    ]
-}

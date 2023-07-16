@@ -1,7 +1,0 @@
-{
-    "problem": "Is the following sentence plausible? \"Mike Williams scored a bicycle kick in the FA Cup.\"",
-    "solution": "no",
-    "tags": [
-        "reasoning/commonsense"
-    ]
-}

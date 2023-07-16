@@ -1,7 +1,0 @@
-{
-    "problem": "Mary, Jess, and Christina want to decorate a party room with balloons. Each person inflates balloons at different speeds, and they only have 30 minutes to inflate as many balloons as possible. Mary inflates 10 balloons per minute, Jess inflates 7 balloons per minute and Christina came 15 minutes late and was the slowest one inflating 4 balloons per minute. How many balloons can they inflate before running out of time?",
-    "solution": "Mary will inflate a total of 10 balloons/minute x 30 minutes = <<10*30=300>>300 balloons\nJess will inflate a total of 7 balloons/minute x 30 minutes = <<7*30=210>>210 balloons\nChristina will inflate a total of 4 balloons/minute x 15 minutes = <<4*15=60>>60 balloons\nCombining all balloons, they made 300 balloons + 210 balloons + 60 balloons = <<300+210+60=570>>570 balloons\n#### 570",
-    "tags": [
-        "reasoning/math"
-    ]
-}

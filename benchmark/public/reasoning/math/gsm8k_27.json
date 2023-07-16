@@ -1,7 +1,0 @@
-{
-    "problem": "Amanda and her family are going to re-paint all the walls inside their house. Before they get started they want to divide up the work. Since all the rooms in the house have different numbers and sizes of walls in them, they figure the fairest way to divide up the work is to count all the walls in the house and assign an equal number to each person. There are 5 people in Amanda's family, including herself. There are 9 rooms in the house. 5 of the rooms have 4 walls each. The other 4 rooms each have 5 walls each. To be fair, how many walls should each person in Amanda's family paint?",
-    "solution": "First, Amanda needs to figure out how many walls there are in the house, 5 rooms x 4 walls each = <<5*4=20>>20 walls.\nThe other 4 rooms have x 5 walls each = 20 walls.\nThe house has 20 walls + 20 walls = <<20+20=40>>40 walls total.\nTo divide the work equally between the 5 people, 40 walls / 5 people = <<40/5=8>>8 walls for each person.\n#### 8",
-    "tags": [
-        "reasoning/math"
-    ]
-}

@@ -1,7 +1,0 @@
-{
-    "problem": "Before Marcus went on a road trip to LA, his car had 1728 miles on it. He filled his empty gas tank twice and used up all the gas on the trip. If Marcus's car gets 30 miles per gallon and holds 20 gallons of gas, how many miles does Marcus' car have on it now?",
-    "solution": "First, figure out how many gallons of gas Marcus bought by multiply the gas tank's volume by the number of fill-ups: 20 gallons * 2 = <<20*2=40>>40 gallons\nThen multiply that number by Marcus's fuel mileage to find how many miles he drove: 40 gallons * 30 miles/gallon = <<40*30=1200>>1200 miles\nThen add that amount to the initial number of miles on Marcus' car to find the final number of miles: 1728 miles + 1200 miles = <<1728+1200=2928>>2928 miles\n#### 2928",
-    "tags": [
-        "reasoning/math"
-    ]
-}

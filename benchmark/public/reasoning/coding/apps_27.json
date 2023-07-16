@@ -1,8 +1,0 @@
-{
-    "problem": "“Arrange” is a planetary popular Flash game. In “Arrange” the player is given a permutation of numbers $1$ to $N$ and a list of allowed swaps. He then has to perform a sequence of swaps that transforms the initial permutation back to the ordered sequence $1,2,3,4,5, \\ldots , N$.\n\nIn order to break the high score list, you need to perform the minimum amount of swaps possible. You can’t do that, but you can write a program that does it for you!\n\n-----Input-----\nThe first line of input contains two integers, $N$ ($2 \\le N \\le 11$), the length of the initial sequence and $M$ ($1 \\le M \\le N(N – 1) / 2$), the number of allowed swaps.\n\nThe second line of input contains a permutation of the numbers $1$ to $N$.\n\nThe next $M$ lines contain descriptions of allowed swaps. Each such line contains two distinct numbers $1 \\le A < B \\le N$, indicating that you are allowed to swap the $A$-th number in the sequence with the $B$-th number. The input never contains two identical swaps.\n\nYou may assume that the input is such that a solution exists.\n\n-----Output-----\nOutput the minimum possible number of swaps to transform the permutation to $1, 2, \\ldots , N$.\n\n-----Examples-----\nSample Input 1:\n2 1\n2 1\n1 2\nSample Output 1:\n1\n\nSample Input 2:\n3 2\n2 1 3\n1 3\n2 3\nSample Output 2:\n3",
-    "test_case": "{\n    \"inputs\": [\n        \"2 1\\n2 1\\n1 2\\n\",\n        \"3 2\\n2 1 3\\n1 3\\n2 3\\n\",\n        \"5 5\\n1 2 3 4 5\\n1 5\\n2 5\\n1 4\\n1 2\\n3 5\\n\"\n    ],\n    \"outputs\": [\n        \"1\\n\",\n        \"3\\n\",\n        \"0\\n\"\n    ]\n}",
-    "dataset": "apps",
-    "tags": [
-        "reasoning/coding"
-    ]
-}

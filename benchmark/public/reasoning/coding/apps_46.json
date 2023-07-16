@@ -1,8 +1,0 @@
-{
-    "problem": "Zapray really loves the Algorithmic Problem Solving course, but he is struggling with it. Recently the class studied Longest Increasing Subsequence (LIS). Zapray knows well how to compute the length of LIS for a given sequence. But on the exam paper there appears to be a different question: “We say an element in a sequence is critical, if removing it will cause the sequence’s LIS length to decrease. Can you find all the critical elements in the sequence below?” Zapray soon realizes that this is a much bigger challenge.\n\n-----Input-----\nThe input starts with a single integer $n$ ($2 \\leq n \\leq 10^5$), the length of the given sequence. The next line has $n$ integers giving the numbers in the sequence. The given sequence is a permutation in which each integer from $1$ to $n$ appears exactly once.\n\n-----Output-----\nOutput all critical elements in the sequence in ascending order. If none of the elements are critical, output “-1”.\n\n-----Examples-----\nSample Input 1:\n4\n1 3 2 4\nSample Output 1:\n1 4\n\nSample Input 2:\n5\n1 2 3 4 5\nSample Output 2:\n1 2 3 4 5\n\nSample Input 3:\n4\n2 1 4 3\nSample Output 3:\n-1",
-    "test_case": "{\n    \"inputs\": [\n        \"4\\n1 3 2 4\\n\",\n        \"5\\n1 2 3 4 5\\n\",\n        \"4\\n2 1 4 3\\n\",\n        \"4\\n4 3 1 2\\n\"\n    ],\n    \"outputs\": [\n        \"1 4\\n\",\n        \"1 2 3 4 5\\n\",\n        \"-1\\n\",\n        \"1 2\\n\"\n    ]\n}",
-    "dataset": "apps",
-    "tags": [
-        "reasoning/coding"
-    ]
-}

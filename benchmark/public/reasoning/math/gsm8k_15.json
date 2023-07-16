@@ -1,7 +1,0 @@
-{
-    "problem": "Henrietta is repainting her house. The walls in the living room take up 600 square feet. She has three bedrooms. The walls in each bedroom take up 400 square feet. If one gallon of paint can cover 600 square feet, how many gallons of paint does Henrietta need to paint her house?",
-    "solution": "The total square footage from the three bedrooms is 3 * 400 = <<3*400=1200>>1200 square feet.\nThe total square footage of the house is 1200 + 600 = <<1200+600=1800>>1800 square feet\nHenrietta needs 1800 / 600 = <<1800/600=3>>3 gallons of paint\n#### 3",
-    "tags": [
-        "reasoning/math"
-    ]
-}

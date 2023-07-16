@@ -1,7 +1,0 @@
-{
-    "problem": "问题：最近, 我国为 “长征九号” 研制的大推力新型火箭发动机联试成功, 这标志着我国重型运载火箭的研发取得突破性进展. 若某次实验中该发动机向后喷射的气体 速度约为 $3 \\mathrm{~km} / \\mathrm{s}$, 产生的推力约为 $4.8 \\times 10^{6} \\mathrm{~N}$, 则它在 $1 \\mathrm{~s}$ 时间内喷射的气体质量约为  选项：(A)$1.6 \\times 10^{2} \\mathrm{~kg}$ (B)$1.6 \\times 10^{3} \\mathrm{~kg}$ (C)$1.6 \\times 10^{5} \\mathrm{~kg}$ (D)$1.6 \\times 10^{6} \\mathrm{~kg}$\n答案：从A到D, 我们应选择",
-    "solution": "B",
-    "tags": [
-        "knowledge/domain_specific_knowledge"
-    ]
-}

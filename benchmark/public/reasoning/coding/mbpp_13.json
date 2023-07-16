@@ -1,8 +1,0 @@
-{
-    "problem": "Write a function to convert radians to degrees.\n\nYour code should pass these tests:\n\nassert degree_radian(90)==5156.620156177409\nassert degree_radian(60)==3437.746770784939\nassert degree_radian(120)==6875.493541569878\n\n",
-    "test_case": "assert degree_radian(90)==5156.620156177409\nassert degree_radian(60)==3437.746770784939\nassert degree_radian(120)==6875.493541569878",
-    "dataset": "mbpp",
-    "tags": [
-        "reasoning/coding"
-    ]
-}

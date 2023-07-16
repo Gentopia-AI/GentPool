@@ -1,8 +1,0 @@
-{
-    "problem": "Mr. Lucky has a store that sells numbers. These numbers have an interesting property: each number formed by its first $k$ digits is evenly divisible by $k$, for $k$ from $1$ to $n$, where $n$ is the number of digits in the number. The numbers do not have leading zeroes.\n\nMr. Unlucky wants to open a competing store. Price for lucky numbers is driven by demand and supply, and given by the formula\\[ \\mbox{price} = \\frac{\\mbox{demand}}{\\mbox{supply}} \\]\n\nwhile demand for numbers with $n$ digits is given by the formula\\[ \\mbox{demand} = \\mbox{citySize} \\cdot \\mbox{dayOfMonth} - n^e \\]\n\nwhere $e$ is the base of the natural logarithm. Supply for lucky numbers with $n$ digits is simply the number of lucky numbers with $n$ digits. Help Mr. Unlucky calculate the supply for $n$ digit lucky numbers.\n\n-----Input-----\nThe input is a single integer $n$.\n\n-----Output-----\nOutput the supply for $n$ digit lucky numbers.\n\n-----Limits-----\n - $2 \\leq n \\leq 1000$\n\n-----Examples-----\nSample Input:\n2\nSample Output:\n45",
-    "test_case": "{\n    \"inputs\": [\n        \"2\\n\",\n        \"3\\n\"\n    ],\n    \"outputs\": [\n        \"45\\n\",\n        \"150\\n\"\n    ]\n}",
-    "dataset": "apps",
-    "tags": [
-        "reasoning/coding"
-    ]
-}
