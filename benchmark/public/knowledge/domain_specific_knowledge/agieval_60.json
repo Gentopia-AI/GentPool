@@ -1,0 +1,7 @@
+{
+    "problem": "The vervet monkey will notify the companion with a scream when it finds a carnivore nearby.Vervet monkeys will scream differently depending on whether the danger comes from land or air.Q: If which of the following statements is true, is it most helpful to explain the above behavior of the vervet monkey? Answer Choices: (A)Some terrestrial carnivores only eat vervet monkeys, and raptors attacking vervet monkeys from the air feed on various animals. (B)Vervet monkeys climb onto trees to avoid terrestrial carnivores, and underneath potential leaves to avoid raptors. (C)No predator that poses a danger to vervet monkeys can attack vervet monkeys from both land and air. (D)Different types of carnivores can deal with different numbers of vervet monkeys.\nA: Among A through D, the answer is",
+    "solution": "B",
+    "tags": [
+        "knowledge/domain_specific_knowledge"
+    ]
+}

@@ -1,0 +1,7 @@
+{
+    "problem": "Jacob has half the number of shoes Edward has. Edward has 3 times the number of shoes Brian has. If Brian has 22 pairs of shoes, how many pairs of shoes do they have in total?",
+    "solution": "Edward has 3 * 22 = <<3*22=66>>66 pairs of shoes.\nJacob has 66 / 2 = <<66/2=33>>33 pairs of shoes.\nAll of them have 22 + 66 + 33 = <<22+66+33=121>>121 pairs of shoes in total.\n#### 121",
+    "tags": [
+        "reasoning/math"
+    ]
+}

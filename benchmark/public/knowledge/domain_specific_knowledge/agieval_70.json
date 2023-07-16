@@ -1,0 +1,7 @@
+{
+    "problem": "Q: In triangle $ABC,$ $\\overline{CD}$ is the bisector of angle $C,$ with $D$ on $\\overline{AB}.$  If $\\cos \\frac{C}{2} = \\frac{1}{3}$ and $CD = 6,$ compute\n\\[\\frac{1}{BC} + \\frac{1}{AC}.\\]\nA: The answer is",
+    "solution": "\\frac{1}{9}",
+    "tags": [
+        "knowledge/domain_specific_knowledge"
+    ]
+}

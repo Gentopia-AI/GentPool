@@ -1,0 +1,7 @@
+{
+    "problem": "\"Here comes a perfectly valid argument: First premise: No son of Alexander who is an ancestor of Ahmed is a great-grandfather of Ronny. It follows that no great-grandfather of Ronny is an ancestor of Ahmed or a son of Alexander.\"\nIs the argument, given the explicitly stated premises, deductively valid or invalid?\nOptions:\n- valid \n- invalid",
+    "solution": "invalid",
+    "tags": [
+        "reasoning/commonsense"
+    ]
+}

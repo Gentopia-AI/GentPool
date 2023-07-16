@@ -1,0 +1,8 @@
+{
+    "problem": "Write a python function to count the upper case characters in a given string.\n\nYour code should pass these tests:\n\nassert upper_ctr('PYthon') == 1\nassert upper_ctr('BigData') == 1\nassert upper_ctr('program') == 0\n\n",
+    "test_case": "assert upper_ctr('PYthon') == 1\nassert upper_ctr('BigData') == 1\nassert upper_ctr('program') == 0",
+    "dataset": "mbpp",
+    "tags": [
+        "reasoning/coding"
+    ]
+}

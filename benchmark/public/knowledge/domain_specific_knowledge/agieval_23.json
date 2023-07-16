@@ -1,0 +1,7 @@
+{
+    "problem": "问题：若曲线 $y=(x+a) \\mathrm{e}^{x}$ 有两条过坐标原点的切线, 则 $a$ 的取值范围是 $(\\quad)$.\n答案：",
+    "solution": "$(-\\infty,-4)\\cup(0,+\\infty)$",
+    "tags": [
+        "knowledge/domain_specific_knowledge"
+    ]
+}

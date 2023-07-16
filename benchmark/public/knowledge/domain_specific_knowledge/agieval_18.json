@@ -1,0 +1,7 @@
+{
+    "problem": "问题：等差数列 $\\left\\{a_{n}\\right\\}$ 的前 $n$ 项和为 $S_{n}$, 已知 $S_{10}=0, S_{15}=25$, 则 $n S_{n}$ 的最小值为$(\\quad)$.\n答案：",
+    "solution": "-49",
+    "tags": [
+        "knowledge/domain_specific_knowledge"
+    ]
+}

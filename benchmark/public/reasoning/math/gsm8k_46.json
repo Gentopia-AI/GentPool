@@ -1,0 +1,7 @@
+{
+    "problem": "Sabrina is collecting herbs to make a poultice for her grandmother. She needs twice as many basil leaves as sage leaves and 5 fewer sage leaves than verbena leaves. If she needs 12 basil leaves, how many leaves total does she need?",
+    "solution": "First find the number of sage leaves Sabrina needs: 12 basil / 2 basil/sage = <<12/2=6>>6 sage\nThen add 5 to find the total number of verbena leaves she needs: 6 sage + 5 = <<6+5=11>>11 verbena\nFinally, add up all the different leaves to find the total number: 6 sage + 11 verbena + 12 basil = <<6+11+12=29>>29 leaves\n#### 29",
+    "tags": [
+        "reasoning/math"
+    ]
+}

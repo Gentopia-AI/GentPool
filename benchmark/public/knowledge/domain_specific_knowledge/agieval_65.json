@@ -1,0 +1,7 @@
+{
+    "problem": "Astronomer: I have asserted that our solar system does not contain enough meteoroids and other cosmic debris to have caused the extensive cratering on the far side of the moon. My opponents have repeatedly failed to demonstrate the falsity of this thesis. Their evidence is simply inconclusive; thus they should admit that my thesis is correct.Q: The reasoning in the astronomer's argument is flawed because this argument Answer Choices: (A)criticizes the astronomer's opponents rather than their arguments (B)infers the truth of the astronomer's thesis from the mere claim that it has not been proven false (C)ignores the possibility that alternative explanations may exist for the cratering (D)presumes that the astronomer's thesis should not be subject to rational discussion and criticism (E)fails to precisely define the key word \"meteoroids\"\nA: Among A through E, the answer is",
+    "solution": "B",
+    "tags": [
+        "knowledge/domain_specific_knowledge"
+    ]
+}

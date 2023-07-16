@@ -1,0 +1,7 @@
+{
+    "problem": "Businessperson: Because the parking area directly in front of the building was closed for maintenance today, I was late to my meeting. If the maintenance had been done on a different day, I would have gotten to the meeting on time. After finding out that I could not park in that area it took me 1 5 minutes to find an available parking space, making me a few minutes late.Q: The answer to which one of the following questions would be most useful to know in order to evaluate the reasoning in the businessperson's argument? Answer Choices: (A)What were the reasons for performing maintenance on the parking area directly in front of the building on that particular day? (B)Were any other of the meeting attendees also late to the meeting because they had difficulty finding parking? (C)What are the parking patterns in the building's vicinity on days when the parking area in front of the building is open? (D)Does the businessperson have a tendency to be late to meetings? . (E)Was it particularly important that the businessperson not be late to this meeting?\nA: Among A through E, the answer is",
+    "solution": "C",
+    "tags": [
+        "knowledge/domain_specific_knowledge"
+    ]
+}

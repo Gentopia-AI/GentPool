@@ -1,0 +1,7 @@
+{
+    "problem": "The following paragraphs each describe a set of three objects arranged in a fixed order. The statements are logically consistent within each paragraph. In a golf tournament, there were three golfers: Eli, Mya, and Eve. Eli finished last. Mya finished second.\nOptions:\n(A) Eli finished second\n(B) Mya finished second\n(C) Eve finished second",
+    "solution": "(B)",
+    "tags": [
+        "reasoning/commonsense"
+    ]
+}

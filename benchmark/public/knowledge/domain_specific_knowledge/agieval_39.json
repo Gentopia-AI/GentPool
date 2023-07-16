@@ -1,0 +1,7 @@
+{
+    "problem": "问题：NO 与 $\\mathrm{CO}$ 是燃油汽车尾气中的两种有害气体, 常温常压下它们之间的反应:\n\n$\\mathrm{CO}(\\mathrm{g})+\\mathrm{NO}(\\mathrm{g})=\\mathrm{CO}_{2}(\\mathrm{~g})+\\frac{1}{2} \\mathrm{~N}_{2}(\\mathrm{~g}) \\quad \\Delta H=-374.3 \\mathrm{~kJ} \\cdot \\mathrm{mol}^{-1} \\mathrm{~K}=2.5 \\times 10^{60}$, 反应速率较小。有关该反应的说法正确 的是 选项：(A)$\\mathrm{K}$ 很大, $\\mathrm{NO}$ 与 $\\mathrm{CO}$ 在排入大气之前就已反应完全 (B)增大压强, 平衡将向右移动, $\\mathrm{K}>2.5 \\times 10^{60}$ (C)升高温度, 既增大反应速率又增大 $\\mathrm{K}$ (D)选用适宜催化剂可达到尾气排放标准\n答案：从A到D, 我们应选择",
+    "solution": "D",
+    "tags": [
+        "knowledge/domain_specific_knowledge"
+    ]
+}

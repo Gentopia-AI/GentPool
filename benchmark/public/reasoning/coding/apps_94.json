@@ -1,0 +1,8 @@
+{
+    "problem": "A Hill Number is a positive integer, the digits of which possibly rise and then possibly fall, but never fall and then rise. For example:12321 is a hill number.\n\n12223 is a hill number.\n\n33322111 is a hill number.\n\n1232321 is not a hill number.\n\n\nGiven a positive integer, if it is a hill number, print the number of positive hill numbers less than or equal to it. If it is not a hill number, print -1.\n\n-----Input-----\nEach input will consist of a single test case. Note that your program may be run multiple times on different inputs. Each test case will consist of a single integer $n$ ($1 \\le n \\le 10^{18}$).\n\n-----Output-----\nOutput a single line with a single integer. If the input is a hill number, then output the number of hill numbers less than or equal to it. If the input is not a hill number, then output -1.\n\n-----Examples-----\nSample Input 1:\n10\nSample Output 1:\n10\n\nSample Input 2:\n55\nSample Output 2:\n55\n\nSample Input 3:\n101\nSample Output 3:\n-1\n\nSample Input 4:\n1234321\nSample Output 4:\n94708",
+    "test_case": "{\n    \"inputs\": [\n        \"10\\n\",\n        \"55\\n\",\n        \"101\\n\",\n        \"1234321\\n\",\n        \"1000\\n\"\n    ],\n    \"outputs\": [\n        \"10\\n\",\n        \"55\\n\",\n        \"-1\\n\",\n        \"94708\\n\",\n        \"715\\n\"\n    ]\n}",
+    "dataset": "apps",
+    "tags": [
+        "reasoning/coding"
+    ]
+}

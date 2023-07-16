@@ -1,0 +1,7 @@
+{
+    "problem": "The half-hour newscast includes 12 minutes of national news, 5 minutes of international news, 5 minutes of sports, and 2 minutes of weather forecasts. The rest is advertisements. How many minutes of advertising are in the newscast?",
+    "solution": "12+5+5+2=<<12+5+5+2=24>>24 minutes are accounted for.\nThere are 30-24=<<30-24=6>>6 minutes of ads.\n#### 6",
+    "tags": [
+        "reasoning/math"
+    ]
+}

@@ -1,0 +1,7 @@
+{
+    "problem": "Find the degree for the given field extension Q(sqrt(2)) over Q.\nA. 0\nB. 2\nC. 1\nD. 3\nAmong A through D, the answer is",
+    "solution": "B",
+    "tags": [
+        "knowledge/world_knowledge"
+    ]
+}

@@ -1,0 +1,8 @@
+{
+    "problem": "Write a python function to count negative numbers in a list.\n\nYour code should pass these tests:\n\nassert neg_count([-1,-2,3,-4,-5]) == 4\nassert neg_count([1,2,3]) == 0\nassert neg_count([1,2,-3,-10,20]) == 2\n\n",
+    "test_case": "assert neg_count([-1,-2,3,-4,-5]) == 4\nassert neg_count([1,2,3]) == 0\nassert neg_count([1,2,-3,-10,20]) == 2",
+    "dataset": "mbpp",
+    "tags": [
+        "reasoning/coding"
+    ]
+}

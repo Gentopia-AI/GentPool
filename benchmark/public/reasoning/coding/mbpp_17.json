@@ -1,0 +1,8 @@
+{
+    "problem": "Write a python function to find nth bell number.\n\nYour code should pass these tests:\n\nassert bell_Number(2) == 2\nassert bell_Number(3) == 5\nassert bell_Number(4) == 15\n\n",
+    "test_case": "assert bell_Number(2) == 2\nassert bell_Number(3) == 5\nassert bell_Number(4) == 15",
+    "dataset": "mbpp",
+    "tags": [
+        "reasoning/coding"
+    ]
+}

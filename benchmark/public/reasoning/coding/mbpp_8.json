@@ -1,0 +1,8 @@
+{
+    "problem": "Write a function to split the given string at uppercase letters by using regex.\n\nYour code should pass these tests:\n\nassert split_list(\"LearnToBuildAnythingWithGoogle\") == ['Learn', 'To', 'Build', 'Anything', 'With', 'Google']\nassert split_list(\"ApmlifyingTheBlack+DeveloperCommunity\") == ['Apmlifying', 'The', 'Black+', 'Developer', 'Community']\nassert split_list(\"UpdateInTheGoEcoSystem\") == ['Update', 'In', 'The', 'Go', 'Eco', 'System']\n\n",
+    "test_case": "assert split_list(\"LearnToBuildAnythingWithGoogle\") == ['Learn', 'To', 'Build', 'Anything', 'With', 'Google']\nassert split_list(\"ApmlifyingTheBlack+DeveloperCommunity\") == ['Apmlifying', 'The', 'Black+', 'Developer', 'Community']\nassert split_list(\"UpdateInTheGoEcoSystem\") == ['Update', 'In', 'The', 'Go', 'Eco', 'System']",
+    "dataset": "mbpp",
+    "tags": [
+        "reasoning/coding"
+    ]
+}

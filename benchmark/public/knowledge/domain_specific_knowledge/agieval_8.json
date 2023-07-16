@@ -1,0 +1,7 @@
+{
+    "problem": "问题：分子式为 $\\mathrm{C}_{4} \\mathrm{H}_{8} \\mathrm{BrCl}$ 的有机物共有 (不含立体异构) 选项：(A)8 种 (B)10 种 (C)12 种 (D)14 种\n答案：从A到D, 我们应选择",
+    "solution": "C",
+    "tags": [
+        "knowledge/domain_specific_knowledge"
+    ]
+}

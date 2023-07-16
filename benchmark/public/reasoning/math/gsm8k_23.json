@@ -1,0 +1,7 @@
+{
+    "problem": "Police officer A patrols 36 streets in 4 hours. His colleague, officer B, patrols 55 streets in 5 hours. How many streets will both officers patrol in one hour?",
+    "solution": "Officer A patrols 36 streets / 4 hours = <<36/4=9>>9 streets/hour.\nOfficer B patrols 55 streets / 5 hours = <<55/5=11>>11 streets/hour\nTogether officer A and B patrol 9 streets/hour + 11 streets/hour = <<9+11=20>>20 streets/hour.\n#### 20",
+    "tags": [
+        "reasoning/math"
+    ]
+}

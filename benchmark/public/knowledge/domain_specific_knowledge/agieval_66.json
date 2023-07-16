@@ -1,0 +1,7 @@
+{
+    "problem": "Q: The $n^{\\text{th}}$ term of a certain geometric series is given by $a\\cdot r^{n-1}$, where $a$ and $r$ are positive integers and $r$ is greater than 1. Bill picks out $k$ different numbers in this sequence, all of which have the same number of digits. What is the largest possible value of $k$?\nA: The answer is",
+    "solution": "4",
+    "tags": [
+        "knowledge/domain_specific_knowledge"
+    ]
+}

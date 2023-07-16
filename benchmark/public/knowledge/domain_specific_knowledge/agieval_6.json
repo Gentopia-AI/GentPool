@@ -1,0 +1,7 @@
+{
+    "problem": "Q: Determine the remainder of 1529 (mod 6).\nA: The answer is",
+    "solution": "5",
+    "tags": [
+        "knowledge/domain_specific_knowledge"
+    ]
+}

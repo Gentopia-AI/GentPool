@@ -1,0 +1,7 @@
+{
+    "problem": "Q: If Q, a positive integer, has 5 factors, which of the following must be true about Q?\nI. Q is the square of a prime number.\nII. Q is the fourth power of a prime number.\nIII. Q is the product of two prime numbers. Answer Choices: (A)I only (B)III only (C)II only (D)I and II only (E)I and III only\nA: Among A through E, the answer is",
+    "solution": "B",
+    "tags": [
+        "knowledge/domain_specific_knowledge"
+    ]
+}

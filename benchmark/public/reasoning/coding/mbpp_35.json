@@ -1,0 +1,8 @@
+{
+    "problem": "Write a python function to find the last digit in factorial of a given number.\n\nYour code should pass these tests:\n\nassert last_Digit_Factorial(4) == 4\nassert last_Digit_Factorial(21) == 0\nassert last_Digit_Factorial(30) == 0\n\n",
+    "test_case": "assert last_Digit_Factorial(4) == 4\nassert last_Digit_Factorial(21) == 0\nassert last_Digit_Factorial(30) == 0",
+    "dataset": "mbpp",
+    "tags": [
+        "reasoning/coding"
+    ]
+}

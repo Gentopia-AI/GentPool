@@ -1,0 +1,7 @@
+{
+    "problem": "In Mr. Bolton's class of 25 students, 2/5 of the students like maths, 1/3 of the remaining students like science, and the rest of the students like history. Calculate the combined total number of students who like history and those who like maths.",
+    "solution": "If there are 25 students in the class, then 2/5*25 = <<2/5*25=10>>10 students like maths.\nThe number of students who don't like math is 25-10 = <<25-10=15>>15 students.\nIf 1/3 of the students that don't like math like science, then 1/3*15 = <<1/3*15=5>>5 students like science.\nThe remaining number of students who enjoy history is 15-5 =<<15-5=10>>10\nThe combined total for the students who want history and maths is 10+10 = <<10+10=20>>20\n#### 20",
+    "tags": [
+        "reasoning/math"
+    ]
+}

@@ -1,0 +1,7 @@
+{
+    "problem": "Jen is planning to sell her root crops. She has 6 yams which can be sold at $1.5 each, 10 sweet potatoes that cost $2 each, and 4 carrots which cost $1.25 each. If she sells everything, how much will she earn?",
+    "solution": "Jen can earn $1.5 x 6 = $<<1.5*6=9>>9 for the yams.\nShe can earn $2 x 10 = $<<2*10=20>>20 for the sweet potatoes.\nAnd she can earn $1.25 x 4 = $<<1.25*4=5>>5 for the carrots.\nTherefore, she will earn $9 + $20 + $5 = $<<9+20+5=34>>34 if she sells everything.\n#### 34",
+    "tags": [
+        "reasoning/math"
+    ]
+}

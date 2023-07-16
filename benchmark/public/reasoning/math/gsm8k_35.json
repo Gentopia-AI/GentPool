@@ -1,0 +1,7 @@
+{
+    "problem": "Sebastian bought art exhibit tickets for his parents and himself.  Tickets were $44 per person.  He was also charged an $18 service fee for the online transaction.  What is the total amount he paid for the tickets?",
+    "solution": "Tickets for Sebastian and his parents cost $44 x 3 = $<<44*3=132>>132.\nTickets and service charge cost $132 + $18 = $<<132+18=150>>150.\n#### 150",
+    "tags": [
+        "reasoning/math"
+    ]
+}

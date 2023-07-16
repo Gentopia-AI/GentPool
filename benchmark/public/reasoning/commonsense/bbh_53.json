@@ -1,0 +1,7 @@
+{
+    "problem": "not ( True ) and ( False ) is",
+    "solution": "False",
+    "tags": [
+        "reasoning/commonsense"
+    ]
+}

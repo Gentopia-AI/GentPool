@@ -1,0 +1,8 @@
+{
+    "problem": "Write a function to find number of odd elements in the given list using lambda function.\n\nYour code should pass these tests:\n\nassert count_odd([1, 2, 3, 5, 7, 8, 10])==4\nassert count_odd([10,15,14,13,-18,12,-20])==2\nassert count_odd([1, 2, 4, 8, 9])==2\n\n",
+    "test_case": "assert count_odd([1, 2, 3, 5, 7, 8, 10])==4\nassert count_odd([10,15,14,13,-18,12,-20])==2\nassert count_odd([1, 2, 4, 8, 9])==2",
+    "dataset": "mbpp",
+    "tags": [
+        "reasoning/coding"
+    ]
+}

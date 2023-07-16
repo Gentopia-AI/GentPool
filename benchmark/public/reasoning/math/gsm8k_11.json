@@ -1,0 +1,7 @@
+{
+    "problem": "The Donaldsons pay $15 per hour for babysitting. The Merck family pays $18 per hour and the Hille family pays $20 per hour for babysitting. Layla babysat for the Donaldsons for 7 hours, the Merck family for 6 hours and the Hille family for 3 hours. How many dollars did Layla earn babysitting?",
+    "solution": "Donaldsons pay $15/hour = 15*7 = $<<15*7=105>>105.\nThe Mercks pay $18/hour = 18*6 = $<<18*6=108>>108.\nThe Hilles pay $20/hour = 20*3 = <<20*3=60>>60.\nThe total amount Layla earned is 105 + 108 + 60 = <<105+108+60=273>>273.\nLayla earned $273 for babysitting.\n#### 273",
+    "tags": [
+        "reasoning/math"
+    ]
+}

@@ -1,0 +1,7 @@
+{
+    "problem": "Cynthia harvested 67 potatoes from her garden. After washing them, she cut 13 of them into wedges. She then halved the remaining potatoes and made french fries with one half, and potato chips with the other half. If one potato can be cut into 8 wedges or make 20 potato chips, how many more potato chips than wedges did Cynthia make?",
+    "solution": "Cynthia was left with 67 -13 = <<67-13=54>>54 potatoes after making wedges.\nShe used 54/2 = <<54/2=27>>27 potatoes to make potato chips.\nCynthia made 13 x 8 = <<13*8=104>>104 wedges.\nShe made 27 x 20 = <<27*20=540>>540 potato chips.\nCynthia made 540 - 104 = <<540-104=436>>436 more potato chips than wedges.\n#### 436",
+    "tags": [
+        "reasoning/math"
+    ]
+}

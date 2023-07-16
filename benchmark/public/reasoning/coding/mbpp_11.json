@@ -1,0 +1,8 @@
+{
+    "problem": "Write a function to find the ascii value of a character.\n\nYour code should pass these tests:\n\nassert ascii_value('A')==65\nassert ascii_value('R')==82\nassert ascii_value('S')==83\n\n",
+    "test_case": "assert ascii_value('A')==65\nassert ascii_value('R')==82\nassert ascii_value('S')==83",
+    "dataset": "mbpp",
+    "tags": [
+        "reasoning/coding"
+    ]
+}

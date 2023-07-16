@@ -1,0 +1,8 @@
+{
+    "problem": "While browsing a math book, Mirko found a strange equation of the form $A=S$. What makes the equation strange is that $A$ and $S$ are not the same. Mirko realized that the left side of the equation should have addition operations between some pairs of digits in $A$.\n\nWrite a program that inserts the smallest number of addition operations on the left side to make the equation correct. The numbers in the corrected equation may contain arbitrary amounts of leading zeros.\n\n-----Input-----\nThe first line contains the equation in the form $A=S$. $A$ and $S$ will both be positive integers without leading zeros. They will be different. $A$ will contain at most $1000$ digits. $S$ will be less than or equal to $5000$. Note: The input data will guarantee that a solution, although not necessarily unique, will always exist.\n\n-----Output-----\nOutput the corrected equation. If there are multiple solutions, output any of them.\n\n-----Examples-----\nSample Input 1:\n143175=120\nSample Output 1:\n14+31+75=120\n\nSample Input 2:\n5025=30\nSample Output 2:\n5+025=30",
+    "test_case": "{\n    \"inputs\": [\n        \"143175=120\\n\",\n        \"5025=30\\n\",\n        \"999899=125\\n\"\n    ],\n    \"outputs\": [\n        \"14+31+75=120\\n\",\n        \"5+025=30\\n\",\n        \"9+9+9+89+9=125\\n\"\n    ]\n}",
+    "dataset": "apps",
+    "tags": [
+        "reasoning/coding"
+    ]
+}

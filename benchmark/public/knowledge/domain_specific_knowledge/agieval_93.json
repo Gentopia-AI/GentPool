@@ -1,0 +1,7 @@
+{
+    "problem": "Given the shape of the hip and foot bones of the Kodiak bear, it has been determined that standing and walking upright is completely natural behavior for these bears. Thus, walking on hind legs is instinctive and not a learned behavior of the Kodiak.Q: To which one of the following criticisms is the argument most vulnerable? Answer Choices: (A)The argument incorrectly generalizes from the behavior of a few bears in support of its conclusion. (B)The argument fails to consider the possibility that walking on hind legs is the result of both learning and an innate capacity. (C)The word \"behavior\" illicitly changes meaning during the course of the argument. (D)The argument presumes, without giving justification, that all behavior can be explained in one or both of only two ways. (E)The argument incorrectly appeals to the authority of science in order to support its conclusion.\nA: Among A through E, the answer is",
+    "solution": "B",
+    "tags": [
+        "knowledge/domain_specific_knowledge"
+    ]
+}

@@ -1,0 +1,7 @@
+{
+    "problem": "Which statement is sarcastic?\nOptions:\n(A) Stop putting people in neat little compartments to protect your view point \u2014\u00a0good idea\n(B) Keep putting people in neat little compartments to protect your view point \u2014\u00a0good idea",
+    "solution": "(B)",
+    "tags": [
+        "reasoning/commonsense"
+    ]
+}

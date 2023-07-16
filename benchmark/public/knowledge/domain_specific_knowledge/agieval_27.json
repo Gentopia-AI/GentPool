@@ -1,0 +1,7 @@
+{
+    "problem": "The 12th International Conference on Logic, Methodology and Philosophy of Science was held in Spain.At least one of Professor Huck, Professor Maas and Professor Regg participated in this conference.Known? (1) Those who sign up for the conference must submit an English academic paper, and the invitation letter will only be issued after expert review.(2) If Professor Huck participates in this conference, then Professor Mas must participate.(3) Professor Leigh submitted a German academic paper to the conference.Q: Based on the above, which of the following must be true? Answer Choices: (A)Professor Huck attended the conference. (B)Professor Mas participated in the conference. (C)Professor Regg attended the conference. (D)Both Professor Huck and Professor Mas participated in the conference.\nA: Among A through D, the answer is",
+    "solution": "B",
+    "tags": [
+        "knowledge/domain_specific_knowledge"
+    ]
+}

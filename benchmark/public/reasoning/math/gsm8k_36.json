@@ -1,0 +1,7 @@
+{
+    "problem": "Lard decides to share a pizza with his friend Jelly.  He takes a whole, uncut pepperoni pizza and cuts it in half.  He then cuts these halves in half and gives one of the slices to Jelly.  Assuming the pizza started with 40 evenly spread slices of pepperoni, how many slices of it are on the slice Lard gives Jelly if 1 of them falls off the slice when Lard picks it up?",
+    "solution": "First, we need to determine how many slices the pizza was cut into. To do this, we start by performing 1*2= <<1*2=2>>2 slices after the pizza was cut in half once.\nEach of these slices was cut in half again, yielding 2*2= <<2*2=4>>4 slices in total.\nNext, we divide the total amount of pepperoni slices by the number of pizza slices, as the pepperoni was spread evenly. We find there are 40/4= <<40/4=10>>10 slices of pepperoni per pizza slice.\nSince 1 slice of pepperoni fell off Jelly's slice, this means there are 10-1=<<10-1=9>>9 slices left on her slice.\n#### 9",
+    "tags": [
+        "reasoning/math"
+    ]
+}

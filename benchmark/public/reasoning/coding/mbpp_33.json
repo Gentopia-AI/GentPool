@@ -1,0 +1,8 @@
+{
+    "problem": "Write a function to find eulerian number a(n, m).\n\nYour code should pass these tests:\n\nassert eulerian_num(3, 1) == 4\nassert eulerian_num(4, 1) == 11\nassert eulerian_num(5, 3) == 26\n\n",
+    "test_case": "assert eulerian_num(3, 1) == 4\nassert eulerian_num(4, 1) == 11\nassert eulerian_num(5, 3) == 26",
+    "dataset": "mbpp",
+    "tags": [
+        "reasoning/coding"
+    ]
+}

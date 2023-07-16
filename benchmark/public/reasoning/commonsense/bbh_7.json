@@ -1,0 +1,7 @@
+{
+    "problem": "((0 + 3 * 4 * 9) - (4 - -5 + -4 - 4)) =",
+    "solution": "107",
+    "tags": [
+        "reasoning/commonsense"
+    ]
+}

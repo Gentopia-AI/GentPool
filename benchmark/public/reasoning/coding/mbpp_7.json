@@ -1,0 +1,8 @@
+{
+    "problem": "Write a function to multiply two lists using map and lambda function.\n\nYour code should pass these tests:\n\nassert mul_list([1, 2, 3],[4,5,6])==[4,10,18]\nassert mul_list([1,2],[3,4])==[3,8]\nassert mul_list([90,120],[50,70])==[4500,8400]\n\n",
+    "test_case": "assert mul_list([1, 2, 3],[4,5,6])==[4,10,18]\nassert mul_list([1,2],[3,4])==[3,8]\nassert mul_list([90,120],[50,70])==[4500,8400]",
+    "dataset": "mbpp",
+    "tags": [
+        "reasoning/coding"
+    ]
+}

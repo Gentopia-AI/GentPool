@@ -1,0 +1,7 @@
+{
+    "problem": "One kilogram of tomatoes is 20% cheaper than one kilogram of cucumbers. One kilogram of cucumbers costs $5. What is the price of two kilograms of tomatoes and three kilograms of cucumbers?",
+    "solution": "One kilogram of tomatoes is 20/100 * 5 = $<<20/100*5=1>>1 cheaper than one kilogram of cucumbers.\nThis means that one kilogram of tomatoes costs 5 - 1 = $<<5-1=4>>4.\nSo two kilograms of tomatoes is a cost of 2 * 4 = $<<2*4=8>>8.\nAnd three kilograms of cucumbers is a cost of 3 * 5 = $<<3*5=15>>15.\nSo the price for both products would be 8 + 15 = $<<8+15=23>>23.\n#### 23",
+    "tags": [
+        "reasoning/math"
+    ]
+}

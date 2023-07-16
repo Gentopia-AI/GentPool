@@ -1,0 +1,7 @@
+{
+    "problem": "Which sentence has the correct adjective order:\nOptions:\n(A) little pink Indonesian drinking repulsive dog\n(B) repulsive little pink Indonesian drinking dog",
+    "solution": "(B)",
+    "tags": [
+        "reasoning/commonsense"
+    ]
+}

@@ -1,0 +1,8 @@
+{
+    "problem": "Write a function to remove all characters except letters and numbers using regex\n\nYour code should pass these tests:\n\nassert remove_char(\"123abcjw:, .@! eiw\") == '123abcjweiw'\nassert remove_char(\"Hello1234:, ! Howare33u\") == 'Hello1234Howare33u'\nassert remove_char(\"Cool543Triks@:, Make@987Trips\") == 'Cool543TriksMake987Trips' \n\n",
+    "test_case": "assert remove_char(\"123abcjw:, .@! eiw\") == '123abcjweiw'\nassert remove_char(\"Hello1234:, ! Howare33u\") == 'Hello1234Howare33u'\nassert remove_char(\"Cool543Triks@:, Make@987Trips\") == 'Cool543TriksMake987Trips' ",
+    "dataset": "mbpp",
+    "tags": [
+        "reasoning/coding"
+    ]
+}

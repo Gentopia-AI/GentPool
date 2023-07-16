@@ -1,0 +1,8 @@
+{
+    "problem": "Write a function to find a path with the maximum average over all existing paths for the given square matrix of size n*n.\n\nYour code should pass these tests:\n\nassert maxAverageOfPath([[1, 2, 3], [6, 5, 4], [7, 3, 9]], 3) == 5.2\nassert maxAverageOfPath([[2, 3, 4], [7, 6, 5], [8, 4, 10]], 3) == 6.2\nassert maxAverageOfPath([[3, 4, 5], [8, 7, 6], [9, 5, 11]], 3) == 7.2 \n\n",
+    "test_case": "assert maxAverageOfPath([[1, 2, 3], [6, 5, 4], [7, 3, 9]], 3) == 5.2\nassert maxAverageOfPath([[2, 3, 4], [7, 6, 5], [8, 4, 10]], 3) == 6.2\nassert maxAverageOfPath([[3, 4, 5], [8, 7, 6], [9, 5, 11]], 3) == 7.2 ",
+    "dataset": "mbpp",
+    "tags": [
+        "reasoning/coding"
+    ]
+}

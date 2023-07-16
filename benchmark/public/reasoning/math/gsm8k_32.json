@@ -1,0 +1,7 @@
+{
+    "problem": "Rong has been saving 20 coins in his piggy bank every month. Neil has been saving 2/5 times more coins in his piggy bank per month than Rong. How many coins are they having ten years after they started their savings?",
+    "solution": "Neil has been saving 2/5 times more coins in his piggy bank per month than Rong, a total of 2/5*20 = <<2/5*20=8>>8 more coins.\nThe total number of coins that Neil has been saving in his piggy month per month is 20+8 = <<20+8=28>>28 coins.\nIf Rong has been saving 20 coins every month for ten years, the total number of months he's been saving for is 12*10 = <<12*10=120>>120 months.\nSaving 20 coins every month for ten years, Rong has 20*120 = <<20*120=2400>>2400 coins in his piggy bank.\nIf Neil has also been saving for ten years, he has saved 120*28 = <<120*28=3360>>3360 coins in his piggy bank.\nThe total number of coins they both have in their piggy banks after ten years of saving is 3360+2400 = <<3360+2400=5760>>5760\n#### 5760",
+    "tags": [
+        "reasoning/math"
+    ]
+}

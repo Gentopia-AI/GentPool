@@ -1,0 +1,7 @@
+{
+    "problem": "Find a movie similar to Apollo 13, Batman, Dances with Wolves, Braveheart:\nOptions:\n(A) Schindler's List\n(B) Crimes and Misdemeanors\n(C) King Kong\n(D) Gorillas in the Mist",
+    "solution": "(A)",
+    "tags": [
+        "reasoning/commonsense"
+    ]
+}

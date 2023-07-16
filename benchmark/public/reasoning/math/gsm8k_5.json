@@ -1,0 +1,7 @@
+{
+    "problem": "Max needs 65 paper plates for the barbecue party.  He already has 22 green paper plates and 24 blue paper plates. How many more paper plates does he need?",
+    "solution": "He already has a total of 22 + 24 = <<22+24=46>>46 paper plates.\nTherefore, Max needs 65 - 46 = <<65-46=19>>19 more paper plates.\n#### 19",
+    "tags": [
+        "reasoning/math"
+    ]
+}

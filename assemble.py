@@ -13,9 +13,11 @@ def main():
 
     parser = argparse.ArgumentParser(description='Assemble an agent with given name.')
     parser.add_argument('name', type=str, help='Name of the agent to assemble.')
+    parser.add_argument('--print_agent', action='store_true', help='Print the agent if specified.')
 
     args = parser.parse_args()
     agent_name = args.name
+    print_agent = args.print_agent
 
     # check if agent_name is under directory ./gentpool/pool/
     if not os.path.exists(f'./gentpool/pool/{agent_name}'):
@@ -32,7 +34,7 @@ def main():
     if agent.name != agent_name:
         raise ValueError(f"Agent name mismatch. Expected {agent_name}, got {agent.name}.")
 
-    chat(agent)
+    chat(agent, verbose=print_agent)
 
 
 if __name__ == '__main__':

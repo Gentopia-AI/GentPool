@@ -1,0 +1,7 @@
+{
+    "problem": "((-6 * -4 + 1 + -1) * (-1 + 2 * 7 + 2)) =",
+    "solution": "360",
+    "tags": [
+        "reasoning/commonsense"
+    ]
+}

@@ -1,0 +1,7 @@
+{
+    "problem": "Christine and Rachel went strawberry picking.  They want to make pies and need 3 pounds of strawberries per pie.  Christine picked 10 pounds of strawberries and Rachel picked twice as much as Rachel.  Together, how many pies can they make?",
+    "solution": "Christine picked 10 pounds and Rachel picked twice as much, so Rachel picked 10*2 = <<10*2=20>>20 pounds of strawberries\nChristine picked 10 pounds and Rachel picked 20 pounds for a combined total of 10+20 = <<10+20=30>>30 pounds of strawberries\nThey need 3 pounds of strawberries to make 1 pie and they have 30 pounds so they can make 30/3 = <<30/3=10>>10 strawberry pies\n#### 10",
+    "tags": [
+        "reasoning/math"
+    ]
+}

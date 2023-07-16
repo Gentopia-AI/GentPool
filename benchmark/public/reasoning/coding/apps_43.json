@@ -1,0 +1,8 @@
+{
+    "problem": "Consider the following function $f(X)$, which takes a single positive integer as argument, and returns an integer.\n\nfunction f(X): iterations := 0 while X is not 1: if X is even: divide X by 2 else: add 1 to X add 1 to iterations return iterations\n\nIt can be shown that for any positive integer $X$, this function terminates. Given an interval $[L, R]$, compute the sum\\[ S = f(L) + f(L+1) + \\cdots + f(R-1) + f(R)\\enspace . \\]\n\n-----Input-----\nThe first and only line of input contains two integers $L$ and $R$ ($1 \\leq L \\leq R \\leq 10^{18}$).\n\n-----Output-----\nOutput the result $S$ modulo the prime $10^9+7$.\n\n-----Examples-----\nSample Input:\n1 127\nSample Output:\n1083",
+    "test_case": "{\n    \"inputs\": [\n        \"1 127\\n\",\n        \"74 74\\n\"\n    ],\n    \"outputs\": [\n        \"1083\\n\",\n        \"11\\n\"\n    ]\n}",
+    "dataset": "apps",
+    "tags": [
+        "reasoning/coding"
+    ]
+}

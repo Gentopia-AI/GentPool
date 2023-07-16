@@ -1,0 +1,7 @@
+{
+    "problem": "Violet has 3 more than twice as many nails as Tickletoe. If Violet has 27 nails, how many nails do they have together?",
+    "solution": "Violet has 27-3 = <<27-3=24>>24 nails, twice the number of nails that Tickletoe has.\nTherefore, Tickletoe has 1/2*24 = <<1/2*24=12>>12 nails.\nTogether, Tickletoe and Violet have 12+27 = <<12+27=39>>39 nails\n#### 39",
+    "tags": [
+        "reasoning/math"
+    ]
+}

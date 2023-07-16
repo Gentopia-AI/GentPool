@@ -1,0 +1,7 @@
+{
+    "problem": "A party hall has 3 decorative light bulbs; a red light bulb which comes on every 2 seconds, a green one every 3 seconds and a blue one every 4 seconds. If they are put on at the same time, what is the shortest time after which the three bulbs will be on at the same time?",
+    "solution": "The blue light bulb comes on every 2 seconds so it will be on after 2, 4, 6, 8, 10, 12, 14... seconds (multiples of 2)\nThe red light bulb comes on every 3 seconds so it will be on after 3, 6, 9, 12, 15, 18... seconds (multiples of 3)\nThe blue light bulb comes on every 4 seconds so it will be on after 4, 8, 12, 16, 20... seconds (multiples of 4)\nThe shortest time after which all three will be on is 12 seconds which is the least common multiple of the set of multiples.\n#### 12",
+    "tags": [
+        "reasoning/math"
+    ]
+}

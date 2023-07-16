@@ -1,0 +1,7 @@
+{
+    "problem": "Alex and his friend had a free throw contest. Alex made 8 baskets. Sandra made three times as many baskets as Alex and Hector made two times the number of baskets that Sandra made. How many baskets did they make in total?",
+    "solution": "Sandra made 3*8=<<3*8=24>>24 baskets\nHector made 24*2=<<24*2=48>>48 baskets.\nIn total they made 8+24+48= <<8+24+48=80>>80 baskets\n#### 80",
+    "tags": [
+        "reasoning/math"
+    ]
+}

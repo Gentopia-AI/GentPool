@@ -1,0 +1,7 @@
+{
+    "problem": "A music producer is recording 7 albums one after another? F, G, H, J, K, L and M, but it is not necessary to record in this order.When arranging the sequence of recording these 7 albums, the following conditions must be met? (l) F must be ranked second.(2) J cannot be ranked seventh.(3) G can neither be directly in front of H nor immediately after H.(4) H must be somewhere in front of L.(5) L must be somewhere before M.Q: If M is somewhere before J and somewhere before K, which of the following must be true? Answer Choices: (A)K seventh (B)L third (C)H is either in front of F or immediately after F (D)L either immediately before G or immediately after G\nA: Among A through D, the answer is",
+    "solution": "C",
+    "tags": [
+        "knowledge/domain_specific_knowledge"
+    ]
+}

@@ -1,0 +1,7 @@
+{
+    "problem": "Sort the following words alphabetically: List: wagging cabdriver astronomic pivot loch coherent",
+    "solution": "astronomic cabdriver coherent loch pivot wagging",
+    "tags": [
+        "reasoning/commonsense"
+    ]
+}

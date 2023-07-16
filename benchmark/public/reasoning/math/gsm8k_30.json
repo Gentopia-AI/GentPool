@@ -1,0 +1,7 @@
+{
+    "problem": "Gumball was counting his water intake for the previous week. He checked his list and saw that he had drank 60 liters of water for the week. He drank nine liters of water on Monday, Thursday and Saturday and 8 liters of water on Tuesday, Friday and Sunday. Unfortunately, no data was input on Wednesday. How many liters of water did he drink on Wednesday?",
+    "solution": "Gumball's total water intake on Monday, Thursday, and Saturday is 9 x 3 = <<9*3=27>>27 liters.\nAnd his total water intake on Tuesday, Friday, and Sunday is 8 x 3 = <<8*3=24>>24 liters.\nSo his total water intake for 6 days is 24 + 27 = <<24+27=51>>51 liters.\nTherefore Gumball's water intake on Wednesday is 60 - 51 = <<60-51=9>>9 liters.\n#### 9",
+    "tags": [
+        "reasoning/math"
+    ]
+}

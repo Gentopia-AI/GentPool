@@ -1,0 +1,8 @@
+{
+    "problem": "Write a python function to check for even parity of a given number.\n\nYour code should pass these tests:\n\nassert check_Even_Parity(10) == True\nassert check_Even_Parity(11) == False\nassert check_Even_Parity(18) == True\n\n",
+    "test_case": "assert check_Even_Parity(10) == True\nassert check_Even_Parity(11) == False\nassert check_Even_Parity(18) == True",
+    "dataset": "mbpp",
+    "tags": [
+        "reasoning/coding"
+    ]
+}

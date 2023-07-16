@@ -1,0 +1,7 @@
+{
+    "problem": "Hammond carves life-sized statues out of marble. His latest set of four statues started with an 80-pound block of marble. The first statue he carved weighed 10 pounds. The second statue weighed 18. The remaining two statues weighed the same amount. The marble he discarded after carving it off the statues weighed 22 pounds. How much did each of the remaining statues Hammond carved weigh?",
+    "solution": "Hammond\u2019s statues weighed 80 - 22 = <<80-22=58>>58 pounds after the discarded marble was carved off.\nMinus the first statue, the statues weighed 58 - 10 = <<58-10=48>>48 pounds.\nMinus the second statue, the statues weighed 48 - 18 = <<48-18=30>>30 pounds.\nThe remaining two statues weighed the same amount, so each weighed 30 / 2 = <<30/2=15>>15 pounds.\n#### 15",
+    "tags": [
+        "reasoning/math"
+    ]
+}

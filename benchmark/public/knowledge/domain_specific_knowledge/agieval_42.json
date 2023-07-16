@@ -1,0 +1,7 @@
+{
+    "problem": "Q: If $\\det \\mathbf{A} = 4$ and $\\det \\mathbf{B} = -5,$ then find $\\det (\\mathbf{A} \\mathbf{B}).$\nA: The answer is",
+    "solution": "-20",
+    "tags": [
+        "knowledge/domain_specific_knowledge"
+    ]
+}

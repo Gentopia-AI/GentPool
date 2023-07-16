@@ -1,0 +1,7 @@
+{
+    "problem": "Q: In the graph of $\\frac{x^2+3x}{x^2+4x+3}$, let $a$ be the number of holes in the graph, $b$ be the number of vertical asympotes, $c$ be the number of horizontal asymptotes, and $d$ be the number of oblique asymptotes. Find $a+2b+3c+4d$.\nA: The answer is",
+    "solution": "6",
+    "tags": [
+        "knowledge/domain_specific_knowledge"
+    ]
+}

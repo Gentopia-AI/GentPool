@@ -1,0 +1,7 @@
+{
+    "problem": "Celia is creating a budget for the next 4 weeks. She wants to spend no more than $100 a week on food. For rent for her apartment, she plans to spend $1500. She has $30 set aside for video streaming services for the month. She also has $50 planned for one month of cell phone usage. After she adds up all of her spending for the month she wants to set aside 10% of it to put into savings. How much money is Celia going to put into her savings account?",
+    "solution": "Celia has budgeted $100 a week for 4 weeks for food, $100 x 4 = $<<100*4=400>>400 worth of food for the month.\nShe has one monthly cost of $1500 for her rent + $30 for video streaming services + $50 for her cell phone = $<<1500+30+50=1580>>1580 of single monthly costs.\nCelia wants to set aside 10% of the $400 + $1580 = $<<400+1580=1980>>1980 for her savings account.\n10% of her savings account is .10 x 1980 = $<<.10*1980=198>>198 to add to her savings account.\n#### 198",
+    "tags": [
+        "reasoning/math"
+    ]
+}

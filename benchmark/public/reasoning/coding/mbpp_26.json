@@ -1,0 +1,8 @@
+{
+    "problem": "Write a function to check for the number of jumps required of given length to reach a point of form (d, 0) from origin in a 2d plane.\n\nYour code should pass these tests:\n\nassert min_Jumps(3,4,11)==3.5\nassert min_Jumps(3,4,0)==0\nassert min_Jumps(11,14,11)==1\n\n",
+    "test_case": "assert min_Jumps(3,4,11)==3.5\nassert min_Jumps(3,4,0)==0\nassert min_Jumps(11,14,11)==1",
+    "dataset": "mbpp",
+    "tags": [
+        "reasoning/coding"
+    ]
+}

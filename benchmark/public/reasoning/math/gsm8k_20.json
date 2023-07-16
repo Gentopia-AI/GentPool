@@ -1,0 +1,7 @@
+{
+    "problem": "Tim won a $100 raffle.  He gave away 20% to his friend.  How much did he keep?",
+    "solution": "He gave away 100*.2=$<<100*.2=20>>20\nSo he kept 100-20=$<<100-20=80>>80\n#### 80",
+    "tags": [
+        "reasoning/math"
+    ]
+}

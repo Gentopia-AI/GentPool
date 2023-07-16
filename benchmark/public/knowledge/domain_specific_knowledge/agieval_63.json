@@ -1,0 +1,7 @@
+{
+    "problem": "Q: Compute\n\\[\\cos \\frac{2 \\pi}{7} \\cos \\frac{4 \\pi}{7} \\cos \\frac{8 \\pi}{7}.\\]\nA: The answer is",
+    "solution": "\\frac{1}{8}",
+    "tags": [
+        "knowledge/domain_specific_knowledge"
+    ]
+}

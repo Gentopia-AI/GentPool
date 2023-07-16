@@ -1,0 +1,7 @@
+{
+    "problem": "As the price of oil rose, the country raised the sales price of gasoline and other refined oil, which led to an increase in taxi operating costs and a decrease in driver income.The survey shows that more than 95% of taxi drivers in Beijing object to the increase in taxi prices because the price increase will lead to a decrease in passengers.Q: Which of the following, if true, can explain this seemingly contradictory attitude of Beijing taxi drivers? Answer Choices: (A)Taxi drivers hope to reduce the monthly rent paid to taxi companies, thereby eliminating the impact of rising oil prices. (B)The survey shows that all consumers are opposed to taxi price increases. (C)The monthly ticket price of Beijing's buses has been raised, but the price of ordinary tickets has remained unchanged. (D)The increase in taxi prices makes the cost of rising oil prices entirely borne by consumers.\nA: Among A through D, the answer is",
+    "solution": "A",
+    "tags": [
+        "knowledge/domain_specific_knowledge"
+    ]
+}

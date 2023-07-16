@@ -1,0 +1,8 @@
+{
+    "problem": "Write a python function to check whether the length of the word is odd or not.\n\nYour code should pass these tests:\n\nassert word_len(\"Hadoop\") == False\nassert word_len(\"great\") == True\nassert word_len(\"structure\") == True\n\n",
+    "test_case": "assert word_len(\"Hadoop\") == False\nassert word_len(\"great\") == True\nassert word_len(\"structure\") == True",
+    "dataset": "mbpp",
+    "tags": [
+        "reasoning/coding"
+    ]
+}

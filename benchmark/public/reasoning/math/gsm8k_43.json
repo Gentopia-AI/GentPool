@@ -1,0 +1,7 @@
+{
+    "problem": "John climbs up 3 flights of stairs.  Each flight is 10 feet.  He then climbs a rope that is half that height.  Finally, he climbs a ladder that is 10 feet longer than the rope.  How high up did he go?",
+    "solution": "He climbed 3*10=<<3*10=30>>30 feet of stairs\nHe then climbed 30/2=<<30/2=15>>15 feet of rope\nFinally, he climbed a 15+10=<<15+10=25>>25 foot ladder\nSo in total, he climbed 30+15+25=<<30+15+25=70>>70 feet\n#### 70",
+    "tags": [
+        "reasoning/math"
+    ]
+}
