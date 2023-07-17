@@ -48,7 +48,7 @@ def create_agent(agent_name: str):
             ]
         )
 
-    with open(dir_path.joinpath("tools.py"), 'w') as f:
+    with open(dir_path.joinpath("tool.py"), 'w') as f:
         f.writelines(
             [
                 "### Define your custom tools here. Check prebuilts in gentopia.tools :)###\n",
