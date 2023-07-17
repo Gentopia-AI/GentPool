@@ -16,4 +16,4 @@ llm:
 plugins:
   - name: wolfram_alpha
   - name: bash_shell
-  - name: run_python_code
+  - name: python_code_interpreter

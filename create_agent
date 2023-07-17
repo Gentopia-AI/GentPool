@@ -45,7 +45,7 @@ if [ "$answer" != "${answer#[Yy]}" ] ;then
 
     # Initialize the content in the tool.py file
     echo "### Define your custom tool here. Check prebuilts in gentopia.tool (:###" > "${dir_path}/tool.py"
-    echo "from gentopia.tool import *" >> "${dir_path}/tool.py"
+    echo "from gentopia.tools import *" >> "${dir_path}/tool.py"
 
 
     echo "Agent ${agent_name} has been initialized."
