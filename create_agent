@@ -17,11 +17,11 @@ if [ "$answer" != "${answer#[Yy]}" ] ;then
     touch "${dir_path}/__init__.py"
     touch "${dir_path}/agent.yaml"
     touch "${dir_path}/prompt.py"
-    touch "${dir_path}/tools.py"
+    touch "${dir_path}/tool.py"
 
     # Initialize the content in the __init__.py file
     echo "from .prompt import *" > "${dir_path}/__init__.py"
-    echo "from .tools import *" >> "${dir_path}/__init__.py"
+    echo "from .tool import *" >> "${dir_path}/__init__.py"
 
     # Register the agent in the pool
     echo "from .${agent_name} import *" >> "./gentpool/pool/__init__.py"
@@ -42,9 +42,9 @@ if [ "$answer" != "${answer#[Yy]}" ] ;then
     echo "from gentopia.prompt import *" >> "${dir_path}/prompt.py"
     echo "from gentopia import PromptTemplate" >> "${dir_path}/prompt.py"
 
-    # Initialize the content in the tools.py file
-    echo "### Define your custom tools here. Check prebuilts in gentopia.tools (:###" > "${dir_path}/tools.py"
-    echo "from gentopia.tools import *" >> "${dir_path}/tools.py"
+    # Initialize the content in the tool.py file
+    echo "### Define your custom tool here. Check prebuilts in gentopia.tool (:###" > "${dir_path}/tool.py"
+    echo "from gentopia.tool import *" >> "${dir_path}/tool.py"
 
 
     echo "Agent ${agent_name} has been initialized."

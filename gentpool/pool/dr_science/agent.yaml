@@ -7,7 +7,7 @@ target_tasks:
   - answer questions about math, physics, chemistry, biology, and other natural sciences
 prompt_template: !prompt gentpool.pool.dr_science.prompt.DrSciencePrompt
 llm:
-  model_name: gpt-4
+  model_name: gpt-4-0613
   params:
     temperature: 0.0
     top_p: 0.9
@@ -15,3 +15,5 @@ llm:
     max_tokens: 1024
 plugins:
   - name: wolfram_alpha
+  - name: bash_shell
+  - !tool gentpool.pool.dr_science.tool.CustomCodeIntepreter
