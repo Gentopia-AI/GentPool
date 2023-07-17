@@ -17,7 +17,13 @@ if [ "$answer" != "${answer#[Yy]}" ] ;then
         rm -r "${dir_path}"
 
         # Unregister the agent from the pool
-        sed -i "/from .${agent_name} import */d" "./gentpool/pool/__init__.py"
+        if [[ "$OSTYPE" == "darwin"* ]]; then
+            # Mac OSX
+            sed -i "" "/from .${agent_name} import */d" "./gentpool/pool/__init__.py"
+        else
+            # Linux, other
+            sed -i "/from .${agent_name} import */d" "./gentpool/pool/__init__.py"
+        fi
 
         echo "Agent ${agent_name} has been deleted."
     else
