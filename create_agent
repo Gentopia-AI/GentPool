@@ -36,6 +36,7 @@ if [ "$answer" != "${answer#[Yy]}" ] ;then
     echo "prompt_template: " >> "${dir_path}/agent.yaml"
     echo "llm: " >> "${dir_path}/agent.yaml"
     echo "plugins: " >> "${dir_path}/agent.yaml"
+    echo "memory: " >> "${dir_path}/agent.yaml"
 
     # Initialize the content in the prompt.py file
     echo "### Define your custom prompt here. Check prebuilts in gentopia.prompt :)###" > "${dir_path}/prompt.py"

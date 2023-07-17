@@ -5,7 +5,7 @@ description: dr_science is a multi-disciplinary expert with strong expertise in 
 target_tasks:
   - solve hard math problems and equations
   - answer questions about math, physics, chemistry, biology, and other natural sciences
-prompt_template: !prompt gentpool.pool.dr_science.prompt.DrSciencePrompt
+prompt_template: !prompt VanillaPrompt
 llm:
   model_name: gpt-4-0613
   params:
@@ -16,4 +16,4 @@ llm:
 plugins:
   - name: wolfram_alpha
   - name: bash_shell
-  - !tool gentpool.pool.dr_science.tool.CustomCodeIntepreter
+  - name: run_python_code
