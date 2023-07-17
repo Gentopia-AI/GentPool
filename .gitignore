@@ -2,7 +2,7 @@
 benchmark/private/
 benchmark/raw/
 test.ipynb
-
+.idea/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
