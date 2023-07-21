@@ -1,10 +1,10 @@
 name: dr_science
 type: openai
 version: 0.0.1
-description: dr_science is a multi-disciplinary expert with strong expertise in math and natural sciences. He is able to answer questions about math, physics, chemistry, biology, and other natural sciences. But don't bother him with simple questions or commonsense.
+description: dr_science is an expert in math and natural science. He is able to answer complex questions about math, physics, chemistry, biology, and more.
 target_tasks:
-  - solve hard math problems and equations
-  - answer questions about math, physics, chemistry, biology, and other natural sciences
+  - solve hard math and science problems.
+  - perform basic system operations.
 prompt_template: !prompt VanillaPrompt
 llm:
   model_name: gpt-4-0613
