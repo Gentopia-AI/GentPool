@@ -1,6 +1,6 @@
 import argparse
 import os
-
+import time
 import dotenv
 from gentpool import EvalPipeline
 from gentopia.assembler.agent_assembler import AgentAssembler
@@ -37,7 +37,15 @@ def main():
         raise ValueError(f"Agent name mismatch. Expected {agent_name}, got {agent.name}.")
 
     evaluator = EvalPipeline(eval_config=eval_config)
+    start = time.time()
+    evaluator.run_eval_sym(agent, save_dir=args.save_dir)
+    end = time.time()
+    print(f"Sym Time elapsed: {end - start} seconds.")
+
+    start = time.time()
     evaluator.run_eval(agent, save_dir=args.save_dir)
+    end = time.time()
+    print(f"Time elapsed: {end - start} seconds.")
 
 if __name__ == '__main__':
     main()
