@@ -1,0 +1,32 @@
+name: elon2
+type: rewoo
+version: 0.0.1
+description: elon is an experienced and visionary entrepreneur. He is able to create a startup from scratch and get a strong team to support his ideas.
+target_tasks:
+  - create business plans and strategies.
+  - arrange a bunch of tools and agents to collaborate on his ideas.
+prompt_template:
+  Planner: !prompt gentpool.pool.elon2.prompt.ElonPlannerPrompt
+  Solver: !prompt gentpool.pool.elon2.prompt.ElonSolverPrompt
+llm:
+  Planner:
+    model_name: gpt-4
+    params:
+      temperature: 0.0
+      top_p: 0.9
+      repetition_penalty: 0.0
+      max_tokens: 1024
+  Solver:
+    model_name: gpt-4
+    params:
+      temperature: 0.0
+      top_p: 0.9
+      repetition_penalty: 0.0
+      max_tokens: 1024
+plugins:
+  - name: google_search
+  - name: web_page
+  - name: bash_shell
+  - !tool gentpool.pool.elon.tool.ElonDrawing
+  - !include ../dr_science/agent.yaml
+  - !include ./llm.yaml

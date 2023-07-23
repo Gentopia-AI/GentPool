@@ -26,7 +26,6 @@ class IntegrityEval(BaseEval):
     def _print_result(self, result: EvalResult):
         output = [
             "\n### FINISHING Agent EVAL ###",
-            " (づ￣ ³￣)づ",
             f"Agent score: {result.score * 100}",
             f"Agent run exception rate: {result.fail_rate * 100}%",
             f"Avg runtime per task: {round(result.avg_runtime, 2)}s",
@@ -75,11 +74,12 @@ class IntegrityEval(BaseEval):
         count = 0
         for task in data:
             count += 1
-            print(f">>> Running Eval {count}/{n_smaple} ...")
+            #print(f">>> Running Eval {count}/{n_smaple} ...")
             st = time.time()
             agent_instruction = task.get("prompt", None)
             try:
                 response = agent.run(agent_instruction)
+                assert response is not None
                 if verbose:
                     print("> Agent run successful.")
             except Exception as e:
@@ -109,11 +109,11 @@ class IntegrityEval(BaseEval):
 
         valid_sample = n_smaple - num_failed
 
-        result = EvalResult(score=total_score / valid_sample,
-                            fail_rate=num_failed / n_smaple,
-                            avg_runtime=total_runtime / valid_sample,
-                            avg_cost=total_cost / valid_sample,
-                            avg_token_usage=total_token / valid_sample,
+        result = EvalResult(score=0 if not n_smaple else total_score / n_smaple,
+                            fail_rate=0 if not n_smaple else num_failed / n_smaple,
+                            avg_runtime=0 if not valid_sample else total_runtime / valid_sample,
+                            avg_cost=0 if not valid_sample else total_cost / valid_sample,
+                            avg_token_usage=0 if not valid_sample else total_token / valid_sample,
                             eval_cost=eval_grader_cost)
 
         if verbose:

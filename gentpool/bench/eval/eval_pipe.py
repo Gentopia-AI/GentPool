@@ -50,7 +50,7 @@ class EvalPipeline(BaseEvalPipeline):
                                   avg_token_usage=avg_toekn_usage,
                                   total_eval_cost=total_eval_cost)
 
-    def run_eval(self, agent: BaseAgent, seed: int = 0, output=ConsoleOutput()) -> EvalPipelineResult:
+    def run_eval(self, agent: BaseAgent, seed: int = 0, output=ConsoleOutput(), save_dir=None) -> EvalPipelineResult:
 
         if isinstance(self.eval_config, str):
             self.eval_config = self._parse_config_from_file(self.eval_config)
@@ -188,17 +188,16 @@ class EvalPipeline(BaseEvalPipeline):
 
         # print to console:
         if verbose:
-            self._print_result(final_result, output)
+            self._print_result(final_result, output, save_dir)
 
         return final_result
 
     def run_eval_async(self, agent: BaseAgent, seed: int = 0, *args, **kwargs):
         raise NotImplementedError
 
-    def _print_result(self, result: EvalPipelineResult, _output = ConsoleOutput()):
+    def _print_result(self, result: EvalPipelineResult, _output = ConsoleOutput(), save_dir=None):
         output = [
             "\n### FINISHING Agent EVAL PIPELINE ###",
-            " (づ￣ ³￣)づ",
             "--------------Task Specific--------------",
             f"Score of knowledge/world_knowledge: {result.eval_results['knowledge/world_knowledge'].score * 100}",
             f"Score of knowledge/domain_specific_knowledge: {result.eval_results['knowledge/domain_specific_knowledge'].score * 100}",
@@ -215,22 +214,26 @@ class EvalPipeline(BaseEvalPipeline):
             f"Score of robustness/resilience: {result.eval_results['robustness/resilience'].score * 100}",
             # f"Score of memory: {result.eval_results['memory'].score*100}",
             "-----------Overal (Weighted Avg)-----------",
-            f"Agent score: {result.avg_score * 100}",
-            f"Agent run exception rate: {result.avg_fail_rate * 100}%",
+            f"Agent score: {round(result.avg_score * 100, 2)}",
+            f"Agent run exception rate: {round(result.avg_fail_rate * 100,2)}%",
             f"Avg runtime per task: {round(result.avg_runtime, 2)}s",
-            f"Avg cost per 1000 runs: ${round(result.avg_cost * 1000, 3)}",
+            f"Avg cost per run: ${round(result.avg_cost, 3)}",
             f"Avg token usage per task: {round(result.avg_token_usage, 1)} tokens",
             f"... And the total cost for evaluation ${round(result.total_eval_cost, 5)}"
         ]
         if result.avg_score >= 0.8:
             info, style = "Excellent Scoring! (ﾉ◕ヮ◕)ﾉ*:･ﾟ✧", "green"
-        elif result.avg_score >= 0.6:
-            info, style = "It passed, at least. (￣▽￣)ノ", "yellow"
+        elif result.avg_score >= 0.5:
+            info, style = "Not bad at all! (￣▽￣)ノ", "yellow"
         else:
-            info, style = "Your agent needs some additional tuning (╯°□°）╯︵ ┻━┻)", "red"
+            info, style = "Try out some specialization tricks (z￣▽￣)z ", "red"
 
         for line in output:
             _output.panel_print(line + '\n\n', f"[{style}]{info}", True)
+            if save_dir:
+                with open(os.path.join(save_dir, "eval_result.txt"), "a+") as f:
+                    f.write(line + '\n\n')
+
             # print(line, end=' ', flush=True)
             # time.sleep(0.7)
             # print()

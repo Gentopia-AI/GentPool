@@ -1,0 +1,52 @@
+#!/bin/bash
+
+# Get the base agent name from the first argument
+base_agent="$1"
+
+# Get the clone agent name from the second argument
+clone_agent="$2"
+
+# Check if base agent directory exists
+if [ ! -d "./gentpool/pool/${base_agent}" ]; then
+    echo "Base agent directory ./gentpool/pool/${base_agent} does not exist. Exiting..."
+    exit 1
+fi
+
+# Check if clone agent directory already exists
+if [ -d "./gentpool/pool/${clone_agent}" ]; then
+    echo "Clone agent directory ./gentpool/pool/${clone_agent} already exists. Exiting..."
+    exit 1
+fi
+
+# Directory paths
+base_dir_path="./gentpool/pool/${base_agent}"
+clone_dir_path="./gentpool/pool/${clone_agent}"
+
+echo "Cloning agent ${base_agent} to ${clone_agent}, continue? (y/n)"
+read answer
+
+if [ "$answer" != "${answer#[Yy]}" ] ;then
+    # Copy the entire base agent directory to the clone agent directory
+    cp -r "${base_dir_path}" "${clone_dir_path}"
+
+
+    # Register the clone agent in the pool
+    echo "from .${clone_agent} import *" >> "./gentpool/pool/__init__.py"
+
+    # Update the agent names in the clone agent directory
+    if [[ "$OSTYPE" == "darwin"* ]]; then
+        # Mac OSX
+        sed -i "" "s/${base_agent}/${clone_agent}/g" "${clone_dir_path}/__init__.py"
+        sed -i "" "s/name: ${base_agent}/name: ${clone_agent}/g" "${clone_dir_path}/agent.yaml"
+    else
+        # Linux, other
+        sed -i "s/${base_agent}/${clone_agent}/g" "${clone_dir_path}/__init__.py"
+        sed -i "s/name: ${base_agent}/name: ${clone_agent}/g" "${clone_dir_path}/agent.yaml"
+    fi
+
+
+    echo "Agent ${clone_agent} has been cloned from ${base_agent}."
+else
+    echo "Exiting..."
+    exit 1
+fi

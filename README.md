@@ -42,7 +42,7 @@ Sometimes an agent can upset you. To wipe it out completely,
 ```
 
 ## Agent  Eval and GentBench
-A core feature of GentPool is an ALM (Augmented Language Model) benchmark to evaluate agent capability **beyond** plain LLMs (since otherwise why do you pay the [tool tax]())? We carefully choose and curate NLP tasks tailored for ALM eval, releasing partially as *public* and others *private*.
+A core feature of GentPool is an ALM (Augmented Language Model) benchmark to evaluate agent capability **beyond** plain LLMs (since otherwise why do you pay the [plugin tax]())? We carefully choose and curate NLP tasks tailored for ALM eval, releasing partially as *public* and others *private*.
 
 Note that GentBench aims to be hard as hell. For example, a common approach to build GentBench is to run a plain `chatgpt` agent and only keep failed cases. See this [Notebook]() for details.
 
