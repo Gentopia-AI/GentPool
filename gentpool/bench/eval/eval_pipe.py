@@ -1,5 +1,5 @@
+from copy import deepcopy
 from typing import Union, Dict, Tuple
-
 import yaml
 from concurrent.futures import ThreadPoolExecutor
 from gentpool.bench.eval import BaseEvalPipeline
@@ -97,6 +97,7 @@ class EvalPipeline(BaseEvalPipeline):
             "translation": QAEval,
             "understanding": QAEval
         }
+        agent.clear()
         with ThreadPoolExecutor() as pool:
             _tasks = []
             for eval_class, task in tasks.items():
@@ -104,7 +105,8 @@ class EvalPipeline(BaseEvalPipeline):
                     grader = None if eval_subclass == "coding" else GateGrader(llm=OpenAIGPTClient(model_name=self.grader_llm))
                     if eval_subclass == "integrity":
                         grader = InstructedGrader(llm=OpenAIGPTClient(model_name=self.grader_llm))
-                    _tasks.append(pool.submit(self._eval, agent, evaluator[eval_subclass], eval_class, eval_subclass,
+                    _agent = deepcopy(agent)
+                    _tasks.append(pool.submit(self._eval, _agent, evaluator[eval_subclass], eval_class, eval_subclass,
                                               grader, seed, output))
             for future in _tasks:
                 n, result, eval_class, eval_subclass = future.result()
