@@ -1,7 +1,7 @@
-from typing import Union, Dict
-
+from copy import deepcopy
+from typing import Union, Dict, Tuple
 import yaml
-
+from concurrent.futures import ThreadPoolExecutor
 from gentpool.bench.eval import BaseEvalPipeline
 from gentpool.bench.eval.base_eval import EvalPipelineResult
 from gentpool.bench.eval.evaluator import *
@@ -49,6 +49,94 @@ class EvalPipeline(BaseEvalPipeline):
                                   avg_cost=avg_cost,
                                   avg_token_usage=avg_toekn_usage,
                                   total_eval_cost=total_eval_cost)
+
+    def _eval(self, agent: BaseAgent, cls, eval_class: str, eval_subclass: str, grader: BaseGrader,
+              seed: int, output) -> Tuple[int, EvalResult]:
+        # output.update_status(f"> EVALUATING: {eval_class}/{eval_subclass} ...")
+        n = self.eval_config.get(eval_class, {}).get(eval_subclass, 0)
+        evaluator = cls(eval_class=eval_class, eval_subclass=eval_subclass, grader=grader)
+        result = evaluator.evaluate(agent, n, seed, verbose=False)
+        # output.done()
+        output.print(f"Done: {eval_class}/{eval_subclass}: {result.score}")
+        return n, result, eval_class, eval_subclass
+
+    def run_eval_sym(self, agent: BaseAgent, seed: int = 0, output=ConsoleOutput(), save_dir=None) -> EvalPipelineResult:
+        if isinstance(self.eval_config, str):
+            self.eval_config = self._parse_config_from_file(self.eval_config)
+
+        if self.eval_config["robustness"].get("consistency", 0) > 0:
+            raise NotImplementedError("Consistency eval is not supported yet.")
+        if self.eval_config["robustness"].get("resilience", 0) > 0:
+            raise NotImplementedError("Resilience eval is not supported yet.")
+        if self.eval_config["memory"] == True:
+            raise NotImplementedError("Memory eval is not supported yet.")
+
+        verbose = self.eval_config.get("verbose", True)
+        private = self.eval_config.get("private", False)
+
+        eval_results = {}
+        total_eval_count = 0
+
+        tasks = {
+            "knowledge": ["world_knowledge", "domain_specific_knowledge", "web_retrieval"],
+            "reasoning": ["math", "coding", "planning", "commonsense"],
+            "safety": ["integrity", "harmless"],
+            "multilingual": ["translation", "understanding"],
+            # "robustness": ["consistency", "resilience"],
+        }
+        evaluator = {
+            "world_knowledge": QAEval,
+            "domain_specific_knowledge": QAEval,
+            "web_retrieval": QAEval,
+            "math": QAEval,
+            "coding": CodeEval,
+            "planning": QAEval,
+            "commonsense": QAEval,
+            "integrity": IntegrityEval,
+            "harmless": QAEval,
+            "translation": QAEval,
+            "understanding": QAEval
+        }
+        agent.clear()
+        with ThreadPoolExecutor() as pool:
+            _tasks = []
+            for eval_class, task in tasks.items():
+                for eval_subclass in task:
+                    grader = None if eval_subclass == "coding" else GateGrader(llm=OpenAIGPTClient(model_name=self.grader_llm))
+                    if eval_subclass == "integrity":
+                        grader = InstructedGrader(llm=OpenAIGPTClient(model_name=self.grader_llm))
+                    _agent = deepcopy(agent)
+                    _tasks.append(pool.submit(self._eval, _agent, evaluator[eval_subclass], eval_class, eval_subclass,
+                                              grader, seed, output))
+            for future in _tasks:
+                n, result, eval_class, eval_subclass = future.result()
+                total_eval_count += n
+                eval_results[f"{eval_class}/{eval_subclass}"] = result
+
+
+        output.update_status("> EVALUATING: robustness/consistency ...")
+        eval_results["robustness/consistency"] = self._placeholder_eval_result()
+        output.done()
+
+        # robustness/resilience
+        output.update_status("> EVALUATING: robustness/resilience ...")
+        eval_results["robustness/resilience"] = self._placeholder_eval_result()
+        output.done()
+
+        # #memory
+        # print("> EVALUATING: memory ...")
+        # eval_results["memory"] = self._placeholder_eval_result()
+
+        # weighted average
+        final_result = self._weigtht_avg_eval_results(eval_results, total_eval_count)
+
+        # print to console:
+        if verbose:
+            self._print_result(final_result, output, save_dir)
+
+        return final_result
+
+
 
     def run_eval(self, agent: BaseAgent, seed: int = 0, output=ConsoleOutput(), save_dir=None) -> EvalPipelineResult:
 
