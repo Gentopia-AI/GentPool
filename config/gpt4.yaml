@@ -3,7 +3,7 @@ name: chatgpt
 type: vanilla
 version: NA
 description: Simple GPT-4 LLM
-prompt_template: !prompt ZeroShotVanillaPrompt
+prompt_template: !prompt VanillaPrompt
 llm:
   model_name: gpt-4
   params:

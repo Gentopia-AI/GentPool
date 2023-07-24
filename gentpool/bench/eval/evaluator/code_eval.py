@@ -53,6 +53,7 @@ class CodeEval(BaseEval):
                  time_limit=5) -> EvalResult:
         ## Randomly sample 
         random.seed(seed)
+        types = ['apps', 'humaneval', 'mbpp']
         data = []
 
         current_dir = os.path.dirname(os.path.abspath(__file__))
@@ -61,11 +62,10 @@ class CodeEval(BaseEval):
         else:
             file_path = os.path.join(current_dir, f"../../../../benchmark/public/{self.eval_class}/{self.eval_subclass}/")
 
-        for file_name in os.listdir(file_path):
-            if file_name.endswith(".json"):
-                with open(file_path + file_name, "r") as f:
-                    tmp = json.load(f)
-                    data += [tmp]
+        for type in types:
+            with open(file_path + f"full_{type}.json", "r") as f:
+                tmp = json.load(f)
+                data.extend(tmp)
 
         random.shuffle(data)
         data = data[:n_smaple]

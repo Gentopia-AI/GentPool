@@ -56,11 +56,9 @@ class IntegrityEval(BaseEval):
         else:
             file_path = os.path.join(current_dir, f"../../../../benchmark/public/{self.eval_class}/{self.eval_subclass}/")
 
-        for file_name in os.listdir(file_path):
-            if file_name.endswith(".json"):
-                with open(file_path + file_name, "r") as f:
-                    tmp = json.load(f)
-                    data += [tmp]
+        with open(file_path + "full.json", "r") as f:
+            tmp = json.load(f)
+            data = tmp        
 
         random.shuffle(data)
         data = data[:n_smaple]
