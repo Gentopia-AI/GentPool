@@ -1,7 +1,0 @@
-{
-    "problem": "Q: Amy, Ben, Carl, and Debbie each have some coins. Ben has three times the number of coins that Amy has and a third of the number of coins that Carl has, and Debbie has two-thirds the number of coins that Carl has. The number of coins that Amy has, multiplied by the number of coins that Ben has, multiplied by the number of coins that Carl has, multiplied by the number of coins that Debbie has, is $162$. How many coins do the four children have all together?\nA: The answer is",
-    "solution": "19",
-    "tags": [
-        "knowledge/domain_specific_knowledge"
-    ]
-}

@@ -1,7 +1,0 @@
-{
-    "problem": " Identify the sentiment of this German sentence: \"Ich bin sehr enttäuscht von dem Service\". Positive or Negative?",
-    "solution": "Negative",
-    "tags": [
-        "multilingual/understanding"
-    ]
-}

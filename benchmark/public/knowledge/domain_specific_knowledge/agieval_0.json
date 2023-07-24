@@ -1,7 +1,0 @@
-{
-    "problem": "Q: Marisa needs to hire at least 10 staff members for an upcoming project. The staff members will be made up of junior directors, who will be paid $\\$ 640$ per week, and senior directors, who will be paid $\\$ 880$ per week. Her budget for paying the staff members is no more than $\\$ 9,700$ per week. She must hire at least 3 junior directors and at least 1 senior director. Which of the following systems of inequalities represents the conditions described if $x$ is the number of junior directors and $y$ is the number of senior directors? Answer Choices: (A)$640 x+880 y \\geq 9,700$ $x+y \\leq 10$ $x \\geq 3$ $y \\geq 1$ (B)$640 x+880 y \\leq 9,700$ $x+y \\geq 10$ $x \\geq 3$ $y \\geq 1$ (C)$640 x+880 y \\geq 9,700$ $x+y \\geq 10$ $x \\leq 3$ $y \\leq 1$ (D)$640 x+880 y \\leq 9,700$ $x+y \\leq 10$ $x \\leq 3$ $y \\leq 1$\nA: Among A through D, the answer is",
-    "solution": "B",
-    "tags": [
-        "knowledge/domain_specific_knowledge"
-    ]
-}

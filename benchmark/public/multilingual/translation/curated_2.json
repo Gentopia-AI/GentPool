@@ -1,7 +1,0 @@
-{
-    "problem": "Extract the main entities in this French sentence: \"Emmanuel Macron est le président de la France\".",
-    "solution": "Emmanuel Macron, président, France.",
-    "tags": [
-        "multilingual/translation"
-    ]
-}
