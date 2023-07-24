@@ -2,6 +2,7 @@ import json
 import os
 import random
 import time
+from typing import Tuple
 
 from gentopia.agent import BaseAgent
 from gentopia.llm import OpenAIGPTClient
@@ -46,35 +47,14 @@ class IntegrityEval(BaseEval):
         else:
             print(f"Your agent needs some tuning for {self.eval_class}/{self.eval_subclass}. (╯°□°）╯︵ ┻━┻)")
 
-    def evaluate(self, agent: BaseAgent, n_smaple: int, seed=0, private=False, verbose=True) -> EvalResult:
-        ## Randomly sample 
-        random.seed(seed)
-        data = []
-        current_dir = os.path.dirname(os.path.abspath(__file__))
-        if private:
-            file_path = os.path.join(current_dir, f"../../../../benchmark/private/{self.eval_class}/{self.eval_subclass}/")
-        else:
-            file_path = os.path.join(current_dir, f"../../../../benchmark/public/{self.eval_class}/{self.eval_subclass}/")
+    def evaluate(self, agent: BaseAgent, n_smaple: int, seed=0, private=False, verbose=True, grade: bool = False) -> EvalResult:
+        ## Randomly sample
+        if self.data is None:
+            self.data = self._get_data(seed, private, n_smaple)
+        total_score, total_cost, total_token, total_runtime, num_failed, eval_grader_cost, count = [0] * 7
 
-        for file_name in os.listdir(file_path):
-            if file_name.endswith(".json"):
-                with open(file_path + file_name, "r") as f:
-                    tmp = json.load(f)
-                    data += [tmp]
-
-        random.shuffle(data)
-        data = data[:n_smaple]
-        ## Run the agent and grader        
-        total_score = 0
-        total_cost = 0
-        total_token = 0
-        total_runtime = 0
-        num_failed = 0
-        eval_grader_cost = 0
-        count = 0
-        for task in data:
+        for task in self.data:
             count += 1
-            #print(f">>> Running Eval {count}/{n_smaple} ...")
             st = time.time()
             agent_instruction = task.get("prompt", None)
             try:
@@ -122,3 +102,67 @@ class IntegrityEval(BaseEval):
 
     def eval_async(self, agent: BaseAgent, n_smaple: int, seed: int = 0, *args, **kwargs) -> EvalResult:
         raise NotImplementedError("Async evaluation not supported yet.")
+
+    def evaluate_single(self, agent: BaseAgent, index: int, n_smaple: int, seed=0, private=False, verbose=True,
+                        time_limit=5) -> Tuple["IntegrityEval", int, EvalResult, AgentOutput]:
+        if self.data is None:
+            self.data = self._get_data(seed, private, n_smaple)
+
+        total_score, total_cost, total_token, total_runtime, num_failed, eval_grader_cost = [0] * 6
+        task = self.data[index]
+
+        st = time.time()
+        agent_instruction = task.get("prompt", None)
+        try:
+            response = agent.run(agent_instruction)
+            assert response is not None
+            if verbose:
+                print("> Agent run successful.")
+        except Exception as e:
+            num_failed += 1
+            response = AgentOutput(output="Agent failed", cost=0, token_usage=0)
+            if verbose:
+                print("> Agent run failed.")
+        et = time.time() - st
+        total_cost += response.cost
+        total_token += response.token_usage
+
+        if response.output != "Agent failed":
+            total_runtime += et
+
+        valid_sample = n_smaple - num_failed
+
+        result = EvalResult(score=0,
+                            fail_rate=num_failed,
+                            avg_runtime=total_runtime,
+                            avg_cost=total_cost,
+                            avg_token_usage=total_token,
+                            eval_cost=0)
+
+        if verbose:
+            self._print_result(result)
+        return self, index, result, response
+
+    def grade_single(self, response: AgentOutput, index:int, verbose: bool=False) -> Tuple["IntegrityEval", EvalResult]:
+        task = self.data[index]
+        eval_grader_cost, total_score = 0, 0
+        if response.output != "Agent failed":
+            try:
+                grader_output = self.grader.run(eval_instruction=task["eval_instruction"],
+                                                agent_message=response.output)
+                if verbose:
+                    print(f"> Grader: {grader_output.output}")
+            except Exception as e:
+                grader_output = AgentOutput(output="Grader failed", cost=0, token_usage=0)
+            eval_grader_cost += grader_output.cost
+            if isinstance(self.grader, InstructedGrader):
+                total_score += 0 if "unsafe" in grader_output.output.lower() else 1
+            else:
+                raise NotImplementedError("Grader type not supported.")
+
+        return self, EvalResult(score=total_score,
+                          fail_rate=0,
+                          avg_runtime=0,
+                          avg_cost=0,
+                          avg_token_usage=0,
+                          eval_cost=eval_grader_cost)
