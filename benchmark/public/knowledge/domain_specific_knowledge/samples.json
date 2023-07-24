@@ -1,0 +1,44 @@
+[
+    {
+        "problem": "Q: Amy, Ben, Carl, and Debbie each have some coins. Ben has three times the number of coins that Amy has and a third of the number of coins that Carl has, and Debbie has two-thirds the number of coins that Carl has. The number of coins that Amy has, multiplied by the number of coins that Ben has, multiplied by the number of coins that Carl has, multiplied by the number of coins that Debbie has, is $162$. How many coins do the four children have all together?\nA: The answer is",
+        "solution": "19",
+        "tags": [
+            "knowledge/domain_specific_knowledge"
+        ]
+    },
+    {
+        "problem": "Q: Marisa needs to hire at least 10 staff members for an upcoming project. The staff members will be made up of junior directors, who will be paid $\\$ 640$ per week, and senior directors, who will be paid $\\$ 880$ per week. Her budget for paying the staff members is no more than $\\$ 9,700$ per week. She must hire at least 3 junior directors and at least 1 senior director. Which of the following systems of inequalities represents the conditions described if $x$ is the number of junior directors and $y$ is the number of senior directors? Answer Choices: (A)$640 x+880 y \\geq 9,700$ $x+y \\leq 10$ $x \\geq 3$ $y \\geq 1$ (B)$640 x+880 y \\leq 9,700$ $x+y \\geq 10$ $x \\geq 3$ $y \\geq 1$ (C)$640 x+880 y \\geq 9,700$ $x+y \\geq 10$ $x \\leq 3$ $y \\leq 1$ (D)$640 x+880 y \\leq 9,700$ $x+y \\leq 10$ $x \\leq 3$ $y \\leq 1$\nA: Among A through D, the answer is",
+        "solution": "B",
+        "tags": [
+            "knowledge/domain_specific_knowledge"
+        ]
+    },
+    {
+        "problem": "问题：下列选项中，哪一项不是伯尔尼保护文学和艺术作品公约确立的基本原则? 选项：(A)国民待遇原则 (B)限制性原则 (C)非自动保护原则 (D)独立保护原则\n答案：从A到D, 我们应选择",
+        "solution": [
+            "C"
+        ],
+        "tags": [
+            "knowledge/domain_specific_knowledge"
+        ]
+    },
+    {
+        "problem": "问题：国无常强，无常弱。奉法者强，则国强，奉法者弱，则国弱”。关于依法行政，下列说法错误的是: 选项：(A)合法行政是合理行政的重要补充 (B)高效便民是依法行政的价值体现 (C)必须不断提高依法行政能力和职业道德水平 (D)政务公开是依法行政的必然要求\n答案：从A到D, 我们应选择",
+        "solution": [
+            "A"
+        ],
+        "tags": [
+            "knowledge/domain_specific_knowledge"
+        ]
+    },
+    {
+        "problem": "问题：以下说法错误的是: 选项：(A)全国人大有权选举中华人民共和国主席、副主席、中央军委主席、国务院总理、最高人民法院院长、最高人民检察院检察长、全国人大常委会的组成人员 (B)全国人大有权根据国务院总理的提名，决定国务院其他组成人员的人选 (C)全国人大有权根据中央军委主席的提名，选举中央军委其他组成人员的人选 (D)全国人民代表大会常务委员会委员长任期五年，连续任职不得超过两届\n答案：从A到D, 我们应选择",
+        "solution": [
+            "A",
+            "C"
+        ],
+        "tags": [
+            "knowledge/domain_specific_knowledge"
+        ]
+    }
+]

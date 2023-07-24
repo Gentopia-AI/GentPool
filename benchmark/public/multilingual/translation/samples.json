@@ -1,0 +1,37 @@
+[
+    {
+        "problem": "Translate the following sentence from Spanish to English: \"El gato está en el tejado\".",
+        "solution": "The cat is on the roof.",
+        "tags": [
+            "multilingual/translation"
+        ]
+    },
+    {
+        "problem": "Translate the following sentence from Romanian to English: \"Castelul Bran este legat de legenda lui Dracula\".",
+        "solution": "I love reading books.",
+        "tags": [
+            "multilingual/translation"
+        ]
+    },
+    {
+        "problem": "Translate the following sentence from Swedish to English: \"Jag älskar att läsa böcker\".",
+        "solution": "I love reading books.",
+        "tags": [
+            "multilingual/translation"
+        ]
+    },
+    {
+        "problem": "Translate the following sentence from Simplified Chinese to English: \"我喜欢吃北京烤鸭\".",
+        "solution": "I like to eat Peking duck.",
+        "tags": [
+            "multilingual/translation"
+        ]
+    },
+    {
+        "problem": "Extract the main entities in this French sentence: \"Emmanuel Macron est le président de la France\".",
+        "solution": "Emmanuel Macron, président, France.",
+        "tags": [
+            "multilingual/translation"
+        ]
+    }
+]
