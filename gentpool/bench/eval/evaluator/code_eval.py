@@ -138,7 +138,7 @@ class CodeEval(BaseEval):
     def evaluate_single(self, agent: BaseAgent, index: int, n_smaple: int, seed=0, private=False, verbose=True,
                  time_limit=5) -> Tuple["CodeEval", int, EvalResult, AgentOutput]:
         if self.data is None:
-            self.data = self._get_data(seed, private, n_smaple)
+            self.data = self._get_data(seed, private, n_smaple, True)
 
         total_score, total_cost, total_token, total_runtime, num_failed, eval_grader_cost = [0] * 6
         task = self.data[index]
