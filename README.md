@@ -42,7 +42,14 @@ Sometimes an agent can upset you. To wipe it out completely,
 ```
 
 ## Agent  Eval and GentBench
-A core feature of GentPool is an ALM (Augmented Language Model) benchmark to evaluate agent capability **beyond** plain LLMs (since otherwise why do you pay the [plugin tax]())? We carefully choose and curate NLP tasks tailored for ALM eval, releasing partially as *public* and others *private*.
+A core feature of GentPool is an ALM (Augmented Language Model) benchmark to evaluate agent capability **beyond** plain LLMs (since otherwise why do you pay the [plugin tax]())? We carefully choose and curate NLP tasks tailored for ALM eval, releasing partially as *public* and others *private*. In *public*, we provide several examples for each task, which can be quickly accessed through 'samples.json'. As for the complete data 'full.json', it is stored using Git-LFS [Git-LFS](https://git-lfs.com/). Once you have downloaded and installed LFS following the official repo, you can fetch the benchmark data (from within your local copy of the GentPool repo) with:
+
+```sh
+git lfs fetch --all
+git lfs pull
+```
+
+This will populate all the pointer files under `benchmark/public`.
 
 Note that GentBench aims to be hard as hell. For example, a common approach to build GentBench is to run a plain `chatgpt` agent and only keep failed cases. See this [Notebook]() for details.
 

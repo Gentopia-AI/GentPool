@@ -51,13 +51,34 @@ class CodeEval(BaseEval):
             print(f"Your agent needs some tuning for {self.eval_class}/{self.eval_subclass}. (╯°□°）╯︵ ┻━┻)")
 
     def evaluate(self, agent: BaseAgent, n_smaple: int, seed=0, private=False, verbose=True,
-                 time_limit=5, grade=False) -> EvalResult:
-        ## Randomly sample
-        if self.data is None:
-            self.data = self._get_data(seed, private, n_smaple)
+                 time_limit=5) -> EvalResult:
+        ## Randomly sample 
+        random.seed(seed)
+        types = ['apps', 'humaneval', 'mbpp']
+        data = []
 
-        total_score, total_cost, total_token, total_runtime, num_failed, eval_grader_cost, count = [0] * 7
-        for task in self.data:
+        current_dir = os.path.dirname(os.path.abspath(__file__))
+        if private:
+            file_path = os.path.join(current_dir, f"../../../../benchmark/private/{self.eval_class}/{self.eval_subclass}/")
+        else:
+            file_path = os.path.join(current_dir, f"../../../../benchmark/public/{self.eval_class}/{self.eval_subclass}/")
+
+        for type in types:
+            with open(file_path + f"full_{type}.json", "r") as f:
+                tmp = json.load(f)
+                data.extend(tmp)
+
+        random.shuffle(data)
+        data = data[:n_smaple]
+        ## Run the agent and grader        
+        total_score = 0
+        total_cost = 0
+        total_token = 0
+        total_runtime = 0
+        num_failed = 0
+        eval_grader_cost = 0
+        count = 0
+        for task in data:
             count += 1
             st = time.time()
             problem = task.get("problem", None)

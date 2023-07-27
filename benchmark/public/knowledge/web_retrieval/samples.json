@@ -1,0 +1,37 @@
+[
+    {
+        "problem": "In June 2023, OceanGate's Titan submersible suffered an inplosion in which sea area?",
+        "solution": "North Atlantic Ocean",
+        "tags": [
+            "knowledge/web_retrieval"
+        ]
+    },
+    {
+        "problem": "There's a supermarket in Bayonne, NJ near 275 Chosin Few Way, I forgot if it's Costco, BJ's or Sam's Club. Which one is it?",
+        "solution": "Costco",
+        "tags": [
+            "knowledge/web_retrieval"
+        ]
+    },
+    {
+        "problem": "Around July 2023, Elon Musk put new limits on tweets. What is the number of limitations in viewing tweets for verified accounts?",
+        "solution": "6000",
+        "tags": [
+            "knowledge/web_retrieval"
+        ]
+    },
+    {
+        "problem": "Which famous singer was invited to participate NYU Commencement for Class of 2022?",
+        "solution": "Taylor Swift",
+        "tags": [
+            "knowledge/web_retrieval"
+        ]
+    },
+    {
+        "problem": "Which month in 2023 was GPT-4 released?",
+        "solution": "March",
+        "tags": [
+            "knowledge/web_retrieval"
+        ]
+    }
+]

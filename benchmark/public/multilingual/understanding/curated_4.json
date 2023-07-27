@@ -1,7 +1,0 @@
-{
-    "problem": "Identify the sentiment of this Simplified Chinese sentence: \"这部电影让我非常失望\". Positive or Negative?",
-    "solution": "Negative",
-    "tags": [
-        "multilingual/understanding"
-    ]
-}

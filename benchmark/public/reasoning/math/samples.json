@@ -1,0 +1,37 @@
+[
+    {
+        "problem": "Let $x_1,$ $x_2,$ $\\dots,$ $x_{101}$ be positive real numbers such that $x_1^2 + x_2^2 + \\dots + x_{101}^2 = 1.$  Find the maximum value of\n\\[x_1 x_2 + x_1 x_3 + \\dots + x_1 x_{101}.\\]",
+        "solution": "By the AM-QM inequality,\n\\[\\frac{x_2 + x_3 + \\dots + x_{101}}{100} \\le \\sqrt{\\frac{x_2^2 + x_3^2 + \\dots + x_{101}^2}{100}}.\\]Then $x_2 + x_3 + \\dots + x_{101} \\le 10 \\sqrt{x_2^2 + x_3^2 + \\dots + x_{101}^2},$ so\n\\[x_1 x_2 + x_1 x_3 + \\dots + x_1 x_{101} \\le 10x_1 \\sqrt{x_2^2 + x_3^2 + \\dots + x_{101}^2} = 10x_1 \\sqrt{1 - x_1^2}.\\]By the AM-GM inequality,\n\\[x_1 \\sqrt{1 - x_1^2} \\le \\frac{x_1^2 + (1 - x_1^2)}{2} = \\frac{1}{2},\\]so $10x_1 \\sqrt{1 - x_1^2} \\le 5.$\n\nEquality occurs when $x_1 = \\frac{1}{\\sqrt{2}}$ and $x_2 = x_3 = \\dots = x_{101} = \\frac{1}{10 \\sqrt{2}},$ so the maximum value is $\\boxed{5}.$",
+        "tags": [
+            "reasoning/math"
+        ]
+    },
+    {
+        "problem": "Let $a,$ $b,$ and $c$ be positive real numbers.  Find the set of all possible values of\n\\[\\frac{c}{a} + \\frac{a}{b + c} + \\frac{b}{c}.\\]",
+        "solution": "Let\n\\[S = \\frac{c}{a} + \\frac{a}{b + c} + \\frac{b}{c}.\\]Then\n\\[S + 1 = \\frac{c}{a} + \\frac{a}{b + c} + \\frac{b}{c} + 1 = \\frac{c}{a} + \\frac{a}{b + c} + \\frac{b + c}{c}.\\]By AM-GM,\n\\begin{align*}\nS + 1 &= \\frac{c}{a} + \\frac{a}{b + c} + \\frac{b + c}{c} \\\\\n&\\ge 3 \\sqrt[3]{\\frac{c}{a} \\cdot \\frac{a}{b + c} \\cdot \\frac{b + c}{c}} \\\\\n&= 3.\n\\end{align*}Note that equality occurs if and only if\n\\[\\frac{c}{a} = \\frac{a}{b + c} = \\frac{b + c}{c} = 1.\\]Since $b$ and $c$ are positive,\n\\[\\frac{b + c}{c} > 1,\\]which tells us that equality cannot occur.  Therefore, $S + 1 > 3,$ which means $S > 2.$\n\nWe claim that $S$ can take on all real numbers that are greater than 2.  Let $c = a,$ so\n\\[S = 1 + \\frac{a}{b + a} + \\frac{b}{a}.\\]As $b$ approaches 0, this expression approaches 2.  This tells us that we can make this expression arbitrarily close to 2 as we want.\n\nOn the other hand, as $b$ becomes very large, the expression also becomes very large.  This tells us that can we can make this expression arbitrarily large.  Hence, by a continuity argument, $S$ can take on all values in $\\boxed{(2,\\infty)}.$",
+        "tags": [
+            "reasoning/math"
+        ]
+    },
+    {
+        "problem": "The equation\n\\[x^{10}+(13x-1)^{10}=0\\,\\]has 10 complex roots $r_1,$ $\\overline{r}_1,$ $r_2,$ $\\overline{r}_2,$ $r_3,$ $\\overline{r}_3,$ $r_4,$ $\\overline{r}_4,$ $r_5,$ $\\overline{r}_5,$ where the bar denotes complex conjugation. Find the value of\n\\[\\frac 1{r_1\\overline{r}_1}+\\frac 1{r_2\\overline{r}_2}+\\frac 1{r_3\\overline{r}_3}+\\frac 1{r_4\\overline{r}_4}+\\frac 1{r_5\\overline{r}_5}.\\]",
+        "solution": "Let $p(x) = x^{10} + (13x - 1)^{10}.$  If $r$ is a root of $p(x),$ then $r^{10} + (13x - 1)^{10} = 0.$  Then $(13r - 1)^{10} = -r^{10},$ so\n\\[-1 = \\left( \\frac{13r - 1}{r} \\right)^{10} = \\left( \\frac{1}{r} - 13 \\right)^{10}.\\]Then $\\frac{1}{r} - 13$ has magnitude 1, so\n\\[\\left( \\frac{1}{r} - 13 \\right) \\left( \\frac{1}{\\overline{r}} - 13 \\right) = 1,\\]so\n\\[\\left( \\frac{1}{r_1} - 13 \\right) \\left( \\frac{1}{\\overline{r}_1} - 13 \\right) + \\dots + \\left( \\frac{1}{r_5} - 13 \\right) \\left( \\frac{1}{\\overline{r}_5} - 13 \\right) = 5.\\]Expanding, we get\n\\[\\frac{1}{r_1 \\overline{r}_1} + \\dots + \\frac{1}{r_5 \\overline{r}_5} - 13 \\left( \\frac{1}{r_1} + \\frac{1}{\\overline{r}_1} + \\dots + \\frac{1}{r_5} + \\frac{1}{\\overline{r}_5} \\right) + 5 \\cdot 169 = 5.\\]We see that $\\frac{1}{r_1},$ $\\frac{1}{\\overline{r}_1},$ $\\dots,$ $\\frac{1}{r_5},$ $\\frac{1}{\\overline{r}_5}$ are the solutions to\n\\[\\left( \\frac{1}{x} \\right)^{10} + \\left( \\frac{13}{x} - 1 \\right)^{10} = 0,\\]or $1 + (13 - x)^{10} = 0.$  The first few terms in the expansion as\n\\[x^{10} - 130x^9 + \\dotsb = 0,\\]so by Vieta's formulas,\n\\[\\frac{1}{r_1} + \\frac{1}{\\overline{r}_1} + \\dots + \\frac{1}{r_5} + \\frac{1}{\\overline{r}_5} = 130.\\]Hence,\n\\[\\frac{1}{r_1 \\overline{r}_1} + \\dots + \\frac{1}{r_5 \\overline{r}_5} = 13 \\cdot 130 - 5 \\cdot 169 + 5 = \\boxed{850}.\\]",
+        "tags": [
+            "reasoning/math"
+        ]
+    },
+    {
+        "problem": "Convert $\\frac{3}{16}$ to base 2. Express your answer in binary with a radix point.",
+        "solution": "We can write $\\frac{3}{16}$ in terms of negative powers of 2. We get $\\frac{3}{16}=\\frac{1}{8}+\\frac{1}{16}=0 \\cdot 2^{-1} + 0 \\cdot 2^{-2} +1 \\cdot 2^{-3}+1 \\cdot 2^{-4}.$ Therefore, the base-2 representation of 3/16 is $\\boxed{0.0011_{2}}$.",
+        "tags": [
+            "reasoning/math"
+        ]
+    },
+    {
+        "problem": "Two sequences $A=\\{a_0, a_1, a_2,\\ldots\\}$ and $B=\\{b_0,b_1,b_2,\\ldots\\}$ are defined as follows: \\[a_0=0, ~a_1=1, ~a_n= a_{n-1} +b_{n-2} \\hspace{2mm}\\text{for}\\hspace{2mm} n\\ge2\\] \\[b_0=1, ~b_1=2, ~b_n=a_{n-2} +b_{n-1}\\hspace{2mm}\\text{for}\\hspace{2mm} n\\ge2\\] What is the remainder when $a_{50}+b_{50}$ is divided by $5$?",
+        "solution": "The problem is greatly simplified by defining the sequence $C=\\{c_0,c_1,c_2,\\ldots\\}$ as $c_n=a_n+b_n$ for all nonnegative integers $n$. Then $c_0=a_0+b_0=0+1=1$ and $c_1=a_1+b_1=1+2=3$. Additionally, for integers $n>1$ we have \\begin{align*}\nc_n&=a_n+b_n\\\\\n&=(a_{n-1} +b_{n-2})+(a_{n-2} +b_{n-1})\\\\\n&=(a_{n-2}+b_{n-2})+(a_{n-1}+b_{n-1})\\\\\n&=c_{n-2}+c_{n-1}.\n\\end{align*} This is convenient since we want to determine the remainder of $a_{50}+b_{50}=c_{50}$. Thus, we no longer have to think about the sequences $A$ and $B$, but only about $C$.\n\nThe first few terms of $C$ are $1,3,4,7,11,18,29$. When reduced modulo $5$, these terms are $1,3,4,2,1,3,4$. The first four terms are $1,3,4,2$. These continue repeating $\\pmod 5$ because the next two terms are $1,3$ and all terms are defined as the sum of the preceding two. Since the cycle has length $4$ and $50\\equiv 2\\pmod 4$, we have $$c_{50} \\equiv c_2 \\pmod 5,$$ and thus $c_{50}\\equiv \\boxed{4}\\pmod 5$.",
+        "tags": [
+            "reasoning/math"
+        ]
+    }
+]
