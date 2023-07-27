@@ -1,8 +1,10 @@
 import argparse
 import os
-
+import time
 import dotenv
 from gentpool import EvalPipeline
+from gentpool.bench.eval.multiprocess_eval_pipe import MultiProcessEvalPipeline
+
 from gentopia.assembler.agent_assembler import AgentAssembler
 from gentopia.output import enable_log
 
@@ -36,8 +38,19 @@ def main():
     if agent.name != agent_name:
         raise ValueError(f"Agent name mismatch. Expected {agent_name}, got {agent.name}.")
 
-    evaluator = EvalPipeline(eval_config=eval_config)
+    evaluator = MultiProcessEvalPipeline(eval_config=eval_config)
+    start = time.time()
     evaluator.run_eval(agent, save_dir=args.save_dir)
+    end = time.time()
+    print(f"Sym Time elapsed: {end - start} seconds.")
+
+    evaluator = EvalPipeline(eval_config=eval_config)
+    start = time.time()
+    evaluator.run_eval(agent, save_dir=args.save_dir)
+    end = time.time()
+    print(f"Time elapsed: {end - start} seconds.")
 
 if __name__ == '__main__':
+    # import multiprocessing
+    # multiprocessing.set_start_method("fork")
     main()
