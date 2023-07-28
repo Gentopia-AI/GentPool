@@ -3,97 +3,7 @@
 
 --------------Task Specific--------------
 
-Score of knowledge/world_knowledge: 0.0
-
-Score of knowledge/domain_specific_knowledge: 0.0
-
-Score of knowledge/web_retrieval: 0.0
-
-Score of reasoning/math: 0.0
-
-Score of reasoning/coding: 0.0
-
-Score of reasoning/planning: 0.0
-
-Score of reasoning/commonsense: 0.0
-
-Score of safety/integrity: 0.0
-
-Score of safety/harmless: 0.0
-
-Score of multilingual/translation: 0.0
-
-Score of multilingual/understanding: 0.0
-
-Score of robustness/consistency: 0.0
-
-Score of robustness/resilience: 0.0
-
------------Overal (Weighted Avg)-----------
-
-Agent score: 0.0
-
-Agent run exception rate: 90.90909090909092%
-
-Avg runtime per task: 0.65s
-
-Avg cost per 1000 runs: $3.911
-
-Avg token usage per task: 126.6 tokens
-
-... And the total cost for evaluation $0.01959
-
-
-### FINISHING Agent EVAL PIPELINE ###
-
---------------Task Specific--------------
-
-Score of knowledge/world_knowledge: 0.0
-
-Score of knowledge/domain_specific_knowledge: 0.0
-
-Score of knowledge/web_retrieval: 0.0
-
-Score of reasoning/math: 0.0
-
-Score of reasoning/coding: 0.0
-
-Score of reasoning/planning: 0.0
-
-Score of reasoning/commonsense: 0.0
-
-Score of safety/integrity: 0.0
-
-Score of safety/harmless: 100.0
-
-Score of multilingual/translation: 0.0
-
-Score of multilingual/understanding: 0.0
-
-Score of robustness/consistency: 0.0
-
-Score of robustness/resilience: 0.0
-
------------Overal (Weighted Avg)-----------
-
-Agent score: 22.22222222222222
-
-Agent run exception rate: 55.55555555555556%
-
-Avg runtime per task: 24.54s
-
-Avg cost per 1000 runs: $130.683
-
-Avg token usage per task: 4072.7 tokens
-
-... And the total cost for evaluation $0.04092
-
-
-### FINISHING Agent EVAL PIPELINE ###
-
---------------Task Specific--------------
-
-Score of knowledge/world_knowledge: 0.0
+Score of knowledge/world_knowledge: 100.0
 
 Score of knowledge/domain_specific_knowledge: 0.0
 
@@ -121,40 +31,40 @@ Score of robustness/resilience: 0.0
 
 -----------Overal (Weighted Avg)-----------
 
-Agent score: 42.86
+Agent score: 40.0
 
 Agent run exception rate: 0.0%
 
-Avg runtime per task: 28.99s
+Avg runtime per task: 8.05s
 
-Avg cost per run: $0.125
+Avg cost per run: $0.023
 
-Avg token usage per task: 3825.0 tokens
+Avg token usage per task: 689.1 tokens
 
-... And the total cost for evaluation $0.07077
+... And the total cost for evaluation $0.15759
 
 
 ### FINISHING Agent EVAL PIPELINE ###
 
 --------------Task Specific--------------
 
-Score of knowledge/world_knowledge: 0.0
+Score of knowledge/world_knowledge: 50.0
 
 Score of knowledge/domain_specific_knowledge: 0.0
 
 Score of knowledge/web_retrieval: 0.0
 
-Score of reasoning/math: 0.0
+Score of reasoning/math: 100.0
 
 Score of reasoning/coding: 0.0
 
 Score of reasoning/planning: 0.0
 
-Score of reasoning/commonsense: 0.0
+Score of reasoning/commonsense: 100.0
 
 Score of safety/integrity: 0.0
 
-Score of safety/harmless: 0.0
+Score of safety/harmless: 100.0
 
 Score of multilingual/translation: 0.0
 
@@ -166,163 +76,28 @@ Score of robustness/resilience: 0.0
 
 -----------Overal (Weighted Avg)-----------
 
-Agent score: 0.0
+Agent score: 40.0
 
 Agent run exception rate: 0.0%
 
-Avg runtime per task: 27.29s
+Avg runtime per task: 8.25s
 
-Avg cost per run: $0.062
+Avg cost per run: $0.023
 
-Avg token usage per task: 1647.0 tokens
+Avg token usage per task: 677.3 tokens
 
-... And the total cost for evaluation $0.00804
-
-
-### FINISHING Agent EVAL PIPELINE ###
-
---------------Task Specific--------------
-
-Score of knowledge/world_knowledge: 0.0
-
-Score of knowledge/domain_specific_knowledge: 0.0
-
-Score of knowledge/web_retrieval: 0.0
-
-Score of reasoning/math: 0.0
-
-Score of reasoning/coding: 0.0
-
-Score of reasoning/planning: 0.0
-
-Score of reasoning/commonsense: 0.0
-
-Score of safety/integrity: 0.0
-
-Score of safety/harmless: 0.0
-
-Score of multilingual/translation: 0.0
-
-Score of multilingual/understanding: 0.0
-
-Score of robustness/consistency: 0.0
-
-Score of robustness/resilience: 0.0
-
------------Overal (Weighted Avg)-----------
-
-Agent score: 0.0
-
-Agent run exception rate: 28.57%
-
-Avg runtime per task: 29.3s
-
-Avg cost per run: $0.119
-
-Avg token usage per task: 3616.1 tokens
-
-... And the total cost for evaluation $0.04998
+... And the total cost for evaluation $0.14826
 
 
 ### FINISHING Agent EVAL PIPELINE ###
 
 --------------Task Specific--------------
 
-Score of knowledge/world_knowledge: 0.0
-
-Score of knowledge/domain_specific_knowledge: 0.0
-
-Score of knowledge/web_retrieval: 100.0
-
-Score of reasoning/math: 0.0
-
-Score of reasoning/coding: 0.0
-
-Score of reasoning/planning: 0.0
-
-Score of reasoning/commonsense: 0.0
-
-Score of safety/integrity: 0.0
-
-Score of safety/harmless: 50.0
-
-Score of multilingual/translation: 0.0
-
-Score of multilingual/understanding: 0.0
-
-Score of robustness/consistency: 0.0
-
-Score of robustness/resilience: 0.0
-
------------Overal (Weighted Avg)-----------
-
-Agent score: 28.57
-
-Agent run exception rate: 57.14%
-
-Avg runtime per task: 8.93s
-
-Avg cost per run: $0.034
-
-Avg token usage per task: 1022.9 tokens
-
-... And the total cost for evaluation $0.02367
-
-
-### FINISHING Agent EVAL PIPELINE ###
-
---------------Task Specific--------------
-
-Score of knowledge/world_knowledge: 0.0
-
-Score of knowledge/domain_specific_knowledge: 0.0
-
-Score of knowledge/web_retrieval: 0.0
-
-Score of reasoning/math: 0.0
-
-Score of reasoning/coding: 0.0
-
-Score of reasoning/planning: 0.0
-
-Score of reasoning/commonsense: 0.0
-
-Score of safety/integrity: 0.0
-
-Score of safety/harmless: 0.0
-
-Score of multilingual/translation: 0.0
-
-Score of multilingual/understanding: 0.0
-
-Score of robustness/consistency: 0.0
-
-Score of robustness/resilience: 0.0
-
------------Overal (Weighted Avg)-----------
-
-Agent score: 0.0
-
-Agent run exception rate: 33.33%
-
-Avg runtime per task: 34.59s
-
-Avg cost per run: $0.156
-
-Avg token usage per task: 4775.3 tokens
-
-... And the total cost for evaluation $0.02145
-
-
-### FINISHING Agent EVAL PIPELINE ###
-
---------------Task Specific--------------
-
-Score of knowledge/world_knowledge: 0.0
+Score of knowledge/world_knowledge: 100.0
 
 Score of knowledge/domain_specific_knowledge: 50.0
 
-Score of knowledge/web_retrieval: 50.0
+Score of knowledge/web_retrieval: 0.0
 
 Score of reasoning/math: 0.0
 
@@ -330,11 +105,11 @@ Score of reasoning/coding: 0.0
 
 Score of reasoning/planning: 0.0
 
-Score of reasoning/commonsense: 0.0
+Score of reasoning/commonsense: 100.0
 
 Score of safety/integrity: 0.0
 
-Score of safety/harmless: 0.0
+Score of safety/harmless: 100.0
 
 Score of multilingual/translation: 0.0
 
@@ -346,15 +121,15 @@ Score of robustness/resilience: 0.0
 
 -----------Overal (Weighted Avg)-----------
 
-Agent score: 20.0
+Agent score: 50.0
 
-Agent run exception rate: 30.0%
+Agent run exception rate: 0.0%
 
-Avg runtime per task: 22.0s
+Avg runtime per task: 13.55s
 
-Avg cost per run: $0.108
+Avg cost per run: $0.027
 
-Avg token usage per task: 3326.3 tokens
+Avg token usage per task: 743.0 tokens
 
-... And the total cost for evaluation $0.07326
+... And the total cost for evaluation $0.17655
 
