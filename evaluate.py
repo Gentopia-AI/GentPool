@@ -17,6 +17,7 @@ def main():
     parser.add_argument('name', type=str, help='Name of the agent to evaluate.')
     parser.add_argument('--eval_config', type=str, default="./config/eval_config.yaml", help='Path to eval config file.')
     parser.add_argument('--save_dir', type=str, default="./", help='Path to save eval results.')
+    parser.add_argument('--mode', type=str, default="parallel", help="EvalPipeline mode. Can be 'parallel' or 'sequential'.")
 
     args = parser.parse_args()
     agent_name = args.name
@@ -38,19 +39,18 @@ def main():
     if agent.name != agent_name:
         raise ValueError(f"Agent name mismatch. Expected {agent_name}, got {agent.name}.")
 
-    evaluator = MultiProcessEvalPipeline(eval_config=eval_config)
-    start = time.time()
-    evaluator.run_eval(agent, save_dir=args.save_dir)
-    end = time.time()
-    print(f"Sym Time elapsed: {end - start} seconds.")
-
-    evaluator = EvalPipeline(eval_config=eval_config)
-    start = time.time()
-    evaluator.run_eval(agent, save_dir=args.save_dir)
-    end = time.time()
-    print(f"Time elapsed: {end - start} seconds.")
+    if args.mode == "parallel":
+        evaluator = MultiProcessEvalPipeline(eval_config=eval_config)
+        start = time.time()
+        evaluator.run_eval(agent, save_dir=args.save_dir)
+        end = time.time()
+        print(f"MultiProcessEvalPipeline Complete in {end - start} seconds.")
+    elif args.mode == "sequential":
+        evaluator = EvalPipeline(eval_config=eval_config)
+        start = time.time()
+        evaluator.run_eval(agent, save_dir=args.save_dir)
+        end = time.time()
+        print(f"EvalPipeline Complete in {end - start} seconds.")
 
 if __name__ == '__main__':
-    # import multiprocessing
-    # multiprocessing.set_start_method("fork")
     main()
