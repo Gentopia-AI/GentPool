@@ -132,7 +132,7 @@ class QAEval(BaseEval):
             -> Tuple["QAEval", int, EvalResult, AgentOutput]:
         ## Randomly sample
         if self.data is None:
-            self.data = self._get_data(seed, private, n_smaple)
+            self.data = self._get_data(seed, private, n_smaple, False)
 
         total_score, total_cost, total_token, total_runtime, num_failed, eval_grader_cost = [0] * 6
         task = self.data[index]

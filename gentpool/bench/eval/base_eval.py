@@ -72,7 +72,7 @@ class BaseEval(ABC, BaseModel):
         pass
 
 
-    def _get_data(self, seed: int, private: bool, n_smaple: int) -> List[Dict]:
+    def _get_data(self, seed: int, private: bool, n_smaple: int, code_eval: bool) -> List[Dict]:
         random.seed(seed)
         data = []
         current_dir = os.path.dirname(os.path.abspath(__file__))
@@ -82,12 +82,17 @@ class BaseEval(ABC, BaseModel):
         else:
             file_path = os.path.join(current_dir,
                                      f"../../../benchmark/public/{self.eval_class}/{self.eval_subclass}/")
-
-        for file_name in os.listdir(file_path):
-            if file_name.endswith(".json"):
-                with open(file_path + file_name, "r") as f:
+            
+        types = ['apps', 'humaneval', 'mbpp']
+        if code_eval:
+            for type in types:
+                with open(file_path + f"full_{type}.json", "r") as f:
                     tmp = json.load(f)
-                    data += [tmp]
+                    data.extend(tmp)
+        else:
+            with open(file_path + "full.json", "r") as f:
+                tmp = json.load(f)
+                data = tmp
 
         random.shuffle(data)
         return data[:n_smaple]
