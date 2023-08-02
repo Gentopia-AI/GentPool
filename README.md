@@ -1,11 +1,11 @@
 # GentPool
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Static Badge](https://img.shields.io/badge/Documentation-8A2BE2)](https://gentopia.readthedocs.io/en/latest/gentpool.html)
+[![Read the Docs](https://img.shields.io/readthedocs/gentopia)](https://gentopia.readthedocs.io/en/latest/gentpool.html)
 [![Static Badge](https://img.shields.io/badge/Gentopia-873503)](https://github.com/Gentopia-AI/Gentopia)
 [![Open Issues](https://img.shields.io/github/issues-raw/Gentopia-AI/GentPool)](https://github.com/Gentopia-AI/GentPool/issues)
 [![Twitter Follow](https://img.shields.io/twitter/follow/GentopiaAI)](https://twitter.com/GentopiaAI)
 [![](https://dcbadge.vercel.app/api/server/ASPP9MY9QK?compact=true&style=flat)](https://discord.gg/ASPP9MY9QK)
-[![YouTube Channel Subscribers](https://img.shields.io/youtube/channel/subscribers/UC9QCjcsHJVKjKZ2Zmrq83vA)](https://www.youtube.com/channel/UC9QCjcsHJVKjKZ2Zmrq83vA)
+[![YouTube Channel Subscribers](https://img.shields.io/youtube/channel/views/UC9QCjcsHJVKjKZ2Zmrq83vA)](https://www.youtube.com/channel/UC9QCjcsHJVKjKZ2Zmrq83vA)
 [![GitHub star chart](https://img.shields.io/github/stars/Gentopia-AI/GentPool?style=social)](https://star-history.com/Gentopia-AI/GentPool)
 
 GentPool is the companion platform of [Gentopia](https://github.com/Gentopia-AI/Gentopia), where people share specialized agents, clone, customize or build upon each other, and run agent evaluation with [GentBench](https://gentopia.readthedocs.io/en/latest/gentpool.html#agent-evaluation).
