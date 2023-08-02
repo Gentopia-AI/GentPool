@@ -1,0 +1,15 @@
+# Vanilla agent template
+name: vanilla_template
+version: 0.0.1
+type: vanilla
+description: A plain gpt-4 LLM.
+target_tasks:
+  - anything to do with an LLM
+llm:
+  model_name: gpt-4
+  params:
+    temperature: 0.0
+    top_p: 0.9
+    repetition_penalty: 1.0
+    max_tokens: 1024
+prompt_template: !prompt VanillaPrompt

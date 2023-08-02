@@ -1,0 +1,26 @@
+# OpenAI agent template
+name: openai_memory_template
+version: 0.0.1
+type: openai_memory
+description: An openai memory agent capable of online web search and browsing in unlimited context length.
+target_tasks:
+  - web search
+  - web browsing
+llm:
+  model_name: gpt-4-0613
+  params:
+    temperature: 0.0
+    top_p: 0.9
+    repetition_penalty: 1.0
+    max_tokens: 1024
+prompt_template: !prompt VanillaPrompt
+plugins:
+  - name: google_search
+  - name: web_page
+memory:
+  memory_type: chroma
+  conversation_threshold: 2      # first-level memory
+  reasoning_threshold: 2         # second-level memory
+  params:
+    index: main
+    top_k: 2
