@@ -53,7 +53,7 @@ class MultiProcessEvalPipeline(BaseEvalPipeline):
                                   total_eval_cost=total_eval_cost)
 
     def run_eval(self, agent: BaseAgent, seed: int = 0, output=ConsoleOutput(), save_dir=None, eval_process: int = 8,
-                 grade_process: int = 12) -> EvalPipelineResult:
+                 grade_process: int = 12) -> Tuple[EvalPipelineResult, List[Dict]]:
         if isinstance(self.eval_config, str):
             self.eval_config = self._parse_config_from_file(self.eval_config)
 
@@ -90,6 +90,7 @@ class MultiProcessEvalPipeline(BaseEvalPipeline):
             "translation": QAEval,
             "understanding": QAEval
         }
+        LOG = []
         agent.clear()
         evaluate_pool = ThreadPoolExecutor(eval_process)
         grader_pool = ThreadPoolExecutor(grade_process)
@@ -109,13 +110,13 @@ class MultiProcessEvalPipeline(BaseEvalPipeline):
                         if eval_subclass == "integrity":
                             grader = InstructedGrader(llm=OpenAIGPTClient(model_name=self.grader_llm))
                         _evaluator = cls(eval_class=eval_class, eval_subclass=eval_subclass, grader=grader)
-                        futures.append(evaluate_pool.submit(_evaluator.evaluate_single, _agent, index, n, seed, verbose=False))
+                        futures.append(evaluate_pool.submit(_evaluator.evaluate_single, _agent, index, n, seed))
             l = len(futures)
             while futures:
                 done, not_done = concurrent.futures.wait(futures, return_when=concurrent.futures.FIRST_COMPLETED)
                 output.update_status(f"Evaluated {l - len(not_done)}/{l} tasks.")
                 for i in done:
-                    item, index, result, response = i.result()
+                    item, index, result, response, log = i.result()
                     name = f"{item.eval_class}/{item.eval_subclass}"
                     eval_results[name] += result
                     results.append(grader_pool.submit(item.grade_single, response, index))
@@ -125,10 +126,11 @@ class MultiProcessEvalPipeline(BaseEvalPipeline):
             concurrent.futures.wait(results)
             output.done(_all=True)
             for i in results:
-                item, result = i.result()
+                item, result, log = i.result()
                 name = f"{item.eval_class}/{item.eval_subclass}"
                 output.print(f"{name} Done")
                 eval_results[name] += result
+                LOG.append(log)
 
 
             for i, j in eval_results.items():
@@ -166,10 +168,7 @@ class MultiProcessEvalPipeline(BaseEvalPipeline):
         if verbose:
             self._print_result(final_result, output, save_dir)
 
-        return final_result
-
-
-
+        return final_result, LOG
 
 
     def run_eval_async(self, agent: BaseAgent, seed: int = 0, *args, **kwargs):
@@ -214,10 +213,27 @@ class MultiProcessEvalPipeline(BaseEvalPipeline):
                 with open(os.path.join(save_dir, "eval_result.txt"), "a+") as f:
                     f.write(line + '\n\n')
 
-            # print(line, end=' ', flush=True)
-            # time.sleep(0.7)
-            # print()
         _output.panel_print("### FINISHING Agent EVAL PIPELINE ###", f"[{style}]{info}", True)
         _output.clear()
 
+    def vis(self, log: List[Dict], view: str, name: str = 'Agent'):
+        assert view in ["'openai-chat", "chatbot"], "view must be 'openai-chat' or 'chatbot'"
+        try:
+            from zeno_build.experiments.experiment_run import ExperimentRun
+            from zeno_build.prompts.chat_prompt import ChatMessages, ChatTurn
+            from zeno_build.reporting.visualize import visualize
+            from pandas import DataFrame as df
+
+            if view == "openai-chat":
+                pass
+            else:
+                data = df({'data_column': [i['prompt'] for i in log]})
+                labels = [i['solution'] for i in log]
+                results = [
+                    ExperimentRun(name=name, parameters={}, predictions=[[i['output']] for i in log]),
+                ]
+                visualize(data, labels, results, view, 'data_column', [], {'batch_size': 1})
+        except Exception as e:
+            raise e
+            pass
 

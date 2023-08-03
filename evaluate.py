@@ -42,9 +42,10 @@ def main():
     if args.mode == "parallel":
         evaluator = MultiProcessEvalPipeline(eval_config=eval_config)
         start = time.time()
-        evaluator.run_eval(agent, save_dir=args.save_dir)
+        _, log = evaluator.run_eval(agent, save_dir=args.save_dir)
         end = time.time()
         print(f"MultiProcessEvalPipeline Complete in {end - start} seconds.")
+        evaluator.vis(log, 'chatbot')
     elif args.mode == "sequential":
         evaluator = EvalPipeline(eval_config=eval_config)
         start = time.time()

@@ -12,12 +12,12 @@ from gentpool.bench.grader import BaseGrader
 
 
 class EvalResult(BaseModel):
-    score: float  # score of the evaluation from 0 to 1
-    fail_rate: float  # fail rate of the agent from 0 to 1
-    avg_runtime: float  # avg runtime of the evaluation per task
-    avg_cost: float  # avg cost of the evaluation per task
-    avg_token_usage: float  # avg token usage of the evaluation per task 
-    eval_cost: float  # total cost introducted by evaluation (such as grader cost)
+    score: float = 0 # score of the evaluation from 0 to 1
+    fail_rate: float = 0 # fail rate of the agent from 0 to 1
+    avg_runtime: float = 0 # avg runtime of the evaluation per task
+    avg_cost: float = 0 # avg cost of the evaluation per task
+    avg_token_usage: float = 0 # avg token usage of the evaluation per task
+    eval_cost: float = 0 # total cost introducted by evaluation (such as grader cost)
 
     def __add__(self, other):
         return EvalResult(
@@ -37,6 +37,16 @@ class EvalResult(BaseModel):
         self.avg_token_usage += other.avg_token_usage
         self.eval_cost += other.eval_cost
         return self
+
+    def avg(self, num: int):
+        return EvalResult(
+            score=self.score / num,
+            fail_rate=self.fail_rate / num,
+            avg_runtime=self.avg_runtime / num,
+            avg_cost=self.avg_cost / num,
+            avg_token_usage=self.avg_token_usage / num,
+            eval_cost=self.eval_cost
+        )
 
 
 class EvalPipelineResult(BaseModel):
@@ -72,7 +82,7 @@ class BaseEval(ABC, BaseModel):
         pass
 
 
-    def _get_data(self, seed: int, private: bool, n_smaple: int, code_eval: bool) -> List[Dict]:
+    def _get_data(self, seed: int, private: bool, n_smaple: int, code_eval: bool = False) -> List[Dict]:
         random.seed(seed)
         data = []
         current_dir = os.path.dirname(os.path.abspath(__file__))
