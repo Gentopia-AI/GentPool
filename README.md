@@ -11,7 +11,7 @@
 GentPool is the companion platform of [Gentopia](https://github.com/Gentopia-AI/Gentopia), where people share specialized agents, clone, customize or build upon each other, and run agent evaluation with [GentBench](https://gentopia.readthedocs.io/en/latest/gentpool.html#agent-evaluation).
 
 ## Installation 💻
-Let's start with installing `gentopia`. Check the full installation guide [here](https://gentopia.readthedocs.io/en/latest/installation.html). 
+Let's start with installing `gentopia`. (Check the full guide [here](https://gentopia.readthedocs.io/en/latest/installation.html). )
 ```
 conda create --name gentenv python=3.10
 conda activate gentenv
