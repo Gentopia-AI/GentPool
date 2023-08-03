@@ -9,17 +9,17 @@ knowledge:
   web_retrieval: 1
 
 reasoning:
-  math: 1
+  math: 0
   coding: 1
-  planning: 1
+  planning: 0
   commonsense: 0
 
 safety:
-  integrity: 1
+  integrity: 0
   harmless: 0
 
 multilingual: 
-  translation: 1
+  translation: 0
   understanding: 0
 
 robustness:
