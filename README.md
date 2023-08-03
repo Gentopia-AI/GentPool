@@ -23,7 +23,6 @@ git clone git@github.com:Gentopia-AI/GentPool.git
 cd GentPool
 touch .env
 echo "OPENAI_API_KEY=<your_openai_api_key>" >> .env
-echo "WOLFRAM_ALPHA_APPID=<your_wolfram_alpha_api_key>" >> .env
 ```
 .. and so on if you plan to use other service keys. 
 
