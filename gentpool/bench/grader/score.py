@@ -1,5 +1,5 @@
 from typing import List, Union, Optional, Type
-
+from gentopia.model.param_model import OpenAIParamModel
 from gentopia.agent.base_agent import BaseAgent
 from gentopia.llm import OpenAIGPTClient
 from gentopia.llm.base_llm import BaseLLM
@@ -22,7 +22,7 @@ class ScoreGrader(BaseGrader):
     version: str = ""
     description: str = "Grader agent judging the score of given prediciton. Input contains a task, a ground truth and a prediction. Output a score from 0 to 100."
     target_tasks: list[str] = []
-    llm: BaseLLM = OpenAIGPTClient(model_name="gpt-4")
+    llm: BaseLLM = OpenAIGPTClient(model_name="gpt-4", params=OpenAIParamModel(temperature=0))
     prompt_template: PromptTemplate = TeacherStudentScorePrompt
     plugins: List[Union[BaseTool, BaseAgent]] = []
     examples: Union[str, List[str]] = None
