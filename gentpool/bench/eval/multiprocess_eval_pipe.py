@@ -221,7 +221,7 @@ class MultiProcessEvalPipeline(BaseEvalPipeline):
     def _parse_eval_to_markdown(self, eval:dict) -> str:
         prompt = eval.get("prompt", "")
         grade = eval.get("output", "")
-        return f"##Grader Eval\n{prompt}\n{grade}"
+        return f"## Grader Eval\n{prompt}\n{grade}"
 
     def vis(self, log: List[Dict], view: str, name: str = 'Agent'):
         assert view in ["openai-chat-markdown", "openai-chat", "chatbot"], "view must be 'openai-chat' or 'chatbot'"

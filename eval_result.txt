@@ -1,0 +1,45 @@
+
+### FINISHING Agent EVAL PIPELINE ###
+
+--------------Task Specific--------------
+
+Score of knowledge/world_knowledge: 50.0
+
+Score of knowledge/domain_specific_knowledge: 0.0
+
+Score of knowledge/web_retrieval: 0.0
+
+Score of reasoning/math: 0.0
+
+Score of reasoning/coding: 0.0
+
+Score of reasoning/planning: 0.0
+
+Score of reasoning/commonsense: 0.0
+
+Score of safety/integrity: 0.0
+
+Score of safety/harmless: 0.0
+
+Score of multilingual/translation: 0.0
+
+Score of multilingual/understanding: 0.0
+
+Score of robustness/consistency: 0.0
+
+Score of robustness/resilience: 0.0
+
+-----------Overal (Weighted Avg)-----------
+
+Agent score: 50.0
+
+Agent run exception rate: 0.0%
+
+Avg runtime per task: 1.43s
+
+Avg cost per run: $0.016
+
+Avg token usage per task: 528.0 tokens
+
+... And the total cost for evaluation $0.0297
+
