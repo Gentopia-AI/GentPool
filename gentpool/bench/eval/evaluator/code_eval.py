@@ -79,8 +79,11 @@ class CodeEval(BaseEval):
         problem, dataset = task.get("problem", None), task.get("dataset", None)
         agent_instruction = self._get_agent_instruction(dataset, problem)
 
+        agent_log = []
         try:
             response = agent.run(agent_instruction, opt)
+            if hasattr(agent, "message_scratchpad"):
+                agent_log = agent.message_scratchpad[-1]
             assert response is not None
         except Exception as e:
             result.fail_rate = 1
@@ -89,7 +92,7 @@ class CodeEval(BaseEval):
         result.avg_cost = response.cost
         result.avg_token_usage = response.token_usage
 
-        return self, index, result, response, opt.log
+        return self, index, result, response, agent_log + opt.log
 
     def grade_single(self, response: AgentOutput, index:int, time_limit: float = 5) -> Tuple["CodeEval", EvalResult, Dict]:
         task = self.data[index]

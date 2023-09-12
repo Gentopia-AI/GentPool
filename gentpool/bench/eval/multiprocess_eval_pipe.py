@@ -9,6 +9,10 @@ from gentpool.bench.eval.base_eval import EvalPipelineResult
 from gentpool.bench.eval.evaluator import *
 from gentopia.output.console_output import ConsoleOutput
 from concurrent.futures import ProcessPoolExecutor, ThreadPoolExecutor
+import pandas as pd
+import zeno
+from zeno import ZenoParameters
+
 
 class MultiProcessEvalPipeline(BaseEvalPipeline):
     eval_config: Union[Dict, str]
@@ -120,6 +124,7 @@ class MultiProcessEvalPipeline(BaseEvalPipeline):
                     name = f"{item.eval_class}/{item.eval_subclass}"
                     eval_results[name] += result
                     results.append(grader_pool.submit(item.grade_single, response, index))
+                    LOG.append(log)
                 futures = list(not_done)
             output.done(_all=True)
             output.update_status(f"Wating for grading ...")
@@ -131,7 +136,6 @@ class MultiProcessEvalPipeline(BaseEvalPipeline):
                 output.print(f"{name} Done")
                 eval_results[name] += result
                 LOG.append(log)
-
 
             for i, j in eval_results.items():
                 eval_class, eval_subclass = i.split("/")
@@ -146,7 +150,6 @@ class MultiProcessEvalPipeline(BaseEvalPipeline):
         finally:
             evaluate_pool.shutdown()
             grader_pool.shutdown()
-
 
         output.update_status("> EVALUATING: robustness/consistency ...")
         eval_results["robustness/consistency"] = self._placeholder_eval_result()
@@ -170,11 +173,10 @@ class MultiProcessEvalPipeline(BaseEvalPipeline):
 
         return final_result, LOG
 
-
     def run_eval_async(self, agent: BaseAgent, seed: int = 0, *args, **kwargs):
         raise NotImplementedError
 
-    def _print_result(self, result: EvalPipelineResult, _output = ConsoleOutput(), save_dir=None):
+    def _print_result(self, result: EvalPipelineResult, _output=ConsoleOutput(), save_dir=None):
         output = [
             "\n### FINISHING Agent EVAL PIPELINE ###",
             "--------------Task Specific--------------",
@@ -194,7 +196,7 @@ class MultiProcessEvalPipeline(BaseEvalPipeline):
             # f"Score of memory: {result.eval_results['memory'].score*100}",
             "-----------Overal (Weighted Avg)-----------",
             f"Agent score: {round(result.avg_score * 100, 2)}",
-            f"Agent run exception rate: {round(result.avg_fail_rate * 100,2)}%",
+            f"Agent run exception rate: {round(result.avg_fail_rate * 100, 2)}%",
             f"Avg runtime per task: {round(result.avg_runtime, 2)}s",
             f"Avg cost per run: ${round(result.avg_cost, 3)}",
             f"Avg token usage per task: {round(result.avg_token_usage, 1)} tokens",
@@ -216,8 +218,13 @@ class MultiProcessEvalPipeline(BaseEvalPipeline):
         _output.panel_print("### FINISHING Agent EVAL PIPELINE ###", f"[{style}]{info}", True)
         _output.clear()
 
+    def _parse_eval_to_markdown(self, eval:dict) -> str:
+        prompt = eval.get("prompt", "")
+        grade = eval.get("output", "")
+        return f"##Grader Eval\n{prompt}\n{grade}"
+
     def vis(self, log: List[Dict], view: str, name: str = 'Agent'):
-        assert view in ["'openai-chat", "chatbot"], "view must be 'openai-chat' or 'chatbot'"
+        assert view in ["openai-chat-markdown", "openai-chat", "chatbot"], "view must be 'openai-chat' or 'chatbot'"
         try:
             from zeno_build.experiments.experiment_run import ExperimentRun
             from zeno_build.prompts.chat_prompt import ChatMessages, ChatTurn
@@ -227,13 +234,10 @@ class MultiProcessEvalPipeline(BaseEvalPipeline):
             if view == "openai-chat":
                 pass
             else:
-                data = df({'data_column': [i['prompt'] for i in log]})
-                labels = [i['solution'] for i in log]
-                results = [
-                    ExperimentRun(name=name, parameters={}, predictions=[[i['output']] for i in log]),
-                ]
-                visualize(data, labels, results, view, 'data_column', [], {'batch_size': 1})
+                data_column = [c for c in log if isinstance(c, list)]
+                eval_column = [self._parse_eval_to_markdown(c) for c in log if isinstance(c, dict)]
+                data = df({'data_column': data_column, 'eval_column': eval_column})
+                zeno.zeno(ZenoParameters(metadata=data, data_column="data_column", label_column="eval_column", view=view))
         except Exception as e:
             raise e
             pass
-

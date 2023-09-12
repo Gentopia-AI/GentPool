@@ -4,13 +4,13 @@ private: False
 
 # eval tasks
 knowledge:
-  world_knowledge: 1
-  domain_specific_knowledge: 1
-  web_retrieval: 1
+  world_knowledge: 2
+  domain_specific_knowledge: 0
+  web_retrieval: 0
 
 reasoning:
   math: 0
-  coding: 1
+  coding: 0
   planning: 0
   commonsense: 0
 

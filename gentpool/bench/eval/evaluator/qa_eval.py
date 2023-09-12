@@ -49,8 +49,11 @@ class QAEval(BaseEval):
         task = self.data[index]
         opt = BaseOutput()
         agent_instruction = task.get("problem", None)
+        agent_log = []
         try:
             response = agent.run(agent_instruction, opt)
+            if hasattr(agent, "message_scratchpad"):
+                agent_log = agent.message_scratchpad[-1]
             assert response is not None
         except Exception as e:
             result.fail_rate = 1
@@ -58,7 +61,7 @@ class QAEval(BaseEval):
         result.avg_runtime = time.time() - result.avg_runtime
         result.avg_cost = response.cost
         result.avg_token_usage = response.token_usage
-        return self, index, result, response, opt.log
+        return self, index, result, response, agent_log + opt.log
 
     def grade_single(self, response: AgentOutput, index:int) -> Tuple["QAEval", EvalResult, Dict]:
         task = self.data[index]
