@@ -4,6 +4,7 @@ benchmark/raw/
 test.ipynb
 .idea/
 *.eval_result.txt
+.zeno_cache/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
