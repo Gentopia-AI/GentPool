@@ -45,7 +45,7 @@ def main():
         _, log = evaluator.run_eval(agent, save_dir=args.save_dir)
         end = time.time()
         print(f"MultiProcessEvalPipeline Complete in {end - start} seconds.")
-        evaluator.vis(log, 'chatbot')
+        evaluator.vis(log, "openai-chat-markdown")
     elif args.mode == "sequential":
         evaluator = EvalPipeline(eval_config=eval_config)
         start = time.time()
